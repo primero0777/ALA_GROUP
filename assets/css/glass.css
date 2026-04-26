@@ -1,0 +1,39 @@
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.glass-nav {
+    background: var(--bg-glass-heavy);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: var(--glass-border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.glass-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(100, 116, 139, 0.2);
+    border-radius: 4px;
+    padding: 3rem 2rem;
+    box-shadow: none;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+html.dark .glass-card {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: -8px 8px 0px rgba(249, 115, 22, 0.1); /* Subtle orange structural shadow */
+}

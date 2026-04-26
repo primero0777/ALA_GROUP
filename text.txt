@@ -1,0 +1,37 @@
+Build a stunning, ultra-professional landing page for "ALA Group", 
+a hardware store (quincaillerie) in Togo, Africa.
+
+Stack: HTML + Tailwind CSS + vanilla JS only. No framework.
+
+Design requirements:
+- Style: Luxury dark theme with gold accents (#D4AF37)
+- Full glassmorphism effects on cards and navbar
+- Smooth scroll animations (AOS or pure CSS keyframes)
+- Parallax hero section with overlay
+- Gradient mesh background
+
+Sections to include:
+1. Navbar — sticky, blur backdrop, logo + nav links + CTA button
+2. Hero — fullscreen, bold headline, subtext, 2 CTA buttons, 
+   animated background particles
+3. About — glassmorphism card, company story, stats counter 
+   (années d'expérience, produits, clients)
+4. Products/Services — bento grid layout, icon cards with hover effects,
+   categories: outils, matériaux, électricité, plomberie, peinture
+5. Why Choose Us — 3 columns, animated icons, key advantages
+6. Testimonials — carousel slider with customer reviews
+7. Gallery — masonry grid with lightbox effect
+8. Contact — form with floating labels + map placeholder + social links
+9. Footer — dark, links, copyright
+
+Visual effects:
+- Hover: scale + glow + shadow transitions
+- Scroll reveal animations on every section
+- Floating elements in hero
+- Gradient text on headings
+- Smooth page transitions
+
+Images: use high quality placeholder images from 
+https://picsum.photos or https://unsplash.com/s/photos/hardware-store
+
+Make it look like a $10,000 website. Pixel perfect. Production ready.

@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALA Group — Quincaillerie Premium | Lomé, Togo</title>
+    <meta name="description" content="ALA Group, votre quincaillerie premium à Lomé, Togo. Outils, matériaux, électricité, plomberie et peinture de qualité professionnelle.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F0D060',
+                        'gold-dark': '#A8890A',
+                        dark: '#0A0A0F',
+                        'd2': '#111118',
+                        'd3': '#1A1A24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ===== BASE ===== */
+        * { scroll-behavior: smooth; box-sizing: border-box; }
+
+        body {
+            background-color: #0A0A0F;
+            color: #E8E8F0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Gradient mesh background */
+        .gradient-mesh {
+            background:
+                radial-gradient(ellipse at 15% 40%, rgba(212,175,55,0.07) 0%, transparent 55%),
+                radial-gradient(ellipse at 85% 15%, rgba(212,175,55,0.05) 0%, transparent 45%),
+                radial-gradient(ellipse at 60% 85%, rgba(120,90,20,0.06) 0%, transparent 50%),
+                #0A0A0F;
+        }
+
+        /* ===== GLASS ===== */
+        .glass {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212,175,55,0.12);
+        }
+
+        .glass-dark {
+            background: rgba(10,10,20,0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212,175,55,0.1);
+        }
+
+        /* ===== GOLD UTILITIES ===== */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-glow-text { text-shadow: 0 0 30px rgba(212,175,55,0.45); }
+
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+
+        /* Gold border gradient trick */
+        .gold-border {
+            position: relative;
+            isolation: isolate;
+        }
+        .gold-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(212,175,55,0.45), transparent 50%, rgba(212,175,55,0.25));
+            z-index: -1;
+        }
+
+        /* ===== NAVBAR ===== */
+        #navbar { transition: all 0.4s ease; }
+        #navbar.scrolled {
+            background: rgba(10,10,20,0.92);
+            backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(212,175,55,0.18);
+            box-shadow: 0 4px 40px rgba(0,0,0,0.6);
+        }
+
+        .nav-link {
+            position: relative;
+            color: rgba(232,232,240,0.75);
+            transition: color 0.3s ease;
+            font-size: 0.875rem;
+            letter-spacing: 0.03em;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 1px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: #D4AF37; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* ===== BUTTONS ===== */
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #B8960C);
+            color: #0A0A0F;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #F0D060, #D4AF37);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .btn-gold:hover::before { opacity: 1; }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(212,175,55,0.4); }
+        .btn-gold > * { position: relative; z-index: 1; }
+
+        .btn-outline-gold {
+            border: 1px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-gold:hover {
+            background: rgba(212,175,55,0.1);
+            box-shadow: 0 12px 35px rgba(212,175,55,0.15);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO ===== */
+        #particles-canvas {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(to bottom, rgba(10,10,15,0.65) 0%, rgba(10,10,15,0.35) 50%, rgba(10,10,15,0.9) 100%),
+                url('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            will-change: transform;
+        }
+
+        /* Floating */
+        @keyframes float { 0%,100%{transform:translateY(0) rotate(0deg)} 33%{transform:translateY(-18px) rotate(4deg)} 66%{transform:translateY(-9px) rotate(-3deg)} }
+        @keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-22px)} }
+        .float-a { animation: float 8s ease-in-out infinite; }
+        .float-b { animation: floatB 6s ease-in-out infinite 1.2s; }
+        .float-c { animation: float 11s ease-in-out infinite 2.5s; }
+
+        /* Pulse glow */
+        @keyframes pulseGlow {
+            0%,100%{box-shadow:0 0 18px rgba(212,175,55,0.3)}
+            50%{box-shadow:0 0 45px rgba(212,175,55,0.65),0 0 90px rgba(212,175,55,0.2)}
+        }
+        .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal, .reveal-l, .reveal-r {
+            opacity: 0;
+            transition: opacity 0.85s ease, transform 0.85s ease;
+        }
+        .reveal { transform: translateY(38px); }
+        .reveal-l { transform: translateX(-38px); }
+        .reveal-r { transform: translateX(38px); }
+        .reveal.in, .reveal-l.in, .reveal-r.in { opacity: 1; transform: none; }
+
+        .d1 { transition-delay: 0.1s !important; }
+        .d2 { transition-delay: 0.2s !important; }
+        .d3 { transition-delay: 0.3s !important; }
+        .d4 { transition-delay: 0.4s !important; }
+        .d5 { transition-delay: 0.5s !important; }
+
+        /* ===== SECTION NUMBER ===== */
+        .sec-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 9rem;
+            font-weight: 900;
+            color: rgba(212,175,55,0.04);
+            position: absolute;
+            top: -2rem; left: -1rem;
+            line-height: 1;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        /* ===== BENTO GRID ===== */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.25rem;
+        }
+        .b-8  { grid-column: span 8; }
+        .b-4  { grid-column: span 4; }
+        .b-4a { grid-column: span 4; }
+        .b-12 { grid-column: span 12; }
+
+        /* ===== PRODUCT CARDS ===== */
+        .product-card {
+            transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+            border-radius: 1.5rem;
+        }
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.015);
+            box-shadow: 0 24px 65px rgba(212,175,55,0.18), 0 0 0 1px rgba(212,175,55,0.28);
+        }
+
+        .icon-wrap {
+            width: 60px; height: 60px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            background: linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05));
+            border: 1px solid rgba(212,175,55,0.3);
+            color: #D4AF37;
+            transition: all 0.4s ease;
+            flex-shrink: 0;
+        }
+        .product-card:hover .icon-wrap {
+            background: linear-gradient(135deg, rgba(212,175,55,0.38), rgba(212,175,55,0.18));
+            box-shadow: 0 0 22px rgba(212,175,55,0.3);
+        }
+
+        /* ===== WHY CARDS ===== */
+        .why-card {
+            transition: all 0.4s ease;
+            border-radius: 1.5rem;
+        }
+        .why-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212,175,55,0.38) !important;
+            box-shadow: 0 24px 55px rgba(212,175,55,0.1);
+        }
+        @keyframes iconPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+        .why-card:hover .icon-wrap { animation: iconPulse 0.9s ease infinite; }
+
+        /* ===== CAROUSEL ===== */
+        .carousel-track {
+            display: flex;
+            transition: transform 0.65s cubic-bezier(0.77,0,0.175,1);
+        }
+        .carousel-slide { min-width: 100%; }
+
+        /* ===== MASONRY GALLERY ===== */
+        .masonry {
+            columns: 3;
+            column-gap: 1.25rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            border-radius: 14px;
+            cursor: zoom-in;
+            position: relative;
+        }
+        .masonry-item img {
+            width: 100%; display: block;
+            transition: transform 0.65s ease;
+        }
+        .masonry-item:hover img { transform: scale(1.07); }
+        .masonry-overlay {
+            position: absolute; inset: 0;
+            background: rgba(212,175,55,0);
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.4s ease;
+        }
+        .masonry-item:hover .masonry-overlay { background: rgba(212,175,55,0.18); }
+        .masonry-overlay i {
+            color: white; font-size: 1.8rem;
+            opacity: 0; transform: scale(0.5);
+            transition: all 0.4s ease;
+        }
+        .masonry-item:hover .masonry-overlay i { opacity: 1; transform: scale(1); }
+
+        /* ===== LIGHTBOX ===== */
+        #lightbox {
+            display: none;
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,0.96);
+            align-items: center; justify-content: center;
+        }
+        #lightbox.open { display: flex; }
+        #lightbox img {
+            max-width: 90vw; max-height: 90vh;
+            border-radius: 14px;
+            border: 1px solid rgba(212,175,55,0.3);
+            box-shadow: 0 0 60px rgba(212,175,55,0.15);
+        }
+
+        /* ===== FLOATING LABELS ===== */
+        .form-group { position: relative; }
+        .form-group input,
+        .form-group textarea {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(212,175,55,0.18);
+            border-radius: 10px;
+            color: #E8E8F0;
+            padding: 1.3rem 1rem 0.5rem;
+            width: 100%;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
+        }
+        .form-group label {
+            position: absolute;
+            left: 1rem; top: 1rem;
+            color: rgba(212,175,55,0.55);
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group textarea:focus + label,
+        .form-group textarea:not(:placeholder-shown) + label {
+            top: 0.3rem; font-size: 0.7rem; color: #D4AF37;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.42s cubic-bezier(0.77,0,0.175,1);
+        }
+        #mobile-menu.open { transform: translateX(0); }
+
+        /* ===== PROGRESS BAR ===== */
+        #progress-bar {
+            position: fixed; top: 0; left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #D4AF37, #F0D060);
+            z-index: 9999;
+            transition: width 0.1s linear;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #0A0A0F; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+
+        /* ===== MAP PLACEHOLDER ===== */
+        .map-ph {
+            background:
+                linear-gradient(rgba(10,10,20,0.55), rgba(10,10,20,0.55)),
+                url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800') center/cover;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .b-8, .b-4, .b-4a { grid-column: span 12; }
+            .masonry { columns: 2; }
+            .sec-num { font-size: 5rem; }
+        }
+        @media (max-width: 480px) {
+            .masonry { columns: 1; }
+        }
+
+        /* ===== STARS ===== */
+        .stars { color: #D4AF37; letter-spacing: 3px; }
+
+        /* ===== COUNTER ===== */
+        .counter { font-variant-numeric: tabular-nums; }
+
+        /* ===== TESTIMONIAL AVATAR ===== */
+        .avatar-ring { border: 2px solid #D4AF37; }
+    </style>
+</head>
+<body class="gradient-mesh">
+
+<!-- Progress Bar -->
+<div id="progress-bar" style="width:0"></div>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div id="lightbox" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl z-10 hover:text-yellow-400 transition-colors">
+        <i class="fas fa-times"></i>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- ============================================================
+     MOBILE MENU
+     ============================================================ -->
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-72 glass-dark z-50 flex flex-col p-8 shadow-2xl">
+    <button onclick="toggleMenu()" class="self-end text-gold text-2xl mb-8 hover:scale-110 transition-transform">
+        <i class="fas fa-times"></i>
+    </button>
+    <nav class="flex flex-col gap-5">
+        <a href="#about"        onclick="toggleMenu()" class="nav-link text-base py-1">À Propos</a>
+        <a href="#products"     onclick="toggleMenu()" class="nav-link text-base py-1">Produits</a>
+        <a href="#why-us"       onclick="toggleMenu()" class="nav-link text-base py-1">Pourquoi Nous</a>
+        <a href="#testimonials" onclick="toggleMenu()" class="nav-link text-base py-1">Témoignages</a>
+        <a href="#gallery"      onclick="toggleMenu()" class="nav-link text-base py-1">Galerie</a>
+        <a href="#contact"      onclick="toggleMenu()" class="nav-link text-base py-1">Contact</a>
+    </nav>
+    <a href="#contact" onclick="toggleMenu()" class="btn-gold px-6 py-3 rounded-xl text-center mt-auto font-semibold">
+        Devis Gratuit &rarr;
+    </a>
+</div>
+<div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden" onclick="toggleMenu()"></div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-30 py-5">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded-xl bg-gold flex items-center justify-center text-dark font-bold text-xl pulse-glow shrink-0">A</div>
+            <div class="leading-tight">
+                <div class="font-heading font-bold text-lg text-gold-gradient">ALA Group</div>
+                <div class="text-[10px] text-gray-600 tracking-[0.2em] uppercase">Quincaillerie Premium</div>
+            </div>
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden lg:flex items-center gap-7">
+            <a href="#about"        class="nav-link">À Propos</a>
+            <a href="#products"     class="nav-link">Produits</a>
+            <a href="#why-us"       class="nav-link">Pourquoi Nous</a>
+            <a href="#testimonials" class="nav-link">Témoignages</a>
+            <a href="#gallery"      class="nav-link">Galerie</a>
+            <a href="#contact"      class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden lg:inline-flex items-center gap-2 btn-gold px-5 py-2.5 rounded-xl text-sm">
+                Devis Gratuit <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+            <button onclick="toggleMenu()" class="lg:hidden text-gold text-xl p-1">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+    <div class="hero-bg absolute inset-0" id="hero-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating decorative shapes -->
+    <div class="float-a absolute top-1/4 left-12 w-28 h-28 rounded-full border border-gold/20 hidden lg:block"></div>
+    <div class="float-b absolute bottom-1/3 right-16 w-18 h-18 rounded-full border border-gold/15 hidden lg:block" style="width:4.5rem;height:4.5rem;"></div>
+    <div class="float-c absolute top-1/3 right-1/4 w-9 h-9 bg-gold/10 rounded-full hidden lg:block"></div>
+    <div class="float-a absolute bottom-1/4 left-1/3 w-14 h-14 border border-gold/10 rotate-45 hidden lg:block"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+
+        <div class="reveal inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-8 text-sm text-gold/80">
+            <span class="w-2 h-2 bg-gold rounded-full animate-pulse shrink-0"></span>
+            Lomé, Togo &bull; Depuis 2014
+        </div>
+
+        <h1 class="font-heading font-black text-5xl md:text-7xl lg:text-[5.5rem] leading-none mb-6 reveal d1">
+            La Quincaillerie<br>
+            <span class="text-gold-gradient gold-glow-text">de l'Excellence</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed reveal d2">
+            Matériaux premium, outils professionnels et solutions complètes pour vos projets de construction et rénovation au Togo et en Afrique de l'Ouest.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center reveal d3">
+            <a href="#products" class="btn-gold px-9 py-4 rounded-xl text-base font-semibold inline-flex items-center justify-center gap-2">
+                <span>Voir nos Produits</span> <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#contact" class="btn-outline-gold px-9 py-4 rounded-xl text-base font-semibold inline-flex items-center justify-center gap-2">
+                Demander un Devis
+            </a>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gold/35 text-[10px] tracking-[0.3em] uppercase">
+            <span>Scroll</span>
+            <div class="w-px h-8 bg-gradient-to-b from-gold/35 to-transparent animate-pulse"></div>
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">01</span>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Left text -->
+            <div class="reveal-l">
+                <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                    <div class="w-8 h-px bg-gold"></div> Notre Histoire
+                </div>
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-white mb-6 leading-tight">
+                    10 ans d'excellence<br>
+                    <span class="text-gold-gradient">au service du Togo</span>
+                </h2>
+                <p class="text-gray-400 leading-relaxed mb-5">
+                    Fondée en 2014 à Lomé, <strong class="text-white">ALA Group</strong> s'est imposée comme la référence incontournable en matière de quincaillerie professionnelle au Togo. Notre engagement envers la qualité et le service client nous distingue dans tout le marché ouest-africain.
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-8">
+                    Nous proposons une gamme complète de produits sélectionnés auprès des meilleurs fabricants mondiaux, garantissant durabilité et performance pour chaque projet — résidentiel, commercial ou industriel.
+                </p>
+                <a href="#contact" class="btn-gold px-7 py-3.5 rounded-xl inline-flex items-center gap-2 font-semibold">
+                    <span>Contactez-nous</span> <i class="fas fa-chevron-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Right stats -->
+            <div class="reveal-r">
+                <div class="glass rounded-3xl p-8 gold-border">
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="font-heading text-4xl font-black text-gold counter" data-target="10" data-suffix="+">0</div>
+                            <div class="text-gray-400 text-sm mt-1.5">Années d'Expérience</div>
+                        </div>
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="font-heading text-4xl font-black text-gold counter" data-target="5000" data-suffix="+">0</div>
+                            <div class="text-gray-400 text-sm mt-1.5">Produits en Stock</div>
+                        </div>
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="font-heading text-4xl font-black text-gold counter" data-target="2500" data-suffix="+">0</div>
+                            <div class="text-gray-400 text-sm mt-1.5">Clients Satisfaits</div>
+                        </div>
+                        <div class="glass rounded-2xl p-6 text-center">
+                            <div class="font-heading text-4xl font-black text-gold counter" data-target="15">0</div>
+                            <div class="text-gray-400 text-sm mt-1.5">Partenaires Mondiaux</div>
+                        </div>
+                    </div>
+                    <div class="mt-5 rounded-2xl overflow-hidden h-44">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=800"
+                             alt="ALA Group Store" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     PRODUCTS / SERVICES
+     ============================================================ -->
+<section id="products" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">02</span>
+
+        <div class="text-center mb-16 reveal">
+            <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                <div class="w-8 h-px bg-gold"></div> Nos Catégories <div class="w-8 h-px bg-gold"></div>
+            </div>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-white">
+                Tout ce qu'il vous faut<br><span class="text-gold-gradient">pour vos projets</span>
+            </h2>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="bento">
+
+            <!-- WIDE: Outils -->
+            <div class="b-8 product-card glass gold-border p-8 relative overflow-hidden group reveal">
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                     style="background:url('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=800') center/cover;"></div>
+                <div class="relative">
+                    <div class="icon-wrap mb-5"><i class="fas fa-tools"></i></div>
+                    <h3 class="font-heading text-2xl font-bold text-white mb-3">Outils Professionnels</h3>
+                    <p class="text-gray-400 mb-5">Perceuses, marteaux, scies, niveaux — tout l'outillage pour professionnels et particuliers exigeants.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-gold/10 text-gold rounded-full border border-gold/20">Électroportatif</span>
+                        <span class="text-xs px-3 py-1 bg-gold/10 text-gold rounded-full border border-gold/20">Manuel</span>
+                        <span class="text-xs px-3 py-1 bg-gold/10 text-gold rounded-full border border-gold/20">Mesure &amp; Traçage</span>
+                        <span class="text-xs px-3 py-1 bg-gold/10 text-gold rounded-full border border-gold/20">Sécurité</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matériaux -->
+            <div class="b-4 product-card glass gold-border p-8 relative overflow-hidden group reveal d1">
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                     style="background:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div class="relative">
+                    <div class="icon-wrap mb-5"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Matériaux</h3>
+                    <p class="text-gray-400 text-sm">Ciment, fer à béton, bois, carrelage et agglos de qualité supérieure.</p>
+                </div>
+            </div>
+
+            <!-- Électricité -->
+            <div class="b-4a product-card glass gold-border p-8 relative overflow-hidden group reveal d1">
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                     style="background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div class="relative">
+                    <div class="icon-wrap mb-5"><i class="fas fa-bolt"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Électricité</h3>
+                    <p class="text-gray-400 text-sm">Câbles, disjoncteurs, prises, tableaux et accessoires électriques certifiés.</p>
+                </div>
+            </div>
+
+            <!-- Plomberie -->
+            <div class="b-4a product-card glass gold-border p-8 relative overflow-hidden group reveal d2">
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                     style="background:url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div class="relative">
+                    <div class="icon-wrap mb-5"><i class="fas fa-faucet"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Plomberie</h3>
+                    <p class="text-gray-400 text-sm">Tuyaux PVC, robinets, vannes, ballons d'eau et raccordements.</p>
+                </div>
+            </div>
+
+            <!-- Peinture -->
+            <div class="b-4a product-card glass gold-border p-8 relative overflow-hidden group reveal d3">
+                <div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                     style="background:url('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=crop&q=80&w=400') center/cover;"></div>
+                <div class="relative">
+                    <div class="icon-wrap mb-5"><i class="fas fa-paint-roller"></i></div>
+                    <h3 class="font-heading text-xl font-bold text-white mb-2">Peinture</h3>
+                    <p class="text-gray-400 text-sm">Peintures intérieure &amp; extérieure, enduits, sous-couches et rouleaux.</p>
+                </div>
+            </div>
+
+            <!-- CTA gold card -->
+            <div class="b-4a product-card p-8 relative overflow-hidden reveal d4 rounded-3xl"
+                 style="background:linear-gradient(135deg,#D4AF37 0%,#A8890A 100%);">
+                <div class="absolute top-4 right-4 w-20 h-20 rounded-full bg-white/10"></div>
+                <div class="absolute -bottom-5 -left-5 w-32 h-32 rounded-full bg-black/10"></div>
+                <div class="relative">
+                    <i class="fas fa-star text-dark text-3xl mb-4 block"></i>
+                    <h3 class="font-heading text-xl font-bold text-dark mb-2">Catalogue Complet</h3>
+                    <p class="text-dark/65 text-sm mb-5">+5 000 références en stock permanent.</p>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-dark text-gold px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-dark/80 transition-colors">
+                        Commander <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     WHY CHOOSE US
+     ============================================================ -->
+<section id="why-us" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">03</span>
+
+        <div class="text-center mb-16 reveal">
+            <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                <div class="w-8 h-px bg-gold"></div> Pourquoi Nous <div class="w-8 h-px bg-gold"></div>
+            </div>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-white">
+                L'excellence à chaque<br><span class="text-gold-gradient">détail</span>
+            </h2>
+        </div>
+
+        <!-- 3 main cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+
+            <div class="why-card glass p-8 border border-white/5 reveal d1 text-center">
+                <div class="icon-wrap mx-auto mb-6"><i class="fas fa-award"></i></div>
+                <h3 class="font-heading text-xl font-bold text-white mb-3">Qualité Certifiée</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Chaque produit est sélectionné auprès de fabricants certifiés, garantissant des performances irréprochables sur le long terme.</p>
+                <div class="mt-5 flex justify-center gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-gold"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold/35"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold/15"></div>
+                </div>
+            </div>
+
+            <!-- Middle card (featured) -->
+            <div class="why-card glass p-8 border border-gold/22 reveal d2 text-center" style="transform:scale(1.03);">
+                <div class="icon-wrap mx-auto mb-6" style="background:linear-gradient(135deg,rgba(212,175,55,0.32),rgba(212,175,55,0.14));border-color:rgba(212,175,55,0.5);"><i class="fas fa-truck-fast"></i></div>
+                <h3 class="font-heading text-xl font-bold text-white mb-3">Livraison Rapide</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Livraison dans tout Lomé et ses environs en moins de 24h. Transport disponible pour les grandes commandes de chantier.</p>
+                <div class="mt-5 flex justify-center gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-gold/15"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold/15"></div>
+                </div>
+            </div>
+
+            <div class="why-card glass p-8 border border-white/5 reveal d3 text-center">
+                <div class="icon-wrap mx-auto mb-6"><i class="fas fa-headset"></i></div>
+                <h3 class="font-heading text-xl font-bold text-white mb-3">Support Expert</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Notre équipe d'experts vous conseille sur le choix des matériaux et outils les mieux adaptés à votre projet.</p>
+                <div class="mt-5 flex justify-center gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-gold/15"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold/35"></div>
+                    <div class="w-2 h-2 rounded-full bg-gold"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini perks row -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass rounded-2xl p-5 text-center border border-white/5 reveal d1 hover:border-gold/30 transition-colors duration-300">
+                <i class="fas fa-tag text-gold text-xl mb-2.5 block"></i>
+                <div class="text-sm font-semibold text-white">Prix Compétitifs</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center border border-white/5 reveal d2 hover:border-gold/30 transition-colors duration-300">
+                <i class="fas fa-shield-alt text-gold text-xl mb-2.5 block"></i>
+                <div class="text-sm font-semibold text-white">Garantie Produits</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center border border-white/5 reveal d3 hover:border-gold/30 transition-colors duration-300">
+                <i class="fas fa-warehouse text-gold text-xl mb-2.5 block"></i>
+                <div class="text-sm font-semibold text-white">Stock Permanent</div>
+            </div>
+            <div class="glass rounded-2xl p-5 text-center border border-white/5 reveal d4 hover:border-gold/30 transition-colors duration-300">
+                <i class="fas fa-handshake text-gold text-xl mb-2.5 block"></i>
+                <div class="text-sm font-semibold text-white">Partenariats B2B</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials" class="py-28 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">04</span>
+
+        <div class="text-center mb-16 reveal">
+            <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                <div class="w-8 h-px bg-gold"></div> Témoignages <div class="w-8 h-px bg-gold"></div>
+            </div>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-white">
+                Ce que disent<br><span class="text-gold-gradient">nos clients</span>
+            </h2>
+        </div>
+
+        <!-- Carousel wrapper -->
+        <div class="relative reveal">
+            <div class="overflow-hidden rounded-3xl">
+                <div class="carousel-track" id="c-track">
+
+                    <div class="carousel-slide px-2">
+                        <div class="glass border border-gold/15 rounded-3xl p-10 max-w-3xl mx-auto text-center">
+                            <div class="stars text-2xl mb-6">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="text-gray-300 text-lg md:text-xl leading-relaxed italic mb-8">
+                                &ldquo;ALA Group a fourni tous les matériaux pour la construction de mon immeuble. Qualité exceptionnelle, délais respectés, et un service client vraiment au top. Je recommande vivement !&rdquo;
+                            </p>
+                            <div class="flex items-center justify-center gap-4">
+                                <img src="https://picsum.photos/seed/cli1/60/60" alt="Kofi Mensah" class="w-14 h-14 rounded-full avatar-ring object-cover" loading="lazy">
+                                <div class="text-left">
+                                    <div class="font-semibold text-white">Kofi Mensah</div>
+                                    <div class="text-gold text-sm">Promoteur Immobilier, Lomé</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide px-2">
+                        <div class="glass border border-gold/15 rounded-3xl p-10 max-w-3xl mx-auto text-center">
+                            <div class="stars text-2xl mb-6">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="text-gray-300 text-lg md:text-xl leading-relaxed italic mb-8">
+                                &ldquo;Meilleure quincaillerie de Lomé, sans aucun doute. Ils ont tout ce qu'il faut et les prix sont très compétitifs. La livraison le lendemain est un vrai avantage pour mon activité.&rdquo;
+                            </p>
+                            <div class="flex items-center justify-center gap-4">
+                                <img src="https://picsum.photos/seed/cli2/60/60" alt="Aminata Diallo" class="w-14 h-14 rounded-full avatar-ring object-cover" loading="lazy">
+                                <div class="text-left">
+                                    <div class="font-semibold text-white">Aminata Diallo</div>
+                                    <div class="text-gold text-sm">Architecte d'Intérieur</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide px-2">
+                        <div class="glass border border-gold/15 rounded-3xl p-10 max-w-3xl mx-auto text-center">
+                            <div class="stars text-2xl mb-6">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="text-gray-300 text-lg md:text-xl leading-relaxed italic mb-8">
+                                &ldquo;Nous travaillons avec ALA Group depuis 5 ans pour nos chantiers. Leur fiabilité et la qualité constante de leurs produits en font un partenaire absolument indispensable.&rdquo;
+                            </p>
+                            <div class="flex items-center justify-center gap-4">
+                                <img src="https://picsum.photos/seed/cli3/60/60" alt="Jean-Baptiste Agbo" class="w-14 h-14 rounded-full avatar-ring object-cover" loading="lazy">
+                                <div class="text-left">
+                                    <div class="font-semibold text-white">Jean-Baptiste Agbo</div>
+                                    <div class="text-gold text-sm">Directeur Travaux, BTP Togo</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Carousel controls -->
+            <div class="flex justify-center items-center gap-4 mt-8">
+                <button onclick="prevSlide()" aria-label="Précédent"
+                        class="w-12 h-12 rounded-full glass border border-gold/20 text-gold hover:bg-gold hover:text-dark transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="flex gap-2" id="c-dots"></div>
+                <button onclick="nextSlide()" aria-label="Suivant"
+                        class="w-12 h-12 rounded-full glass border border-gold/20 text-gold hover:bg-gold hover:text-dark transition-all duration-300 flex items-center justify-center">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     GALLERY
+     ============================================================ -->
+<section id="gallery" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">05</span>
+
+        <div class="text-center mb-16 reveal">
+            <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                <div class="w-8 h-px bg-gold"></div> Galerie <div class="w-8 h-px bg-gold"></div>
+            </div>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-white">
+                Notre magasin &amp;<br><span class="text-gold-gradient">nos réalisations</span>
+            </h2>
+        </div>
+
+        <div class="masonry reveal">
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=75&w=600" alt="Outils professionnels" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=75&w=600" alt="Magasin ALA Group" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?auto=format&fit=crop&q=75&w=600" alt="Peinture" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=75&w=600" alt="Électricité" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=75&w=600" alt="Plomberie" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=75&w=600" alt="Chantier de construction" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=75&w=600" alt="Construction" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="masonry-item" onclick="openLightbox('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=90&w=1400')">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=75&w=600" alt="Architecture" loading="lazy">
+                <div class="masonry-overlay"><i class="fas fa-expand-alt"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gold-divider max-w-7xl mx-auto"></div>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="py-28 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <span class="sec-num" aria-hidden="true">06</span>
+
+        <div class="text-center mb-16 reveal">
+            <div class="inline-flex items-center gap-2 text-gold text-xs tracking-[0.25em] uppercase mb-4">
+                <div class="w-8 h-px bg-gold"></div> Contact <div class="w-8 h-px bg-gold"></div>
+            </div>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-white">
+                Démarrons votre<br><span class="text-gold-gradient">projet ensemble</span>
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+            <!-- Form -->
+            <div class="glass rounded-3xl p-8 gold-border reveal-l">
+                <h3 class="font-heading text-2xl font-bold text-white mb-7">Demande de Devis Gratuit</h3>
+                <form id="contact-form" onsubmit="handleSubmit(event)" class="space-y-5">
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="form-group">
+                            <input type="text" id="fname" placeholder=" " required>
+                            <label for="fname">Prénom</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="lname" placeholder=" " required>
+                            <label for="lname">Nom</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Adresse Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder=" ">
+                        <label for="phone">Téléphone / WhatsApp</label>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Décrivez votre projet ou besoin</label>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn-gold w-full py-4 rounded-xl font-semibold text-base flex items-center justify-center gap-2">
+                        <span>Envoyer la Demande</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+
+                    <div id="form-success" class="hidden text-center py-3.5 px-5 bg-gold/10 border border-gold/25 rounded-xl text-gold text-sm">
+                        <i class="fas fa-check-circle mr-2"></i> Message envoyé ! Nous vous répondons sous 24h.
+                    </div>
+                </form>
+            </div>
+
+            <!-- Info + Map -->
+            <div class="flex flex-col gap-6 reveal-r">
+
+                <div class="glass rounded-3xl p-8 gold-border">
+                    <h3 class="font-heading text-xl font-bold text-white mb-6">Nos Coordonnées</h3>
+                    <div class="space-y-5">
+
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrap shrink-0"><i class="fas fa-map-marker-alt text-lg"></i></div>
+                            <div>
+                                <div class="text-white font-medium mb-1">Adresse</div>
+                                <div class="text-gray-400 text-sm">Avenue des Nîmes, Lomé, Togo<br>Quartier Bè — face au grand marché</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrap shrink-0"><i class="fas fa-phone text-lg"></i></div>
+                            <div>
+                                <div class="text-white font-medium mb-1">Téléphone</div>
+                                <div class="text-gray-400 text-sm">+228 90 00 00 00<br>+228 70 00 00 00</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrap shrink-0"><i class="fas fa-envelope text-lg"></i></div>
+                            <div>
+                                <div class="text-white font-medium mb-1">Email</div>
+                                <div class="text-gray-400 text-sm">contact@alagroup.tg</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="icon-wrap shrink-0"><i class="fas fa-clock text-lg"></i></div>
+                            <div>
+                                <div class="text-white font-medium mb-1">Horaires</div>
+                                <div class="text-gray-400 text-sm">Lun – Sam : 7h30 – 18h30<br>Dimanche : 8h00 – 13h00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-5 border-t border-white/5">
+                        <div class="text-white text-sm font-medium mb-3">Suivez-nous</div>
+                        <div class="flex gap-3">
+                            <a href="#" aria-label="Facebook"  class="w-10 h-10 rounded-xl bg-gold/8 border border-gold/18 flex items-center justify-center text-gold hover:bg-gold hover:text-dark transition-all duration-300"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-gold/8 border border-gold/18 flex items-center justify-center text-gold hover:bg-gold hover:text-dark transition-all duration-300"><i class="fab fa-instagram text-sm"></i></a>
+                            <a href="#" aria-label="WhatsApp"  class="w-10 h-10 rounded-xl bg-gold/8 border border-gold/18 flex items-center justify-center text-gold hover:bg-gold hover:text-dark transition-all duration-300"><i class="fab fa-whatsapp text-sm"></i></a>
+                            <a href="#" aria-label="TikTok"    class="w-10 h-10 rounded-xl bg-gold/8 border border-gold/18 flex items-center justify-center text-gold hover:bg-gold hover:text-dark transition-all duration-300"><i class="fab fa-tiktok text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map placeholder -->
+                <div class="map-ph rounded-3xl h-48 flex items-center justify-center border border-gold/18 cursor-pointer hover:border-gold/40 transition-colors duration-300">
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt text-gold text-3xl mb-2 block"></i>
+                        <div class="text-white font-semibold">Lomé, Togo</div>
+                        <div class="text-gray-500 text-sm mt-1">Voir sur Google Maps &rarr;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-black border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+            <!-- Brand col -->
+            <div class="md:col-span-2">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-gold flex items-center justify-center text-dark font-bold text-xl shrink-0">A</div>
+                    <div>
+                        <div class="font-heading font-bold text-lg text-gold-gradient">ALA Group</div>
+                        <div class="text-[10px] text-gray-700 tracking-[0.2em] uppercase">Quincaillerie Premium</div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm leading-relaxed max-w-xs">
+                    Votre partenaire de confiance pour tous vos projets de construction, rénovation et aménagement au Togo depuis 2014.
+                </p>
+                <div class="flex gap-3 mt-5">
+                    <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 hover:text-gold hover:bg-gold/10 transition-all duration-300"><i class="fab fa-facebook-f text-xs"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 hover:text-gold hover:bg-gold/10 transition-all duration-300"><i class="fab fa-instagram text-xs"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-gray-500 hover:text-gold hover:bg-gold/10 transition-all duration-300"><i class="fab fa-whatsapp text-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Nav links -->
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-xs tracking-[0.2em] uppercase">Navigation</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about"        class="text-gray-600 text-sm hover:text-gold transition-colors">À Propos</a></li>
+                    <li><a href="#products"     class="text-gray-600 text-sm hover:text-gold transition-colors">Produits</a></li>
+                    <li><a href="#why-us"       class="text-gray-600 text-sm hover:text-gold transition-colors">Pourquoi Nous</a></li>
+                    <li><a href="#gallery"      class="text-gray-600 text-sm hover:text-gold transition-colors">Galerie</a></li>
+                    <li><a href="#contact"      class="text-gray-600 text-sm hover:text-gold transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-xs tracking-[0.2em] uppercase">Catégories</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 text-sm hover:text-gold transition-colors">Outils</a></li>
+                    <li><a href="#" class="text-gray-600 text-sm hover:text-gold transition-colors">Matériaux</a></li>
+                    <li><a href="#" class="text-gray-600 text-sm hover:text-gold transition-colors">Électricité</a></li>
+                    <li><a href="#" class="text-gray-600 text-sm hover:text-gold transition-colors">Plomberie</a></li>
+                    <li><a href="#" class="text-gray-600 text-sm hover:text-gold transition-colors">Peinture</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gold-divider mb-8"></div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-700 text-sm">&copy; 2024 ALA Group. Tous droits réservés.</p>
+            <p class="text-gray-800 text-xs">Conçu avec <span class="text-gold">&diams;</span> à Lomé, Togo</p>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/22890000000" target="_blank" rel="noopener" aria-label="WhatsApp"
+   class="fixed bottom-8 right-8 w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl z-40 transition-transform duration-300 hover:scale-110"
+   style="background:#25D366;box-shadow:0 4px 24px rgba(37,211,102,0.45);">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+'use strict';
+
+/* ---- PROGRESS BAR ---- */
+window.addEventListener('scroll', () => {
+    const st = document.documentElement.scrollTop;
+    const sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    document.getElementById('progress-bar').style.width = (st / sh * 100) + '%';
+}, { passive: true });
+
+/* ---- NAVBAR SCROLL ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ---- PARALLAX HERO ---- */
+const heroBg = document.getElementById('hero-bg');
+window.addEventListener('scroll', () => {
+    heroBg.style.transform = `translateY(${window.scrollY * 0.38}px)`;
+}, { passive: true });
+
+/* ---- PARTICLES ---- */
+(function () {
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    const N = 55;
+    const pts = Array.from({ length: N }, () => ({
+        x:  Math.random() * window.innerWidth,
+        y:  Math.random() * window.innerHeight,
+        r:  Math.random() * 1.8 + 0.4,
+        dx: (Math.random() - 0.5) * 0.28,
+        dy: (Math.random() - 0.5) * 0.28,
+        o:  Math.random() * 0.45 + 0.08,
+    }));
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pts.forEach((p, i) => {
+            p.x = (p.x + p.dx + canvas.width)  % canvas.width;
+            p.y = (p.y + p.dy + canvas.height) % canvas.height;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(212,175,55,${p.o})`;
+            ctx.fill();
+
+            for (let j = i + 1; j < N; j++) {
+                const q = pts[j];
+                const d = Math.hypot(p.x - q.x, p.y - q.y);
+                if (d < 130) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(q.x, q.y);
+                    ctx.strokeStyle = `rgba(212,175,55,${0.06 * (1 - d / 130)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        });
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
+
+/* ---- SCROLL REVEAL ---- */
+const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('in');
+            revealObs.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-l, .reveal-r').forEach(el => revealObs.observe(el));
+
+/* ---- COUNTERS ---- */
+const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = +el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        counterObs.unobserve(el);
+
+        const duration = 2000;
+        const t0 = performance.now();
+        (function tick(now) {
+            const p = Math.min((now - t0) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(eased * target).toLocaleString('fr-FR') + (p === 1 ? suffix : '');
+            if (p < 1) requestAnimationFrame(tick);
+        })(performance.now());
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+/* ---- CAROUSEL ---- */
+let slide = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+const track  = document.getElementById('c-track');
+const dots   = document.getElementById('c-dots');
+
+slides.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = i === 0
+        ? 'w-6 h-2 rounded-full bg-gold transition-all duration-300'
+        : 'w-2 h-2 rounded-full bg-white/20 transition-all duration-300';
+    btn.setAttribute('aria-label', `Slide ${i + 1}`);
+    btn.onclick = () => goTo(i);
+    dots.appendChild(btn);
+});
+
+function goTo(n) {
+    slide = n;
+    track.style.transform = `translateX(-${n * 100}%)`;
+    dots.querySelectorAll('button').forEach((d, i) => {
+        d.className = i === n
+            ? 'w-6 h-2 rounded-full bg-gold transition-all duration-300'
+            : 'w-2 h-2 rounded-full bg-white/20 transition-all duration-300';
+    });
+}
+
+function nextSlide() { goTo((slide + 1) % slides.length); }
+function prevSlide()  { goTo((slide - 1 + slides.length) % slides.length); }
+
+setInterval(nextSlide, 5500);
+
+/* ---- LIGHTBOX ---- */
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ---- MOBILE MENU ---- */
+function toggleMenu() {
+    const menu    = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+    const isOpen  = menu.classList.toggle('open');
+    overlay.classList.toggle('hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+/* ---- CONTACT FORM ---- */
+function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Envoi en cours…';
+
+    setTimeout(() => {
+        e.target.reset();
+        btn.disabled = false;
+        btn.innerHTML = '<span>Envoyer la Demande</span> <i class="fas fa-paper-plane"></i>';
+        const success = document.getElementById('form-success');
+        success.classList.remove('hidden');
+        setTimeout(() => success.classList.add('hidden'), 5000);
+    }, 1600);
+}
+</script>
+</body>
+</html>
