@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ALA Building – Cabinet d'architecture et de construction premium à Lomé, Togo. Design, construction et aménagement intérieur d'exception.">
+  <title>ALA Building – Archiram Link Africa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-inner">
+    <div class="loading-logo">ALA <span>Building</span></div>
+    <div class="loading-bar"><div class="loading-fill"></div></div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">ALA <span>Building</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" aria-label="Switch language"><span id="langLabel">EN</span></button>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80" alt="Architecture moderne" loading="eager">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Architecture &amp; Construction — Lomé, Togo</p>
+    <h1 class="hero-title">
+      <span class="hero-static" data-i18n="hero_static">Nous bâtissons</span>
+      <span class="hero-rotate-wrap">
+        <span class="hero-rotate" id="heroRotate">l'Excellence</span>
+      </span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">Cabinet d'architecture premium spécialisé dans la conception, la construction et l'aménagement intérieur d'exception en Afrique de l'Ouest.</p>
+    <div class="hero-actions">
+      <a href="projects.html" class="btn btn-primary" data-i18n="hero_cta1">Voir nos projets</a>
+      <a href="contact.html" class="btn btn-ghost" data-i18n="hero_cta2">Nous contacter</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><span class="hstat-n">10+</span><span class="hstat-l" data-i18n="hstat1">Années</span></div>
+    <div class="hstat"><span class="hstat-n">150+</span><span class="hstat-l" data-i18n="hstat2">Projets</span></div>
+    <div class="hstat"><span class="hstat-n">3</span><span class="hstat-l" data-i18n="hstat3">Pays</span></div>
+    <div class="hstat"><span class="hstat-n">98%</span><span class="hstat-l" data-i18n="hstat4">Satisfaction</span></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="srv_tag">Nos Expertises</p>
+      <h2 class="sec-title" data-i18n="srv_title">Des services conçus<br>pour l'excellence</h2>
+    </div>
+    <div class="services-grid">
+      <div class="srv-card reveal" style="--d:0ms">
+        <div class="srv-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3 data-i18n="srv1_title">Architecture</h3>
+        <p data-i18n="srv1_desc">Conception architecturale sur mesure, des plans aux permis de construire, avec une vision esthétique unique et durable.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="srv-card reveal" style="--d:80ms">
+        <div class="srv-icon"><i class="fas fa-hard-hat"></i></div>
+        <h3 data-i18n="srv2_title">Construction</h3>
+        <p data-i18n="srv2_desc">Maîtrise d'œuvre complète avec des matériaux premium, dans le respect total des délais et du budget convenu.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="srv-card reveal" style="--d:160ms">
+        <div class="srv-icon"><i class="fas fa-couch"></i></div>
+        <h3 data-i18n="srv3_title">Design Intérieur</h3>
+        <p data-i18n="srv3_desc">Aménagement d'espaces luxueux alliant fonctionnalité, esthétique raffinée et identité personnelle forte.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="srv-card reveal" style="--d:0ms">
+        <div class="srv-icon"><i class="fas fa-cogs"></i></div>
+        <h3 data-i18n="srv4_title">Ingénierie</h3>
+        <p data-i18n="srv4_desc">Études techniques, calculs de structures et solutions d'ingénierie pour des bâtiments durables et sécurisés.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="srv-card reveal" style="--d:80ms">
+        <div class="srv-icon"><i class="fas fa-paint-roller"></i></div>
+        <h3 data-i18n="srv5_title">Finition &amp; Rénovation</h3>
+        <p data-i18n="srv5_desc">Travaux de finition haut de gamme et rénovation complète pour transformer et sublimer vos espaces existants.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="srv-card reveal" style="--d:160ms">
+        <div class="srv-icon"><i class="fas fa-building"></i></div>
+        <h3 data-i18n="srv6_title">Promotion Immobilière</h3>
+        <p data-i18n="srv6_desc">Développement de projets résidentiels et commerciaux, de la conception à la livraison clé en main.</p>
+        <a href="devis.html" class="srv-link" data-i18n="srv_more">En savoir plus <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="proj_tag">Portfolio</p>
+      <h2 class="sec-title" data-i18n="proj_title">Nos Réalisations</h2>
+    </div>
+    <div class="proj-filter reveal">
+      <button class="flt-btn active" data-filter="all" data-i18n="flt_all">Tous</button>
+      <button class="flt-btn" data-filter="residential" data-i18n="flt_res">Résidentiel</button>
+      <button class="flt-btn" data-filter="commercial" data-i18n="flt_com">Commercial</button>
+      <button class="flt-btn" data-filter="interior" data-i18n="flt_int">Intérieur</button>
+    </div>
+    <div class="proj-grid" id="projGrid">
+      <div class="proj-card reveal" data-cat="residential">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80" alt="Villa Moderne" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_res">Résidentiel</span><h3>Villa Moderne Avedji</h3><p>Lomé, Togo — 2024</p></div>
+      </div>
+      <div class="proj-card reveal" data-cat="commercial">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Siège Social" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_com">Commercial</span><h3>Siège Social Tech Togo</h3><p>Lomé, Togo — 2023</p></div>
+      </div>
+      <div class="proj-card reveal" data-cat="interior">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Intérieur Luxe" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_int">Intérieur</span><h3>Bureau Premium Coconut</h3><p>Lomé, Togo — 2023</p></div>
+      </div>
+      <div class="proj-card reveal" data-cat="residential">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Résidence" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_res">Résidentiel</span><h3>Résidence Éco-Durable</h3><p>Lomé, Togo — 2022</p></div>
+      </div>
+      <div class="proj-card reveal" data-cat="commercial">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Complexe" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_com">Commercial</span><h3>Complexe Hôtelier Accra</h3><p>Accra, Ghana — 2022</p></div>
+      </div>
+      <div class="proj-card reveal" data-cat="interior">
+        <div class="proj-img"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Appartement" loading="lazy"></div>
+        <div class="proj-overlay"><span class="proj-cat" data-i18n="flt_int">Intérieur</span><h3>Appartement Minimaliste</h3><p>Lomé, Togo — 2021</p></div>
+      </div>
+    </div>
+    <div class="proj-cta reveal"><a href="devis.html" class="btn btn-primary" data-i18n="proj_cta">Discuter de votre projet</a></div>
+  </div>
+</section>
+
+<!-- Before / After -->
+<section id="before-after" class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="ba_tag">Transformation</p>
+      <h2 class="sec-title" data-i18n="ba_title">Avant / Après</h2>
+    </div>
+    <div class="ba-slider reveal" id="baSlider">
+      <div class="ba-after">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" alt="Après rénovation" loading="lazy">
+        <span class="ba-label ba-label-r" data-i18n="ba_after">Après</span>
+      </div>
+      <div class="ba-before" id="baBefore">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&q=80" alt="Avant rénovation" id="baBeforeImg" loading="lazy">
+        <span class="ba-label ba-label-l" data-i18n="ba_before">Avant</span>
+      </div>
+      <div class="ba-handle" id="baHandle">
+        <div class="ba-line"></div>
+        <div class="ba-btn"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i></div>
+        <div class="ba-line"></div>
+      </div>
+      <p class="ba-hint" data-i18n="ba_hint">← Glissez pour comparer / Drag to compare →</p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section id="stats" class="section section-navy">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal" style="--d:0ms"><span class="stat-n" data-target="10">0</span><span class="stat-s">+</span><p class="stat-l" data-i18n="stat1">Années d'expérience</p></div>
+      <div class="stat-item reveal" style="--d:100ms"><span class="stat-n" data-target="150">0</span><span class="stat-s">+</span><p class="stat-l" data-i18n="stat2">Projets réalisés</p></div>
+      <div class="stat-item reveal" style="--d:200ms"><span class="stat-n" data-target="3">0</span><p class="stat-l" data-i18n="stat3">Pays d'intervention</p></div>
+      <div class="stat-item reveal" style="--d:300ms"><span class="stat-n" data-target="98">0</span><span class="stat-s">%</span><p class="stat-l" data-i18n="stat4">Clients satisfaits</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="testi_tag">Témoignages</p>
+      <h2 class="sec-title" data-i18n="testi_title">Ce que disent<br>nos clients</h2>
+    </div>
+    <div class="testi-wrap reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card active">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t1_quote">"ALA Building a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Kofi Mensah" loading="lazy">
+            <div><p class="testi-name">Kofi Mensah</p><p class="testi-role" data-i18n="t1_role">Entrepreneur, Accra</p></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t2_quote">"De la conception aux finitions, l'équipe ALA a su comprendre et sublimer notre projet d'entreprise. Je recommande à 100% pour tout projet d'envergure."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Aminata Diallo" loading="lazy">
+            <div><p class="testi-name">Aminata Diallo</p><p class="testi-role" data-i18n="t2_role">Directrice, Lomé</p></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t3_quote">"Notre siège social est devenu une carte de visite architecturale. ALA maîtrise parfaitement la fusion entre fonctionnalité et esthétique contemporaine."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Jean-Baptiste Agbo" loading="lazy">
+            <div><p class="testi-name">Jean-Baptiste Agbo</p><p class="testi-role" data-i18n="t3_role">PDG, Lomé</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button class="t-btn" id="tPrev" aria-label="Précédent"><i class="fas fa-arrow-left"></i></button>
+        <div class="t-dots" id="tDots">
+          <span class="t-dot active"></span>
+          <span class="t-dot"></span>
+          <span class="t-dot"></span>
+        </div>
+        <button class="t-btn" id="tNext" aria-label="Suivant"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners -->
+<section id="partners" class="section section-sm">
+  <div class="container">
+    <p class="partners-label reveal" data-i18n="partners_label">Ils nous font confiance</p>
+    <div class="partners-wrap">
+      <div class="partners-track" id="partnersTrack">
+        <span class="partner">CEET Togo</span>
+        <span class="partner">BCEAO</span>
+        <span class="partner">Ecobank</span>
+        <span class="partner">UTB Togo</span>
+        <span class="partner">Port de Lomé</span>
+        <span class="partner">Ghana Homes</span>
+        <span class="partner">SGBÉ</span>
+        <span class="partner">Togo Real</span>
+        <span class="partner">CEET Togo</span>
+        <span class="partner">BCEAO</span>
+        <span class="partner">Ecobank</span>
+        <span class="partner">UTB Togo</span>
+        <span class="partner">Port de Lomé</span>
+        <span class="partner">Ghana Homes</span>
+        <span class="partner">SGBÉ</span>
+        <span class="partner">Togo Real</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video -->
+<section id="video" class="section section-alt">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="vid_tag">En Images</p>
+      <h2 class="sec-title" data-i18n="vid_title">Notre savoir-faire<br>en vidéo</h2>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-thumb" id="videoThumb">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80" alt="Présentation ALA Building" loading="lazy">
+        <button class="video-play" id="videoPlay" aria-label="Lire la vidéo"><i class="fas fa-play"></i></button>
+      </div>
+      <iframe id="videoFrame" src="" data-src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;width:100%;height:100%;position:absolute;inset:0;"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="sec-tag" data-i18n="contact_tag">Contact</p>
+        <h2 class="sec-title" data-i18n="contact_title">Parlons de<br>votre projet</h2>
+        <p class="contact-sub" data-i18n="contact_sub">Chaque grand projet commence par une conversation. Dites-nous ce que vous envisagez, nous ferons le reste.</p>
+        <div class="contact-details">
+          <div class="cd">
+            <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><p class="cd-lbl" data-i18n="cd_addr">Adresse</p><p>Avedji Wessomé, Lomé, Togo</p></div>
+          </div>
+          <div class="cd">
+            <div class="cd-icon"><i class="fab fa-whatsapp"></i></div>
+            <div><p class="cd-lbl">WhatsApp</p><a href="https://wa.me/22898067744" target="_blank" rel="noopener">+228 98 06 77 44</a></div>
+          </div>
+          <div class="cd">
+            <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+            <div><p class="cd-lbl">Email</p><a href="mailto:binaeltoudeka@gmail.com">binaeltoudeka@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name" data-i18n="f_name">Nom complet *</label>
+              <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+              <label for="f-phone" data-i18n="f_phone">Téléphone *</label>
+              <input type="tel" id="f-phone" name="phone" required autocomplete="tel" placeholder="+228 XX XX XX XX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-email" data-i18n="f_email">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label for="f-type" data-i18n="f_type">Type de projet *</label>
+            <select id="f-type" name="type" required>
+              <option value="" data-i18n="f_type_ph">Sélectionnez un type</option>
+              <option value="Architecture" data-i18n="f_t1">Architecture</option>
+              <option value="Construction" data-i18n="f_t2">Construction</option>
+              <option value="Design intérieur" data-i18n="f_t3">Design intérieur</option>
+              <option value="Rénovation" data-i18n="f_t4">Rénovation</option>
+              <option value="Ingénierie" data-i18n="f_t5">Ingénierie</option>
+              <option value="Autre" data-i18n="f_t6">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-msg" data-i18n="f_msg">Message *</label>
+            <textarea id="f-msg" name="message" required rows="5" placeholder="Décrivez votre projet..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <i class="fab fa-whatsapp"></i>
+            <span data-i18n="f_submit">Envoyer via WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">ALA <span>Building</span></p>
+        <p class="footer-tag" data-i18n="footer_tag">Architecture. Construction. Excellence.</p>
+        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" data-i18n="footer_nav">Navigation</p>
+        <ul>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="#testimonials" data-i18n="nav_testimonials">Témoignages</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" data-i18n="footer_srv">Services</p>
+        <ul>
+          <li><a href="#contact" data-i18n="srv1_title">Architecture</a></li>
+          <li><a href="#contact" data-i18n="srv2_title">Construction</a></li>
+          <li><a href="#contact" data-i18n="srv3_title">Design Intérieur</a></li>
+          <li><a href="#contact" data-i18n="srv4_title">Ingénierie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ALA Building – Archiram Link Africa. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/22898067744?text=Bonjour%20ALA%20Building%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip" data-i18n="wa_tip">Discutons sur WhatsApp</span>
+</a>
+
+<!-- Back to Top -->
+<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

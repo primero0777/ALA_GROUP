@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Services ALA Building — Architecture, Construction, Design intérieur, Ingénierie, Finition et Promotion immobilière à Lomé, Togo.">
+  <title>Services — ALA Building</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Translations for this page -->
+<script>
+window.PAGE_LANG = {
+  fr: {
+    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
+    ph_title:'Nos <em>Services</em>', ph_sub:"De la conception architecturale à la livraison clé en main, ALA Building vous accompagne à chaque étape de votre projet.",
+    why_tag:'Pourquoi ALA', why_title:'L\'excellence,\nnotre standard',
+    p1_title:'Expertise reconnue', p1_desc:'10 ans d\'expérience dans la conception et la réalisation de projets architecturaux d\'exception en Afrique de l\'Ouest.',
+    p2_title:'Matériaux premium', p2_desc:'Sélection rigoureuse des matériaux les plus qualitatifs pour des constructions durables et esthétiquement supérieures.',
+    p3_title:'Livraison garantie', p3_desc:'Respect strict des délais et du budget convenus, avec suivi de chantier transparent et reporting régulier.',
+    proc_tag:'Notre Processus', proc_title:'Comment nous\ntravaillons',
+    proc1_title:'Consultation', proc1_desc:'Rencontre initiale pour comprendre votre projet, vos besoins et votre vision personnelle.',
+    proc2_title:'Conception', proc2_desc:'Élaboration des plans et propositions de design sur mesure adaptés à vos attentes.',
+    proc3_title:'Réalisation', proc3_desc:'Exécution rigoureuse des travaux avec suivi qualité à chaque étape du chantier.',
+    proc4_title:'Livraison', proc4_desc:'Remise des clés et accompagnement post-livraison pour votre satisfaction totale.',
+    faq_tag:'FAQ', faq_title:'Questions fréquentes',
+    cta_title:'Prêt à démarrer votre projet ?',
+    cta_sub:'Contactez-nous dès aujourd\'hui pour une consultation offerte sans engagement.',
+    cta_btn1:'Obtenir un devis gratuit', cta_btn2:'Nous appeler'
+  },
+  en: {
+    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
+    ph_title:'Our <em>Services</em>', ph_sub:'From architectural design to turnkey delivery, ALA Building guides you through every step of your project.',
+    why_tag:'Why ALA', why_title:'Excellence,\nour standard',
+    p1_title:'Proven expertise', p1_desc:'10 years of experience designing and delivering exceptional architectural projects across West Africa.',
+    p2_title:'Premium materials', p2_desc:'Rigorous selection of the highest quality materials for durable and aesthetically superior constructions.',
+    p3_title:'Guaranteed delivery', p3_desc:'Strict adherence to agreed timelines and budgets, with transparent site monitoring and regular reporting.',
+    proc_tag:'Our Process', proc_title:'How we\nwork',
+    proc1_title:'Consultation', proc1_desc:'Initial meeting to understand your project, needs and personal vision.',
+    proc2_title:'Design', proc2_desc:'Development of bespoke plans and design proposals tailored to your expectations.',
+    proc3_title:'Construction', proc3_desc:'Rigorous execution of works with quality control at every stage of the build.',
+    proc4_title:'Handover', proc4_desc:'Key handover and post-delivery support for your complete satisfaction.',
+    faq_tag:'FAQ', faq_title:'Frequently asked questions',
+    cta_title:'Ready to start your project?',
+    cta_sub:'Contact us today for a free, no-obligation consultation.',
+    cta_btn1:'Get a free quote', cta_btn2:'Call us'
+  }
+};
+</script>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ALA <span>Building</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-link active" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle"><span id="langLabel">EN</span></button>
+      <button class="theme-btn" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="cur" data-i18n="nav_services">Services</span>
+      </nav>
+      <h1 class="page-h1" data-i18n="ph_title">Nos <em>Services</em></h1>
+      <p class="page-sub" data-i18n="ph_sub">De la conception architecturale à la livraison clé en main, ALA Building vous accompagne à chaque étape.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why ALA -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="why_tag">Pourquoi ALA</p>
+      <h2 class="sec-title" data-i18n="why_title">L'excellence,<br>notre standard</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar reveal" style="--d:0ms">
+        <div class="pillar-icon"><i class="fas fa-medal"></i></div>
+        <h4 data-i18n="p1_title">Expertise reconnue</h4>
+        <p data-i18n="p1_desc">10 ans d'expérience dans la conception et la réalisation de projets architecturaux d'exception en Afrique de l'Ouest.</p>
+      </div>
+      <div class="pillar reveal" style="--d:100ms">
+        <div class="pillar-icon"><i class="fas fa-gem"></i></div>
+        <h4 data-i18n="p2_title">Matériaux premium</h4>
+        <p data-i18n="p2_desc">Sélection rigoureuse des matériaux les plus qualitatifs pour des constructions durables et esthétiquement supérieures.</p>
+      </div>
+      <div class="pillar reveal" style="--d:200ms">
+        <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4 data-i18n="p3_title">Livraison garantie</h4>
+        <p data-i18n="p3_desc">Respect strict des délais et du budget convenus, avec suivi de chantier transparent et reporting régulier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Alternés -->
+<section class="section section-alt">
+  <div class="container">
+    <!-- Service 1 -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Architecture" loading="lazy"></div>
+      <div class="srv-alt-body">
+        <p class="srv-alt-num">01</p>
+        <i class="fas fa-drafting-compass srv-alt-icon"></i>
+        <h3>Architecture</h3>
+        <p>Conception architecturale sur mesure avec une approche esthétique unique. Nos architectes transforment vos idées en plans détaillés, en respectant les normes locales et vos aspirations les plus exigeantes.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Plans architecturaux complets</li>
+          <li class="srv-feat">Permis de construire & conformité</li>
+          <li class="srv-feat">Modélisation 3D & rendu réaliste</li>
+          <li class="srv-feat">Suivi architectural de chantier</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+    </div>
+
+    <!-- Service 2 (reverse) -->
+    <div class="srv-alt reveal" style="direction:ltr">
+      <div class="srv-alt-body" style="order:1">
+        <p class="srv-alt-num">02</p>
+        <i class="fas fa-hard-hat srv-alt-icon"></i>
+        <h3>Construction</h3>
+        <p>Maîtrise d'œuvre complète de votre projet de construction. Nous gérons l'ensemble des corps de métier pour vous livrer un bâtiment conforme à vos attentes, dans les délais et le budget prévus.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Gestion complète du chantier</li>
+          <li class="srv-feat">Approvisionnement en matériaux</li>
+          <li class="srv-feat">Coordination des sous-traitants</li>
+          <li class="srv-feat">Contrôle qualité à chaque étape</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction" loading="lazy"></div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Design Intérieur" loading="lazy"></div>
+      <div class="srv-alt-body">
+        <p class="srv-alt-num">03</p>
+        <i class="fas fa-couch srv-alt-icon"></i>
+        <h3>Design Intérieur</h3>
+        <p>Aménagement d'espaces intérieurs luxueux qui allient fonctionnalité, esthétique raffinée et expression de votre personnalité. Chaque espace devient une œuvre à vivre.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Conception de l'espace sur mesure</li>
+          <li class="srv-feat">Sélection des matériaux & mobilier</li>
+          <li class="srv-feat">Éclairage architectural</li>
+          <li class="srv-feat">Décoration & mise en scène</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+    </div>
+
+    <!-- Service 4 (reverse) -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-body" style="order:1">
+        <p class="srv-alt-num">04</p>
+        <i class="fas fa-cogs srv-alt-icon"></i>
+        <h3>Ingénierie</h3>
+        <p>Études techniques approfondies et solutions d'ingénierie innovantes pour garantir la solidité, la sécurité et la durabilité de vos constructions sur le long terme.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Études de structures & fondations</li>
+          <li class="srv-feat">Calculs béton armé & métal</li>
+          <li class="srv-feat">VRD & réseaux divers</li>
+          <li class="srv-feat">Certification & expertise technique</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80" alt="Ingénierie" loading="lazy"></div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Finition" loading="lazy"></div>
+      <div class="srv-alt-body">
+        <p class="srv-alt-num">05</p>
+        <i class="fas fa-paint-roller srv-alt-icon"></i>
+        <h3>Finition &amp; Rénovation</h3>
+        <p>Travaux de finition haut de gamme et rénovation complète pour transformer et sublimer vos espaces existants. Peinture, revêtements, menuiseries, plomberie et électricité.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Revêtements sols & murs premium</li>
+          <li class="srv-feat">Menuiseries aluminium & bois</li>
+          <li class="srv-feat">Peinture décorative</li>
+          <li class="srv-feat">Rénovation complète clé en main</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+    </div>
+
+    <!-- Service 6 (reverse) -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-body" style="order:1">
+        <p class="srv-alt-num">06</p>
+        <i class="fas fa-building srv-alt-icon"></i>
+        <h3>Promotion Immobilière</h3>
+        <p>Développement de projets immobiliers résidentiels et commerciaux ambitieux. Nous portons votre projet de l'idée à la livraison, en optimisant valeur et rentabilité.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Études de faisabilité & viabilité</li>
+          <li class="srv-feat">Montage financier & juridique</li>
+          <li class="srv-feat">Commercialisation & vente</li>
+          <li class="srv-feat">Gestion de copropriété</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Promotion immobilière" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="proc_tag">Notre Processus</p>
+      <h2 class="sec-title" data-i18n="proc_title">Comment nous<br>travaillons</h2>
+    </div>
+    <div class="process-grid">
+      <div class="proc-step reveal" style="--d:0ms">
+        <div class="proc-num">01</div>
+        <h4 data-i18n="proc1_title">Consultation</h4>
+        <p data-i18n="proc1_desc">Rencontre initiale pour comprendre votre projet, vos besoins et votre vision personnelle.</p>
+      </div>
+      <div class="proc-step reveal" style="--d:100ms">
+        <div class="proc-num">02</div>
+        <h4 data-i18n="proc2_title">Conception</h4>
+        <p data-i18n="proc2_desc">Élaboration des plans et propositions de design sur mesure adaptés à vos attentes.</p>
+      </div>
+      <div class="proc-step reveal" style="--d:200ms">
+        <div class="proc-num">03</div>
+        <h4 data-i18n="proc3_title">Réalisation</h4>
+        <p data-i18n="proc3_desc">Exécution rigoureuse des travaux avec suivi qualité à chaque étape du chantier.</p>
+      </div>
+      <div class="proc-step reveal" style="--d:300ms">
+        <div class="proc-num">04</div>
+        <h4 data-i18n="proc4_title">Livraison</h4>
+        <p data-i18n="proc4_desc">Remise des clés et accompagnement post-livraison pour votre satisfaction totale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="faq_tag">FAQ</p>
+      <h2 class="sec-title" data-i18n="faq_title">Questions fréquentes</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2 data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
+      <p data-i18n="cta_sub">Contactez-nous dès aujourd'hui pour une consultation offerte sans engagement.</p>
+      <div class="cta-actions">
+        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1">Obtenir un devis gratuit</a>
+        <a href="https://wa.me/22898067744" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta_btn2">Nous appeler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">ALA <span>Building</span></p>
+        <p class="footer-tag">Architecture. Construction. Excellence.</p>
+        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Services</p>
+        <ul>
+          <li><a href="devis.html">Architecture</a></li>
+          <li><a href="devis.html">Construction</a></li>
+          <li><a href="devis.html">Design Intérieur</a></li>
+          <li><a href="devis.html">Ingénierie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ALA Building – Archiram Link Africa. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22898067744?text=Bonjour%20ALA%20Building%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Discutons sur WhatsApp</span>
+</a>
+<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+const FAQ_DATA = {
+  fr: [
+    { q: 'Quelle est la durée moyenne d\'un projet de construction ?', a: 'La durée varie selon la complexité du projet. Une villa individuelle prend généralement 6 à 12 mois, un immeuble commercial 12 à 24 mois. Nous établissons un planning détaillé dès la phase de consultation.' },
+    { q: 'Proposez-vous des services clé en main ?', a: 'Oui, nous proposons une offre complète de A à Z : conception architecturale, ingénierie, construction et finitions. Vous n\'avez qu\'un seul interlocuteur tout au long du projet.' },
+    { q: 'Travaillez-vous en dehors de Lomé ?', a: 'Absolument. Nous intervenons au Togo, au Ghana et dans d\'autres pays d\'Afrique de l\'Ouest selon les projets. Contactez-nous pour discuter de votre situation géographique.' },
+    { q: 'Comment est calculé le coût d\'un projet ?', a: 'Le coût dépend de la superficie, des matériaux choisis, de la complexité architecturale et du calendrier. Nous réalisons une estimation gratuite après une consultation initiale.' },
+    { q: 'Offrez-vous une garantie sur vos constructions ?', a: 'Oui, nous offrons une garantie décennale sur nos constructions conformément aux normes en vigueur, ainsi qu\'une garantie de parfait achèvement d\'un an après réception des travaux.' },
+    { q: 'Est-il possible de modifier les plans en cours de chantier ?', a: 'Les modifications mineures sont possibles mais peuvent entraîner des ajustements de coût et de délai. Nous recommandons de finaliser les plans avant le début du chantier pour éviter les surcoûts.' }
+  ],
+  en: [
+    { q: 'How long does a construction project typically take?', a: 'Duration varies by project complexity. A private villa typically takes 6 to 12 months; a commercial building 12 to 24 months. We establish a detailed schedule from the consultation phase.' },
+    { q: 'Do you offer turnkey services?', a: 'Yes, we offer a comprehensive A-to-Z service: architectural design, engineering, construction and finishes. You have a single point of contact throughout the entire project.' },
+    { q: 'Do you work outside Lomé?', a: 'Absolutely. We operate in Togo, Ghana and other West African countries depending on the project. Contact us to discuss your geographic situation.' },
+    { q: 'How is a project cost calculated?', a: 'Cost depends on surface area, chosen materials, architectural complexity and timeline. We provide a free estimate after an initial consultation.' },
+    { q: 'Do you offer a construction warranty?', a: 'Yes, we offer a ten-year warranty on our constructions in accordance with applicable standards, as well as a one-year perfect completion warranty after handover.' },
+    { q: 'Can plans be changed during construction?', a: 'Minor modifications are possible but may result in cost and schedule adjustments. We recommend finalising plans before construction begins to avoid additional costs.' }
+  ]
+};
+
+function renderFAQ() {
+  const lang = localStorage.getItem('ala-lang') || 'fr';
+  const items = FAQ_DATA[lang] || FAQ_DATA.fr;
+  const list = document.getElementById('faqList');
+  list.innerHTML = items.map(item => `
+    <div class="faq-item">
+      <div class="faq-q">
+        <span>${item.q}</span>
+        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-body">${item.a}</div></div>
+    </div>
+  `).join('');
+
+  list.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      list.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+}
+
+renderFAQ();
+document.getElementById('langToggle').addEventListener('click', () => setTimeout(renderFAQ, 50));
+</script>
+</body>
+</html>

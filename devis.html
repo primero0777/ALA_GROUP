@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Devis gratuit ALA Building — Obtenez une estimation personnalisée pour votre projet de construction ou rénovation.">
+  <title>Devis Gratuit — ALA Building</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+window.PAGE_LANG = {
+  fr: {
+    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
+    dv_title:'Votre <span>Devis</span> Gratuit',
+    dv_sub:'3 étapes simples pour recevoir une estimation personnalisée sous 48h.',
+    step1:'Type de projet', step2:'Détails', step3:'Vos coordonnées',
+    s1_title:'Quel type de projet ?', s1_sub:'Sélectionnez la nature de votre projet.',
+    t1:'Architecture', t2:'Construction', t3:'Design Intérieur', t4:'Rénovation', t5:'Ingénierie', t6:'Autre',
+    s2_title:'Détails du projet', s2_sub:'Aidez-nous à mieux comprendre votre besoin.',
+    budget_title:'Quel est votre budget estimé ?',
+    b1_price:'< 5 000 000 FCFA', b1_desc:'Petit projet / Rénovation partielle',
+    b2_price:'5M – 15M FCFA', b2_desc:'Maison individuelle / Appartement',
+    b3_price:'15M – 50M FCFA', b3_desc:'Villa haut de gamme / Immeuble',
+    b4_price:'> 50M FCFA', b4_desc:'Grand projet commercial / Complexe',
+    timeline_lbl:'Délai souhaité de démarrage', tl1:'Immédiatement', tl2:'Dans 3 mois', tl3:'Dans 6 mois', tl4:'Dans 1 an et +',
+    desc_lbl:'Description du projet *',
+    desc_ph:'Décrivez votre projet en quelques lignes : superficie souhaitée, nombre de pièces, style architectural, contraintes particulières...',
+    s3_title:'Vos coordonnées', s3_sub:'Comment pouvons-nous vous joindre ?',
+    f_name:'Nom complet *', f_phone:'Téléphone / WhatsApp *', f_email:'Email',
+    f_city:'Ville / Localité *', btn_next:'Continuer', btn_prev:'Retour', btn_submit:'Envoyer ma demande <i class="fab fa-whatsapp"></i>',
+    ok_title:'Demande envoyée !',
+    ok_sub:'Votre demande de devis a bien été transmise. Notre équipe vous contactera dans les 48 heures.'
+  },
+  en: {
+    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
+    dv_title:'Your Free <span>Quote</span>',
+    dv_sub:'3 simple steps to receive a personalised estimate within 48 hours.',
+    step1:'Project type', step2:'Details', step3:'Your details',
+    s1_title:'What type of project?', s1_sub:'Select the nature of your project.',
+    t1:'Architecture', t2:'Construction', t3:'Interior Design', t4:'Renovation', t5:'Engineering', t6:'Other',
+    s2_title:'Project details', s2_sub:'Help us better understand your needs.',
+    budget_title:'What is your estimated budget?',
+    b1_price:'< 5,000,000 FCFA', b1_desc:'Small project / Partial renovation',
+    b2_price:'5M – 15M FCFA', b2_desc:'Individual house / Apartment',
+    b3_price:'15M – 50M FCFA', b3_desc:'High-end villa / Building',
+    b4_price:'> 50M FCFA', b4_desc:'Large commercial project / Complex',
+    timeline_lbl:'Desired start timeline', tl1:'Immediately', tl2:'Within 3 months', tl3:'Within 6 months', tl4:'In 1 year+',
+    desc_lbl:'Project description *',
+    desc_ph:'Describe your project: desired area, number of rooms, architectural style, special constraints...',
+    s3_title:'Your contact details', s3_sub:'How can we reach you?',
+    f_name:'Full name *', f_phone:'Phone / WhatsApp *', f_email:'Email',
+    f_city:'City / Location *', btn_next:'Continue', btn_prev:'Back', btn_submit:'Send my request <i class="fab fa-whatsapp"></i>',
+    ok_title:'Request sent!',
+    ok_sub:'Your quote request has been submitted. Our team will contact you within 48 hours.'
+  }
+};
+</script>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ALA <span>Building</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle"><span id="langLabel">EN</span></button>
+      <button class="theme-btn" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Wizard Hero -->
+<div class="wizard-hero">
+  <div class="container">
+    <h1 data-i18n="dv_title">Votre <span>Devis</span> Gratuit</h1>
+    <p data-i18n="dv_sub">3 étapes simples pour recevoir une estimation personnalisée sous 48h.</p>
+  </div>
+</div>
+
+<!-- Wizard Body -->
+<div class="wizard-body container">
+
+  <!-- Steps indicator -->
+  <div class="w-steps" id="wSteps">
+    <div class="w-step active" data-step="1">
+      <div class="w-num">1</div>
+      <p class="w-lbl" data-i18n="step1">Type</p>
+    </div>
+    <div class="w-sep" id="sep1"></div>
+    <div class="w-step" data-step="2">
+      <div class="w-num">2</div>
+      <p class="w-lbl" data-i18n="step2">Détails</p>
+    </div>
+    <div class="w-sep" id="sep2"></div>
+    <div class="w-step" data-step="3">
+      <div class="w-num">3</div>
+      <p class="w-lbl" data-i18n="step3">Contact</p>
+    </div>
+  </div>
+
+  <!-- Step 1 — Project type -->
+  <div class="w-panel active" id="panel1">
+    <h2 class="w-title" data-i18n="s1_title">Quel type de projet ?</h2>
+    <p class="w-sub" data-i18n="s1_sub">Sélectionnez la nature de votre projet.</p>
+    <div class="type-grid">
+      <div class="type-card" data-type="Architecture"><i class="fas fa-drafting-compass"></i><p data-i18n="t1">Architecture</p></div>
+      <div class="type-card" data-type="Construction"><i class="fas fa-hard-hat"></i><p data-i18n="t2">Construction</p></div>
+      <div class="type-card" data-type="Design Intérieur"><i class="fas fa-couch"></i><p data-i18n="t3">Design Intérieur</p></div>
+      <div class="type-card" data-type="Rénovation"><i class="fas fa-paint-roller"></i><p data-i18n="t4">Rénovation</p></div>
+      <div class="type-card" data-type="Ingénierie"><i class="fas fa-cogs"></i><p data-i18n="t5">Ingénierie</p></div>
+      <div class="type-card" data-type="Autre"><i class="fas fa-ellipsis-h"></i><p data-i18n="t6">Autre</p></div>
+    </div>
+    <div class="w-nav">
+      <span></span>
+      <button class="btn btn-primary" id="next1" data-i18n="btn_next" disabled>Continuer</button>
+    </div>
+  </div>
+
+  <!-- Step 2 — Details -->
+  <div class="w-panel" id="panel2">
+    <h2 class="w-title" data-i18n="s2_title">Détails du projet</h2>
+    <p class="w-sub" data-i18n="s2_sub">Aidez-nous à mieux comprendre votre besoin.</p>
+
+    <p class="sec-tag" style="margin-bottom:1rem" data-i18n="budget_title">Quel est votre budget estimé ?</p>
+    <div class="budget-grid">
+      <div class="budget-card" data-budget="< 5M FCFA">
+        <p class="bc-price" data-i18n="b1_price">&lt; 5 000 000 FCFA</p>
+        <p class="bc-desc" data-i18n="b1_desc">Petit projet / Rénovation partielle</p>
+      </div>
+      <div class="budget-card" data-budget="5M-15M FCFA">
+        <p class="bc-price" data-i18n="b2_price">5M – 15M FCFA</p>
+        <p class="bc-desc" data-i18n="b2_desc">Maison individuelle / Appartement</p>
+      </div>
+      <div class="budget-card" data-budget="15M-50M FCFA">
+        <p class="bc-price" data-i18n="b3_price">15M – 50M FCFA</p>
+        <p class="bc-desc" data-i18n="b3_desc">Villa haut de gamme / Immeuble</p>
+      </div>
+      <div class="budget-card" data-budget="> 50M FCFA">
+        <p class="bc-price" data-i18n="b4_price">&gt; 50M FCFA</p>
+        <p class="bc-desc" data-i18n="b4_desc">Grand projet commercial / Complexe</p>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:1.5rem">
+      <label data-i18n="timeline_lbl">Délai souhaité de démarrage</label>
+      <select id="f-timeline">
+        <option value="Immédiatement" data-i18n="tl1">Immédiatement</option>
+        <option value="Dans 3 mois" data-i18n="tl2">Dans 3 mois</option>
+        <option value="Dans 6 mois" data-i18n="tl3">Dans 6 mois</option>
+        <option value="Dans 1 an et +" data-i18n="tl4">Dans 1 an et +</option>
+      </select>
+    </div>
+
+    <div class="form-group" style="margin-top:1.25rem">
+      <label for="f-desc" data-i18n="desc_lbl">Description du projet *</label>
+      <textarea id="f-desc" rows="5" placeholder="Décrivez votre projet..." data-i18n-ph="desc_ph"></textarea>
+    </div>
+
+    <div class="w-nav">
+      <button class="btn btn-ghost" id="prev2" onclick="goStep(1)" style="color:var(--text-2);border-color:var(--border)" data-i18n="btn_prev">Retour</button>
+      <button class="btn btn-primary" id="next2" data-i18n="btn_next">Continuer</button>
+    </div>
+  </div>
+
+  <!-- Step 3 — Contact -->
+  <div class="w-panel" id="panel3">
+    <h2 class="w-title" data-i18n="s3_title">Vos coordonnées</h2>
+    <p class="w-sub" data-i18n="s3_sub">Comment pouvons-nous vous joindre ?</p>
+
+    <div class="contact-form" style="display:flex;flex-direction:column;gap:1.25rem">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="f-name" data-i18n="f_name">Nom complet *</label>
+          <input type="text" id="f-name" placeholder="Votre nom" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="f-phone" data-i18n="f_phone">Téléphone / WhatsApp *</label>
+          <input type="tel" id="f-phone" placeholder="+228 XX XX XX XX" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="f-email" data-i18n="f_email">Email</label>
+          <input type="email" id="f-email" placeholder="votre@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="f-city" data-i18n="f_city">Ville / Localité *</label>
+          <input type="text" id="f-city" placeholder="Lomé, Togo">
+        </div>
+      </div>
+    </div>
+
+    <div class="w-nav">
+      <button class="btn btn-ghost" onclick="goStep(2)" style="color:var(--text-2);border-color:var(--border)" data-i18n="btn_prev">Retour</button>
+      <button class="btn btn-primary" id="submitDevis">Envoyer ma demande <i class="fab fa-whatsapp"></i></button>
+    </div>
+  </div>
+
+  <!-- Success -->
+  <div class="w-success" id="wSuccess">
+    <div class="w-success-icon"><i class="fab fa-whatsapp"></i></div>
+    <h2 data-i18n="ok_title">Demande envoyée !</h2>
+    <p data-i18n="ok_sub">Votre demande de devis a bien été transmise. Notre équipe vous contactera dans les 48 heures.</p>
+    <a href="index.html" class="btn btn-primary" style="margin-top:2rem;display:inline-flex">Retour à l'accueil</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">ALA <span>Building</span></p>
+        <p class="footer-tag">Architecture. Construction. Excellence.</p>
+        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Services</p>
+        <ul>
+          <li><a href="devis.html">Architecture</a></li>
+          <li><a href="devis.html">Construction</a></li>
+          <li><a href="devis.html">Design Intérieur</a></li>
+          <li><a href="devis.html">Ingénierie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ALA Building – Archiram Link Africa. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22898067744?text=Bonjour%20ALA%20Building%2C%20je%20souhaite%20un%20devis." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Discutons sur WhatsApp</span>
+</a>
+<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+/* ── Wizard state ── */
+let step = 1;
+let selected = { type: '', budget: '', timeline: '' };
+
+function goStep(n) {
+  document.querySelectorAll('.w-panel').forEach((p, i) => p.classList.toggle('active', i + 1 === n));
+  document.querySelectorAll('.w-step').forEach((s, i) => {
+    s.classList.toggle('active', i + 1 === n);
+    s.classList.toggle('done', i + 1 < n);
+  });
+  document.getElementById('sep1').classList.toggle('done', n > 1);
+  document.getElementById('sep2').classList.toggle('done', n > 2);
+  step = n;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ── Step 1: type selection ── */
+document.querySelectorAll('.type-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.type-card').forEach(c => c.classList.remove('sel'));
+    card.classList.add('sel');
+    selected.type = card.dataset.type;
+    document.getElementById('next1').disabled = false;
+    document.getElementById('next1').removeAttribute('disabled');
+  });
+});
+document.getElementById('next1').addEventListener('click', () => {
+  if (!selected.type) return;
+  goStep(2);
+});
+
+/* ── Step 2: budget + details ── */
+document.querySelectorAll('.budget-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.budget-card').forEach(c => c.classList.remove('sel'));
+    card.classList.add('sel');
+    selected.budget = card.dataset.budget;
+  });
+});
+document.getElementById('next2').addEventListener('click', () => {
+  const desc = document.getElementById('f-desc').value.trim();
+  if (!desc) {
+    document.getElementById('f-desc').focus();
+    document.getElementById('f-desc').style.borderColor = 'var(--gold)';
+    return;
+  }
+  selected.timeline = document.getElementById('f-timeline').value;
+  selected.desc = desc;
+  goStep(3);
+});
+
+/* ── Step 3: submit ── */
+document.getElementById('submitDevis').addEventListener('click', () => {
+  const lang = localStorage.getItem('ala-lang') || 'fr';
+  const name  = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const city  = document.getElementById('f-city').value.trim();
+
+  if (!name || !phone || !city) {
+    alert(lang === 'fr' ? 'Veuillez remplir tous les champs obligatoires (*).' : 'Please fill in all required fields (*).');
+    return;
+  }
+
+  const msg = lang === 'fr'
+    ? `🏗️ *Demande de Devis — ALA Building*\n\n📋 *Projet:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Non précisé'}\n🗓️ *Délai:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nNom: ${name}\nTél: ${phone}${email ? '\nEmail: ' + email : ''}\nVille: ${city}`
+    : `🏗️ *Quote Request — ALA Building*\n\n📋 *Project:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Not specified'}\n🗓️ *Timeline:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nCity: ${city}`;
+
+  window.open(`https://wa.me/22898067744?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
+
+  // Show success
+  document.getElementById('panel3').classList.remove('active');
+  document.getElementById('wSteps').style.display = 'none';
+  document.getElementById('wSuccess').classList.add('show');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="À propos d'ALA Building – Archiram Link Africa. Découvrez notre histoire, nos valeurs, notre équipe et notre vision pour l'architecture en Afrique de l'Ouest.">
+  <title>À Propos — ALA Building</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── ABOUT PAGE HERO ── */
+    .about-hero {
+      position: relative;
+      padding: calc(var(--nav-h) + 5rem) 0 4.5rem;
+      background: var(--navy);
+      overflow: hidden;
+    }
+    .about-hero-mosaic {
+      position: absolute; inset: 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      opacity: .13;
+      filter: saturate(.25);
+    }
+    .about-hero-mosaic img { width:100%; height:100%; object-fit:cover; }
+    .about-hero-mosaic::after {
+      content:'';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, var(--navy) 0%, rgba(11,28,58,.5) 55%, var(--navy) 100%);
+    }
+    .about-hero .page-hero-inner { position:relative; z-index:1; }
+    .about-hero .page-h1 em { color:var(--gold); font-style:italic; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      display:flex; align-items:center; gap:.5rem;
+      font-size:.75rem; color:rgba(255,255,255,.5); margin-bottom:1.5rem;
+    }
+    .breadcrumb a { color:rgba(255,255,255,.5); transition:color var(--dur); }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb .sep { font-size:.5rem; opacity:.4; }
+    .breadcrumb .cur { color:var(--gold); }
+    .page-h1 {
+      font-family:var(--font-d); font-size:clamp(2.75rem,6vw,5rem);
+      font-weight:300; line-height:1.1; color:#fff; margin-bottom:1.25rem;
+    }
+    .page-sub {
+      font-size:1.0625rem; color:rgba(255,255,255,.6);
+      max-width:580px; line-height:1.75; font-weight:300;
+    }
+
+    /* ── STATS STRIP ── */
+    .about-stats-strip {
+      background: var(--navy);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+    .ass-item {
+      padding: 2.5rem 1rem;
+      border-right: 1px solid rgba(255,255,255,.07);
+    }
+    .ass-item:last-child { border-right: none; }
+    .ass-n {
+      font-family:var(--font-d); font-size:2.75rem;
+      font-weight:300; color:var(--gold); display:block; line-height:1;
+    }
+    .ass-l {
+      font-size:.6875rem; color:rgba(255,255,255,.45);
+      letter-spacing:.1em; text-transform:uppercase; margin-top:.375rem; display:block;
+    }
+
+    /* ── HISTOIRE (split) ── */
+    .histoire-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .histoire-img-wrap {
+      position: relative;
+    }
+    .histoire-img-wrap img {
+      width:100%; border-radius:var(--radius); box-shadow:var(--sh-lg);
+      aspect-ratio:4/5; object-fit:cover;
+    }
+    .histoire-badge {
+      position:absolute; bottom:-1.5rem; right:-1.5rem;
+      background:var(--gold); color:var(--navy);
+      padding:1.5rem 1.75rem; border-radius:var(--radius);
+      text-align:center; box-shadow:var(--gold-glow);
+    }
+    .histoire-badge strong {
+      display:block; font-family:var(--font-d);
+      font-size:2.5rem; font-weight:300; line-height:1;
+    }
+    .histoire-badge span {
+      font-size:.625rem; font-weight:700;
+      letter-spacing:.15em; text-transform:uppercase;
+    }
+    .histoire-body { padding-right:1rem; }
+    .histoire-body .sec-tag { text-align:left; display:block; margin-bottom:.875rem; }
+    .histoire-body .sec-title { text-align:left; margin-bottom:1.75rem; }
+    .histoire-body p {
+      font-size:.9375rem; color:var(--text-3); line-height:1.85; margin-bottom:1.25rem;
+    }
+    .histoire-body p:last-of-type { margin-bottom:2rem; }
+    .histoire-body .btn { display:inline-flex; }
+
+    /* ── VALEURS ── */
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .valeur-card {
+      padding: 2.5rem 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all .4s var(--ease);
+      position: relative; overflow: hidden;
+    }
+    .valeur-card::before {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg,var(--gold-light),transparent);
+      opacity:0; transition:opacity .4s;
+    }
+    .valeur-card:hover { transform:translateY(-8px); box-shadow:var(--sh-lg); border-color:var(--gold); }
+    .valeur-card:hover::before { opacity:1; }
+    .valeur-icon {
+      width:60px; height:60px; border-radius:50%;
+      background:var(--gold-light);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.375rem; color:var(--gold);
+      margin:0 auto 1.5rem;
+      transition: all .3s;
+    }
+    .valeur-card:hover .valeur-icon { background:var(--gold); color:var(--navy); transform:scale(1.08); }
+    .valeur-card h4 {
+      font-family:var(--font-d); font-size:1.375rem;
+      font-weight:400; color:var(--text); margin-bottom:.75rem;
+    }
+    .valeur-card p { font-size:.875rem; color:var(--text-3); line-height:1.7; }
+
+    /* ── EQUIPE ── */
+    .equipe-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all .4s var(--ease);
+    }
+    .team-card:hover { transform:translateY(-6px); box-shadow:var(--sh-lg); }
+    .team-img {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+    }
+    .team-img img {
+      width:100%; height:100%; object-fit:cover; object-position:top center;
+      transition: transform .6s var(--ease);
+    }
+    .team-card:hover .team-img img { transform:scale(1.06); }
+    .team-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(to top, rgba(11,28,58,.9) 0%, transparent 50%);
+      opacity:0; transition:opacity .4s;
+      display:flex; align-items:flex-end; padding:1.5rem;
+    }
+    .team-card:hover .team-overlay { opacity:1; }
+    .team-social { display:flex; gap:.5rem; }
+    .team-social a {
+      width:34px; height:34px; border-radius:50%;
+      background:rgba(255,255,255,.15); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-size:.75rem; transition:all .3s; backdrop-filter:blur(4px);
+    }
+    .team-social a:hover { background:var(--gold); color:var(--navy); }
+    .team-info { padding:1.375rem 1.5rem; }
+    .team-name {
+      font-family:var(--font-d); font-size:1.25rem;
+      font-weight:400; color:var(--text); margin-bottom:.2rem;
+    }
+    .team-role {
+      font-size:.75rem; font-weight:600; letter-spacing:.1em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:.625rem;
+    }
+    .team-bio { font-size:.8125rem; color:var(--text-3); line-height:1.65; }
+
+    /* ── VISION (full-width quote) ── */
+    .vision-section {
+      background: var(--navy);
+      padding: 7rem 0;
+      position: relative; overflow: hidden;
+    }
+    .vision-section::before {
+      content: '"';
+      position: absolute; top:-2rem; left:5%;
+      font-family: var(--font-d);
+      font-size: 30rem; line-height:1;
+      color: rgba(201,168,76,.04);
+      pointer-events:none;
+    }
+    .vision-inner {
+      max-width: 860px; margin:0 auto;
+      text-align: center; position:relative; z-index:1;
+    }
+    .vision-quote {
+      font-family:var(--font-d); font-size:clamp(1.75rem,3.5vw,2.75rem);
+      font-weight:300; font-style:italic; color:#fff; line-height:1.5;
+      margin-bottom:2rem;
+    }
+    .vision-quote em { color:var(--gold); font-style:inherit; }
+    .vision-author {
+      display:flex; align-items:center; justify-content:center; gap:1rem;
+    }
+    .vision-author img {
+      width:52px; height:52px; border-radius:50%;
+      object-fit:cover; border:2px solid var(--gold);
+    }
+    .vision-author-name { font-weight:600; color:#fff; font-size:.9375rem; text-align:left; }
+    .vision-author-role {
+      font-size:.75rem; color:rgba(255,255,255,.45);
+      letter-spacing:.08em; text-transform:uppercase; margin-top:2px;
+    }
+
+    /* ── TEMOIGNAGES ── */
+    .testi-wrap { max-width:760px; margin:0 auto; }
+
+    /* ── TIMELINE (Notre parcours) ── */
+    .timeline {
+      position: relative;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content:'';
+      position:absolute; top:0; bottom:0; left:50%;
+      width:1px; background:var(--border);
+      transform:translateX(-50%);
+    }
+    .tl-item {
+      display:grid; grid-template-columns:1fr 60px 1fr;
+      gap:0; margin-bottom:3rem; align-items:start;
+    }
+    .tl-body-left { text-align:right; padding-right:2.5rem; padding-top:.3rem; }
+    .tl-body-right { text-align:left; padding-left:2.5rem; padding-top:.3rem; }
+    .tl-body-empty { }
+    .tl-dot-col {
+      display:flex; flex-direction:column; align-items:center;
+    }
+    .tl-dot {
+      width:16px; height:16px; border-radius:50%;
+      background:var(--gold); border:3px solid var(--bg);
+      box-shadow:0 0 0 2px var(--gold); flex-shrink:0; margin-top:.3rem;
+    }
+    .tl-year {
+      font-family:var(--font-d); font-size:.875rem; font-weight:500;
+      color:var(--gold); letter-spacing:.06em; margin-bottom:.375rem; display:block;
+    }
+    .tl-title {
+      font-family:var(--font-d); font-size:1.25rem;
+      font-weight:400; color:var(--text); margin-bottom:.375rem;
+    }
+    .tl-desc { font-size:.8125rem; color:var(--text-3); line-height:1.7; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: var(--navy);
+      border-radius: 1.25rem;
+      padding: 4rem 3rem;
+      text-align: center;
+      position: relative; overflow:hidden;
+    }
+    .cta-banner::before {
+      content:'';
+      position:absolute; inset:0;
+      background: radial-gradient(ellipse 80% 80% at 50% 120%, rgba(201,168,76,.18) 0%, transparent 70%);
+    }
+    .cta-banner > * { position:relative; z-index:1; }
+    .cta-banner h2 {
+      font-family:var(--font-d); font-size:clamp(2rem,4vw,3rem);
+      font-weight:300; color:#fff; margin-bottom:1rem;
+    }
+    .cta-banner p { color:rgba(255,255,255,.6); font-size:1rem; margin-bottom:2rem; }
+    .cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1100px) {
+      .valeurs-grid { grid-template-columns:repeat(2,1fr); }
+      .equipe-grid { grid-template-columns:repeat(2,1fr); }
+      .histoire-grid { grid-template-columns:1fr; gap:3rem; }
+      .histoire-img-wrap { max-width:520px; }
+      .histoire-badge { bottom:-1rem; right:-.75rem; }
+    }
+    @media (max-width:768px) {
+      .about-stats-strip { grid-template-columns:repeat(2,1fr); }
+      .ass-item { border-bottom:1px solid rgba(255,255,255,.07); }
+      .timeline::before { left:0; }
+      .tl-item { grid-template-columns:32px 1fr; }
+      .tl-body-left { display:none; }
+      .tl-body-right { padding-left:1.5rem; }
+      .tl-dot-col { align-items:flex-start; }
+    }
+    @media (max-width:580px) {
+      .valeurs-grid { grid-template-columns:1fr; }
+      .equipe-grid { grid-template-columns:1fr; }
+      .about-stats-strip { grid-template-columns:1fr 1fr; }
+      .histoire-img-wrap { max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+<script>
+window.PAGE_LANG = {
+  fr: {
+    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
+    ph_title:'Notre <em>Histoire</em>',
+    ph_sub:'Depuis 2014, ALA Building façonne le paysage architectural de l\'Afrique de l\'Ouest avec passion, rigueur et une quête permanente d\'excellence.',
+    ass1:'Projets réalisés', ass2:'Années d\'expérience', ass3:'Pays d\'intervention', ass4:'Clients satisfaits',
+    hist_tag:'Notre Origine', hist_title:'Bâtir l\'Afrique\nde demain',
+    hist_p1:'ALA Building – Archiram Link Africa – est né d\'une vision simple et ambitieuse : doter l\'Afrique de l\'Ouest d\'une architecture de classe mondiale, ancrée dans l\'identité culturelle du continent et tournée vers l\'avenir.',
+    hist_p2:'Fondé à Lomé en 2014 par une équipe d\'architectes et d\'ingénieurs passionnés, le cabinet a rapidement bâti sa réputation sur la rigueur technique, l\'excellence esthétique et un service client irréprochable. Aujourd\'hui, ALA Building intervient au Togo, au Ghana et dans plusieurs pays d\'Afrique de l\'Ouest.',
+    hist_p3:'Chaque projet que nous réalisons est une déclaration architecturale : une réponse créative aux défis du milieu, une signature qui durera des générations.',
+    hist_cta:'Voir nos réalisations',
+    val_tag:'Nos Valeurs', val_title:'L\'ADN d\'ALA Building',
+    val1_title:'Excellence', val1_desc:'Chaque détail compte. Nous n\'acceptons rien de moins que le meilleur dans nos conceptions, nos matériaux et nos finitions.',
+    val2_title:'Intégrité', val2_desc:'Transparence totale sur les coûts, délais et processus. La confiance de nos clients est notre bien le plus précieux.',
+    val3_title:'Innovation', val3_desc:'Nous intégrons les dernières technologies de conception et les matériaux les plus avancés pour bâtir les projets de demain.',
+    val4_title:'Durabilité', val4_desc:'Architecture éco-responsable, intégration au contexte local et construction durable pour les générations futures.',
+    team_tag:'Notre Équipe', team_title:'Les Architectes\nderrière l\'excellence',
+    tm1_name:'Kofi Amedzro', tm1_role:'Fondateur & Architecte Principal', tm1_bio:'10 ans d\'expérience en architecture résidentielle et commerciale. Diplômé de l\'ESAC Lomé et de l\'École Polytechnique de Paris.',
+    tm2_name:'Afia Mensah', tm2_role:'Directrice Design Intérieur', tm2_bio:'Spécialiste en aménagement de luxe et design biophilique. Parcours entre l\'Afrique de l\'Ouest, Paris et Dubai.',
+    tm3_name:'Jean-Luc Agbodjan', tm3_role:'Ingénieur Structures', tm3_bio:'Expert en calculs de structures et ingénierie du bâtiment. 8 ans sur des projets de grande envergure au Togo et au Ghana.',
+    tm4_name:'Fatou Coulibaly', tm4_role:'Cheffe de Projets', tm4_bio:'Coordination et pilotage de projets complexes. Garantit la livraison dans les délais et la satisfaction complète du client.',
+    parc_tag:'Notre Parcours', parc_title:'10 ans d\'évolution',
+    vis_quote:'"Nous ne construisons pas simplement des bâtiments. Nous créons des espaces qui <em>inspirent</em>, qui durent et qui racontent l\'histoire d\'un continent en marche."',
+    vis_author:'Kofi Amedzro', vis_role:'Fondateur & Architecte Principal',
+    testi_tag:'Témoignages', testi_title:'Ce que disent\nnos clients',
+    t1_quote:'"ALA Building a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."',
+    t1_role:'Entrepreneur, Accra',
+    t2_quote:'"De la conception aux finitions, l\'équipe ALA a su comprendre et sublimer notre projet d\'entreprise. Je recommande à 100% pour tout projet d\'envergure."',
+    t2_role:'Directrice, Lomé',
+    t3_quote:'"Notre siège social est devenu une carte de visite architecturale. ALA maîtrise parfaitement la fusion entre fonctionnalité et esthétique contemporaine."',
+    t3_role:'PDG, Lomé',
+    partners_label:'Ils nous font confiance',
+    cta_title:'Prêt à bâtir avec nous ?',
+    cta_sub:'Chaque grand projet commence par une conversation. Discutons de votre vision.',
+    cta_btn1:'Obtenir un devis gratuit', cta_btn2:'Nous contacter'
+  },
+  en: {
+    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
+    ph_title:'Our <em>Story</em>',
+    ph_sub:'Since 2014, ALA Building has been shaping the architectural landscape of West Africa with passion, rigour and a relentless pursuit of excellence.',
+    ass1:'Projects delivered', ass2:'Years of experience', ass3:'Countries', ass4:'Satisfied clients',
+    hist_tag:'Our Origin', hist_title:'Building tomorrow\'s\nAfrica',
+    hist_p1:'ALA Building – Archiram Link Africa – was born from a simple yet ambitious vision: to bring world-class architecture to West Africa, rooted in the continent\'s cultural identity and oriented towards the future.',
+    hist_p2:'Founded in Lomé in 2014 by a team of passionate architects and engineers, the firm quickly built its reputation on technical rigour, aesthetic excellence and impeccable client service. Today, ALA Building operates in Togo, Ghana and several other West African countries.',
+    hist_p3:'Every project we deliver is an architectural statement — a creative response to its environment, a signature that will endure for generations.',
+    hist_cta:'View our portfolio',
+    val_tag:'Our Values', val_title:'The DNA of ALA Building',
+    val1_title:'Excellence', val1_desc:'Every detail matters. We accept nothing less than the best in our designs, materials and finishes.',
+    val2_title:'Integrity', val2_desc:'Full transparency on costs, timelines and process. Our clients\' trust is our most valuable asset.',
+    val3_title:'Innovation', val3_desc:'We integrate the latest design technologies and most advanced materials to build the projects of tomorrow.',
+    val4_title:'Sustainability', val4_desc:'Eco-responsible architecture, local contextual integration and sustainable construction for future generations.',
+    team_tag:'Our Team', team_title:'The Architects\nbehind excellence',
+    tm1_name:'Kofi Amedzro', tm1_role:'Founder & Lead Architect', tm1_bio:'10 years of experience in residential and commercial architecture. Graduate of ESAC Lomé and École Polytechnique de Paris.',
+    tm2_name:'Afia Mensah', tm2_role:'Interior Design Director', tm2_bio:'Specialist in luxury fit-out and biophilic design. Career spanning West Africa, Paris and Dubai.',
+    tm3_name:'Jean-Luc Agbodjan', tm3_role:'Structural Engineer', tm3_bio:'Expert in structural calculations and building engineering. 8 years on large-scale projects across Togo and Ghana.',
+    tm4_name:'Fatou Coulibaly', tm4_role:'Project Manager', tm4_bio:'Coordination and management of complex projects. Ensures on-time delivery and complete client satisfaction.',
+    parc_tag:'Our Journey', parc_title:'10 years of growth',
+    vis_quote:'"We don\'t just build buildings. We create spaces that <em>inspire</em>, that endure and that tell the story of a continent on the move."',
+    vis_author:'Kofi Amedzro', vis_role:'Founder & Lead Architect',
+    testi_tag:'Testimonials', testi_title:'What our clients\nare saying',
+    t1_quote:'"ALA Building turned our vision into reality. Remarkable professionalism and exceptional attention to detail. Our villa exceeds every expectation."',
+    t1_role:'Entrepreneur, Accra',
+    t2_quote:'"From concept to finish, the ALA team understood and elevated our project. I recommend them 100% for any major project."',
+    t2_role:'Director, Lomé',
+    t3_quote:'"Our headquarters has become an architectural calling card. ALA perfectly masters the fusion of functionality and contemporary aesthetics."',
+    t3_role:'CEO, Lomé',
+    partners_label:'They trust us',
+    cta_title:'Ready to build with us?',
+    cta_sub:'Every great project begins with a conversation. Let\'s discuss your vision.',
+    cta_btn1:'Get a free quote', cta_btn2:'Contact us'
+  }
+};
+</script>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ALA <span>Building</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-link active" data-i18n="nav_about">À Propos</a></li>
+      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" aria-label="Switch language"><span id="langLabel">EN</span></button>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="about-hero">
+  <div class="about-hero-mosaic" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=60" alt="">
+    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=60" alt="">
+  </div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="cur" data-i18n="nav_about">À Propos</span>
+      </nav>
+      <h1 class="page-h1" data-i18n="ph_title">Notre <em>Histoire</em></h1>
+      <p class="page-sub" data-i18n="ph_sub">Depuis 2014, ALA Building façonne le paysage architectural de l'Afrique de l'Ouest avec passion, rigueur et une quête permanente d'excellence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Strip -->
+<div class="about-stats-strip">
+  <div class="ass-item"><span class="ass-n">150+</span><span class="ass-l" data-i18n="ass1">Projets réalisés</span></div>
+  <div class="ass-item"><span class="ass-n">10+</span><span class="ass-l" data-i18n="ass2">Années d'expérience</span></div>
+  <div class="ass-item"><span class="ass-n">3</span><span class="ass-l" data-i18n="ass3">Pays d'intervention</span></div>
+  <div class="ass-item"><span class="ass-n">98%</span><span class="ass-l" data-i18n="ass4">Clients satisfaits</span></div>
+</div>
+
+<!-- Notre Histoire -->
+<section class="section">
+  <div class="container">
+    <div class="histoire-grid">
+      <div class="histoire-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80" alt="Équipe ALA Building au travail" loading="lazy">
+        <div class="histoire-badge">
+          <strong>2014</strong>
+          <span>Fondation</span>
+        </div>
+      </div>
+      <div class="histoire-body reveal" style="--d:150ms">
+        <p class="sec-tag" data-i18n="hist_tag">Notre Origine</p>
+        <h2 class="sec-title" data-i18n="hist_title">Bâtir l'Afrique<br>de demain</h2>
+        <p data-i18n="hist_p1">ALA Building – Archiram Link Africa – est né d'une vision simple et ambitieuse : doter l'Afrique de l'Ouest d'une architecture de classe mondiale, ancrée dans l'identité culturelle du continent et tournée vers l'avenir.</p>
+        <p data-i18n="hist_p2">Fondé à Lomé en 2014 par une équipe d'architectes et d'ingénieurs passionnés, le cabinet a rapidement bâti sa réputation sur la rigueur technique, l'excellence esthétique et un service client irréprochable. Aujourd'hui, ALA Building intervient au Togo, au Ghana et dans plusieurs pays d'Afrique de l'Ouest.</p>
+        <p data-i18n="hist_p3">Chaque projet que nous réalisons est une déclaration architecturale : une réponse créative aux défis du milieu, une signature qui durera des générations.</p>
+        <a href="projects.html" class="btn btn-primary" data-i18n="hist_cta">Voir nos réalisations</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nos Valeurs -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="val_tag">Nos Valeurs</p>
+      <h2 class="sec-title" data-i18n="val_title">L'ADN d'ALA Building</h2>
+    </div>
+    <div class="valeurs-grid">
+      <div class="valeur-card reveal" style="--d:0ms">
+        <div class="valeur-icon"><i class="fas fa-medal"></i></div>
+        <h4 data-i18n="val1_title">Excellence</h4>
+        <p data-i18n="val1_desc">Chaque détail compte. Nous n'acceptons rien de moins que le meilleur dans nos conceptions, nos matériaux et nos finitions.</p>
+      </div>
+      <div class="valeur-card reveal" style="--d:80ms">
+        <div class="valeur-icon"><i class="fas fa-handshake"></i></div>
+        <h4 data-i18n="val2_title">Intégrité</h4>
+        <p data-i18n="val2_desc">Transparence totale sur les coûts, délais et processus. La confiance de nos clients est notre bien le plus précieux.</p>
+      </div>
+      <div class="valeur-card reveal" style="--d:160ms">
+        <div class="valeur-icon"><i class="fas fa-lightbulb"></i></div>
+        <h4 data-i18n="val3_title">Innovation</h4>
+        <p data-i18n="val3_desc">Nous intégrons les dernières technologies de conception et les matériaux les plus avancés pour bâtir les projets de demain.</p>
+      </div>
+      <div class="valeur-card reveal" style="--d:240ms">
+        <div class="valeur-icon"><i class="fas fa-leaf"></i></div>
+        <h4 data-i18n="val4_title">Durabilité</h4>
+        <p data-i18n="val4_desc">Architecture éco-responsable, intégration au contexte local et construction durable pour les générations futures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notre Parcours (Timeline) -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="parc_tag">Notre Parcours</p>
+      <h2 class="sec-title" data-i18n="parc_title">10 ans d'évolution</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-body-left">
+          <span class="tl-year">2014</span>
+          <p class="tl-title">Fondation d'ALA Building</p>
+          <p class="tl-desc">Création du cabinet à Lomé par Kofi Amedzro avec une équipe de 4 personnes et une première commande résidentielle.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right tl-body-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-body-left tl-body-empty"></div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right">
+          <span class="tl-year">2016</span>
+          <p class="tl-title">Premier projet commercial</p>
+          <p class="tl-desc">Réalisation du siège social de Tech Togo, premier grand projet commercial qui confirme la réputation d'ALA Building.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-body-left">
+          <span class="tl-year">2018</span>
+          <p class="tl-title">Expansion au Ghana</p>
+          <p class="tl-desc">Ouverture d'un bureau à Accra et livraison du complexe hôtelier Ghana Homes, premier projet international.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right tl-body-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-body-left tl-body-empty"></div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right">
+          <span class="tl-year">2020</span>
+          <p class="tl-title">100 projets réalisés</p>
+          <p class="tl-desc">Franchissement du cap symbolique des 100 projets livrés, avec l'intégration d'une division Design Intérieur spécialisée.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-body-left">
+          <span class="tl-year">2022</span>
+          <p class="tl-title">Prix de l'architecture africaine</p>
+          <p class="tl-desc">ALA Building est distingué lors des African Architecture Awards pour son approche durable et son ancrage culturel.</p>
+        </div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right tl-body-empty"></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-body-left tl-body-empty"></div>
+        <div class="tl-dot-col"><div class="tl-dot"></div></div>
+        <div class="tl-body-right">
+          <span class="tl-year">2024</span>
+          <p class="tl-title">150+ projets &amp; 3 pays</p>
+          <p class="tl-desc">Aujourd'hui, ALA Building compte 20 collaborateurs et continue d'écrire son histoire dans toute l'Afrique de l'Ouest.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision Quote -->
+<section class="vision-section">
+  <div class="container">
+    <div class="vision-inner reveal">
+      <p class="vision-quote" data-i18n="vis_quote">"Nous ne construisons pas simplement des bâtiments. Nous créons des espaces qui <em>inspirent</em>, qui durent et qui racontent l'histoire d'un continent en marche."</p>
+      <div class="vision-author">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Kofi Amedzro" loading="lazy">
+        <div>
+          <p class="vision-author-name" data-i18n="vis_author">Kofi Amedzro</p>
+          <p class="vision-author-role" data-i18n="vis_role">Fondateur &amp; Architecte Principal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notre Équipe -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="team_tag">Notre Équipe</p>
+      <h2 class="sec-title" data-i18n="team_title">Les Architectes<br>derrière l'excellence</h2>
+    </div>
+    <div class="equipe-grid">
+      <div class="team-card reveal" style="--d:0ms">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Kofi Amedzro" loading="lazy">
+          <div class="team-overlay">
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <p class="team-name" data-i18n="tm1_name">Kofi Amedzro</p>
+          <p class="team-role" data-i18n="tm1_role">Fondateur &amp; Architecte Principal</p>
+          <p class="team-bio" data-i18n="tm1_bio">10 ans d'expérience en architecture résidentielle et commerciale. Diplômé de l'ESAC Lomé et de l'École Polytechnique de Paris.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="--d:80ms">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Afia Mensah" loading="lazy">
+          <div class="team-overlay">
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <p class="team-name" data-i18n="tm2_name">Afia Mensah</p>
+          <p class="team-role" data-i18n="tm2_role">Directrice Design Intérieur</p>
+          <p class="team-bio" data-i18n="tm2_bio">Spécialiste en aménagement de luxe et design biophilique. Parcours entre l'Afrique de l'Ouest, Paris et Dubai.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="--d:160ms">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Jean-Luc Agbodjan" loading="lazy">
+          <div class="team-overlay">
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <p class="team-name" data-i18n="tm3_name">Jean-Luc Agbodjan</p>
+          <p class="team-role" data-i18n="tm3_role">Ingénieur Structures</p>
+          <p class="team-bio" data-i18n="tm3_bio">Expert en calculs de structures et ingénierie du bâtiment. 8 ans sur des projets de grande envergure au Togo et au Ghana.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="--d:240ms">
+        <div class="team-img">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Fatou Coulibaly" loading="lazy">
+          <div class="team-overlay">
+            <div class="team-social">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="team-info">
+          <p class="team-name" data-i18n="tm4_name">Fatou Coulibaly</p>
+          <p class="team-role" data-i18n="tm4_role">Cheffe de Projets</p>
+          <p class="team-bio" data-i18n="tm4_bio">Coordination et pilotage de projets complexes. Garantit la livraison dans les délais et la satisfaction complète du client.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Témoignages -->
+<section class="section">
+  <div class="container">
+    <div class="sec-header reveal">
+      <p class="sec-tag" data-i18n="testi_tag">Témoignages</p>
+      <h2 class="sec-title" data-i18n="testi_title">Ce que disent<br>nos clients</h2>
+    </div>
+    <div class="testi-wrap reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card active">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t1_quote">"ALA Building a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Kofi Mensah" loading="lazy">
+            <div><p class="testi-name">Kofi Mensah</p><p class="testi-role" data-i18n="t1_role">Entrepreneur, Accra</p></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t2_quote">"De la conception aux finitions, l'équipe ALA a su comprendre et sublimer notre projet d'entreprise. Je recommande à 100% pour tout projet d'envergure."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Aminata Diallo" loading="lazy">
+            <div><p class="testi-name">Aminata Diallo</p><p class="testi-role" data-i18n="t2_role">Directrice, Lomé</p></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote" data-i18n="t3_quote">"Notre siège social est devenu une carte de visite architecturale. ALA maîtrise parfaitement la fusion entre fonctionnalité et esthétique contemporaine."</p>
+          <div class="testi-author">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Jean-Baptiste Agbo" loading="lazy">
+            <div><p class="testi-name">Jean-Baptiste Agbo</p><p class="testi-role" data-i18n="t3_role">PDG, Lomé</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button class="t-btn" id="tPrev" aria-label="Précédent"><i class="fas fa-arrow-left"></i></button>
+        <div class="t-dots" id="tDots">
+          <span class="t-dot active"></span>
+          <span class="t-dot"></span>
+          <span class="t-dot"></span>
+        </div>
+        <button class="t-btn" id="tNext" aria-label="Suivant"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partenaires -->
+<section class="section section-sm section-alt">
+  <div class="container">
+    <p class="partners-label reveal" data-i18n="partners_label">Ils nous font confiance</p>
+    <div class="partners-wrap">
+      <div class="partners-track">
+        <span class="partner">CEET Togo</span>
+        <span class="partner">BCEAO</span>
+        <span class="partner">Ecobank</span>
+        <span class="partner">UTB Togo</span>
+        <span class="partner">Port de Lomé</span>
+        <span class="partner">Ghana Homes</span>
+        <span class="partner">SGBÉ</span>
+        <span class="partner">Togo Real</span>
+        <span class="partner">CEET Togo</span>
+        <span class="partner">BCEAO</span>
+        <span class="partner">Ecobank</span>
+        <span class="partner">UTB Togo</span>
+        <span class="partner">Port de Lomé</span>
+        <span class="partner">Ghana Homes</span>
+        <span class="partner">SGBÉ</span>
+        <span class="partner">Togo Real</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2 data-i18n="cta_title">Prêt à bâtir avec nous ?</h2>
+      <p data-i18n="cta_sub">Chaque grand projet commence par une conversation. Discutons de votre vision.</p>
+      <div class="cta-actions">
+        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1">Obtenir un devis gratuit</a>
+        <a href="contact.html" class="btn btn-ghost" data-i18n="cta_btn2">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">ALA <span>Building</span></p>
+        <p class="footer-tag">Architecture. Construction. Excellence.</p>
+        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Services</p>
+        <ul>
+          <li><a href="devis.html">Architecture</a></li>
+          <li><a href="devis.html">Construction</a></li>
+          <li><a href="devis.html">Design Intérieur</a></li>
+          <li><a href="devis.html">Ingénierie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ALA Building – Archiram Link Africa. Tous droits réservés.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22898067744?text=Bonjour%20ALA%20Building%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Discutons sur WhatsApp</span>
+</a>
+<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+</body>
+</html>

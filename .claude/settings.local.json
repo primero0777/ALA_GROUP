@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(//c/Users/ephra/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/.claude/skills/ui-ux-pro-max/**)",
-      "Bash(python scripts/search.py \"developer portfolio landing page minimalist\" --design-system -p \"Portfolio Dev\" -f markdown)",
-      "Bash(python \"C:\\\\Users\\\\ephra\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.5.0\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"developer portfolio landing page minimalist\" --design-system -p \"Portfolio Dev\" -f markdown)"
-    ]
-  }
-}
