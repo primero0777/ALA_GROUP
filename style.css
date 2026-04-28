@@ -206,6 +206,9 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
 .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
 
+/* Mobile CTA injected in nav — hidden on desktop */
+.nav-mobile-cta { display:none; }
+
 /* ── 7. HERO ── */
 #hero {
   position:relative; min-height:100svh;
@@ -565,8 +568,9 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 .reveal.in { opacity:1; transform:translateY(0); }
 
 /* ── 19. KEYFRAMES ── */
-@keyframes fadeUp  { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
-@keyframes fadeIn  { from{opacity:0} to{opacity:1} }
+@keyframes fadeUp      { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn      { from{opacity:0} to{opacity:1} }
+@keyframes mobileNavIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 
 /* ── 20. RESPONSIVE ── */
 @media (max-width:1100px) {
@@ -580,13 +584,55 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 @media (max-width:768px) {
   :root { --nav-h:64px; }
   .nav-links,.nav-cta { display:none; }
+
+  /* ── Menu ouvert ── */
   .nav-links.open {
-    display:flex; flex-direction:column; position:fixed;
-    inset:var(--nav-h) 0 0 0; background:var(--navy);
-    z-index:999; align-items:center; justify-content:center; gap:.5rem;
-    padding:2rem;
+    display:flex; flex-direction:column;
+    position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
+    background:var(--navy);
+    z-index:999;
+    padding:1.75rem 2rem 3rem;
+    overflow-y:auto;
+    justify-content:flex-start;
+    gap:0;
   }
-  .nav-links.open .nav-link { font-family:var(--font-d); font-size:2rem; font-weight:300; color:#fff; }
+  .nav-links.open li {
+    width:100%;
+    border-bottom:1px solid rgba(255,255,255,.07);
+    opacity:0; transform:translateY(10px);
+    animation:mobileNavIn .4s var(--ease-out) forwards;
+  }
+  .nav-links.open li:nth-child(1){animation-delay:.05s}
+  .nav-links.open li:nth-child(2){animation-delay:.10s}
+  .nav-links.open li:nth-child(3){animation-delay:.15s}
+  .nav-links.open li:nth-child(4){animation-delay:.20s}
+  .nav-links.open li:nth-child(5){animation-delay:.25s}
+  .nav-links.open li:nth-child(6){animation-delay:.30s}
+  .nav-links.open li:nth-child(7){animation-delay:.35s}
+  .nav-links.open .nav-link {
+    font-family:var(--font-d); font-size:1.875rem; font-weight:300;
+    color:rgba(255,255,255,.65);
+    display:block; padding:.875rem 0;
+    letter-spacing:.02em;
+    transition:color var(--dur), padding-left .25s var(--ease);
+  }
+  .nav-links.open .nav-link::after { display:none; }
+  .nav-links.open .nav-link:hover { color:var(--gold); padding-left:.5rem; }
+  .nav-links.open .nav-link.active { color:var(--gold); font-style:italic; }
+  /* CTA dans le menu mobile */
+  .nav-links.open .nav-mobile-cta {
+    display:block; border-bottom:none;
+    padding-top:2rem; animation-delay:.3s;
+  }
+  .nav-links.open .nav-mobile-cta a {
+    display:inline-flex; align-items:center; gap:.625rem;
+    padding:.875rem 2rem;
+    background:var(--gold); color:var(--navy);
+    font-family:var(--font-b); font-size:.8125rem; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase; border-radius:2px;
+    transition:background var(--dur), transform var(--dur);
+  }
+  .nav-links.open .nav-mobile-cta a:hover { background:var(--gold-h); transform:translateY(-2px); }
   .hamburger { display:flex; }
 
   .hero-title { font-size:clamp(2.5rem,10vw,3.5rem); }

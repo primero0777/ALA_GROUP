@@ -181,6 +181,15 @@ function initNav() {
   const ham   = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
 
+  /* Inject mobile-only CTA + contact items once */
+  if (!links.querySelector('.nav-mobile-cta')) {
+    const cta = document.createElement('li');
+    cta.className = 'nav-mobile-cta';
+    const lang = currentLang;
+    const ctaLabel = (lang === 'en') ? 'Free Quote' : 'Devis gratuit';
+    cta.innerHTML = `<a href="devis.html"><i class="fas fa-arrow-right"></i>${ctaLabel}</a>`;
+    links.appendChild(cta);
+  }
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
