@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Devis gratuit ALA Building — Obtenez une estimation personnalisée pour votre projet de construction ou rénovation.">
-  <title>Devis Gratuit — ALA Building</title>
+  <meta name="description" content="Devis gratuit ARCHIRAM BUILDING — Obtenez une estimation personnalisée pour votre projet de construction ou rénovation.">
+  <title>Devis Gratuit — ARCHIRAM BUILDING</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@ window.PAGE_LANG = {
 <!-- Navbar -->
 <nav id="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">ALA <span>Building</span></a>
+    <a href="index.html" class="nav-logo">ARCHIRAM <span>BUILDING</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
       <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
@@ -223,7 +223,7 @@ window.PAGE_LANG = {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <p class="footer-logo">ALA <span>Building</span></p>
+        <p class="footer-logo">ARCHIRAM <span>BUILDING</span></p>
         <p class="footer-tag">Architecture. Construction. Excellence.</p>
         <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
       </div>
@@ -252,7 +252,7 @@ window.PAGE_LANG = {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 ALA Building – Archiram Link Africa. Tous droits réservés.</p>
+      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
       <div class="footer-social">
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -335,8 +335,8 @@ document.getElementById('submitDevis').addEventListener('click', () => {
   }
 
   const msg = lang === 'fr'
-    ? `🏗️ *Demande de Devis — ALA Building*\n\n📋 *Projet:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Non précisé'}\n🗓️ *Délai:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nNom: ${name}\nTél: ${phone}${email ? '\nEmail: ' + email : ''}\nVille: ${city}`
-    : `🏗️ *Quote Request — ALA Building*\n\n📋 *Project:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Not specified'}\n🗓️ *Timeline:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nCity: ${city}`;
+    ? `🏗️ *Demande de Devis — ARCHIRAM BUILDING*\n\n📋 *Projet:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Non précisé'}\n🗓️ *Délai:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nNom: ${name}\nTél: ${phone}${email ? '\nEmail: ' + email : ''}\nVille: ${city}`
+    : `🏗️ *Quote Request — ARCHIRAM BUILDING*\n\n📋 *Project:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Not specified'}\n🗓️ *Timeline:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nCity: ${city}`;
 
   window.open(`https://wa.me/22898067744?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
 

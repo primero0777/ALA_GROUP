@@ -31,7 +31,7 @@ const LANG = {
     ba_before:'Avant', ba_after:'Après', ba_hint:'← Glissez pour comparer / Drag to compare →',
     stat1:"Années d'expérience", stat2:'Projets réalisés', stat3:"Pays d'intervention", stat4:'Clients satisfaits',
     testi_tag:'Témoignages', testi_title:'Ce que disent\nnos clients',
-    t1_quote:'"ALA Building a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."',
+    t1_quote:'"ARCHIRAM BUILDING a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."',
     t1_role:'Entrepreneur, Accra',
     t2_quote:'"De la conception aux finitions, l\'équipe ALA a su comprendre et sublimer notre projet d\'entreprise. Je recommande à 100% pour tout projet d\'envergure."',
     t2_role:'Directrice, Lomé',
@@ -75,7 +75,7 @@ const LANG = {
     ba_before:'Before', ba_after:'After', ba_hint:'← Drag to compare →',
     stat1:'Years of experience', stat2:'Projects completed', stat3:'Countries', stat4:'Client satisfaction',
     testi_tag:'Testimonials', testi_title:'What our clients\nare saying',
-    t1_quote:'"ALA Building turned our vision into reality. Remarkable professionalism and exceptional attention to detail. Our villa exceeds every expectation."',
+    t1_quote:'"ARCHIRAM BUILDING turned our vision into reality. Remarkable professionalism and exceptional attention to detail. Our villa exceeds every expectation."',
     t1_role:'Entrepreneur, Accra',
     t2_quote:'"From concept to finish, the ALA team understood and elevated our project. I recommend them 100% for any major project."',
     t2_role:'Director, Lomé',
@@ -397,8 +397,8 @@ function initContactForm() {
     }
 
     const waMsg = currentLang === 'fr'
-      ? `Bonjour ALA Building 👋\n\nNom: ${name}\nTéléphone: ${phone}${email ? '\nEmail: ' + email : ''}\nType de projet: ${type}\n\nMessage:\n${msg}`
-      : `Hello ALA Building 👋\n\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nProject type: ${type}\n\nMessage:\n${msg}`;
+      ? `Bonjour ARCHIRAM BUILDING 👋\n\nNom: ${name}\nTéléphone: ${phone}${email ? '\nEmail: ' + email : ''}\nType de projet: ${type}\n\nMessage:\n${msg}`
+      : `Hello ARCHIRAM BUILDING 👋\n\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nProject type: ${type}\n\nMessage:\n${msg}`;
 
     const url = `https://wa.me/22898067744?text=${encodeURIComponent(waMsg)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
