@@ -605,7 +605,8 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 
   /* ── Navbar mobile : espace garanti pour le hamburger ── */
   .nav-container { padding:0 1rem; gap:.5rem; overflow:visible; }
-  .nav-logo { font-size:1.05rem; letter-spacing:.02em; flex-shrink:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .nav-logo { font-size:.9rem; letter-spacing:.04em; flex-shrink:1; min-width:0; line-height:1.15; }
+  .nav-logo span { display:block; }
   .nav-actions { gap:.25rem; flex-shrink:0; }
   .lang-btn,.theme-btn { width:30px; height:30px; font-size:.7rem; }
   .hamburger { display:flex; flex-shrink:0; }
