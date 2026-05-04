@@ -197,9 +197,16 @@ function initNav() {
     cta.innerHTML = `<a href="devis.html"><i class="fas fa-arrow-right"></i>${ctaLabel}</a>`;
     links.appendChild(cta);
   }
+  function syncMenuTop() {
+    document.documentElement.style.setProperty('--menu-top', nav.offsetHeight + 'px');
+  }
+
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
+    syncMenuTop();
   }, { passive: true });
+
+  syncMenuTop();
 
   function closeMenu() {
     if (!links.classList.contains('open')) return;
@@ -215,6 +222,7 @@ function initNav() {
     if (links.classList.contains('open') || links.classList.contains('closing')) {
       closeMenu();
     } else {
+      syncMenuTop();
       ham.classList.add('open');
       links.classList.add('open');
       document.body.style.overflow = 'hidden';
