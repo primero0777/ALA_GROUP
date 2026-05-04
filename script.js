@@ -13,7 +13,7 @@ const LANG = {
     hero_eyebrow:'Architecture & Construction — Lomé, Togo',
     hero_static:'Nous bâtissons',
     hero_words:["l'Excellence","l'Avenir","vos Rêves","l'Afrique"],
-    hero_sub:"Cabinet d'architecture premium spécialisé dans la conception, la construction et l'aménagement intérieur d'exception en Afrique de l'Ouest.",
+    hero_sub:"Startup spécialisée en ingénierie BTP, construction écologique et architecture intérieure en Afrique de l'Ouest.",
     hero_cta1:'Voir nos projets', hero_cta2:'Nous contacter',
     hstat1:'Années', hstat2:'Projets', hstat3:'Pays', hstat4:'Satisfaction',
     srv_tag:'Nos Expertises', srv_title:'Des services conçus\npour l\'excellence',
@@ -61,7 +61,7 @@ const LANG = {
     hero_eyebrow:'Architecture & Construction — Lomé, Togo',
     hero_static:'We build',
     hero_words:['Excellence','the Future','your Dreams','Africa'],
-    hero_sub:'Premium architecture studio specializing in design, construction and luxury interior fit-out across West Africa.',
+    hero_sub:'A startup specialising in civil engineering, ecological construction and interior architecture across West Africa.',
     hero_cta1:'View our projects', hero_cta2:'Contact us',
     hstat1:'Years', hstat2:'Projects', hstat3:'Countries', hstat4:'Satisfaction',
     srv_tag:'Our Expertise', srv_title:'Services crafted\nfor excellence',
@@ -201,18 +201,28 @@ function initNav() {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
+  function closeMenu() {
+    if (!links.classList.contains('open')) return;
+    links.classList.add('closing');
+    links.addEventListener('animationend', () => {
+      links.classList.remove('open', 'closing');
+      ham.classList.remove('open');
+      document.body.style.overflow = '';
+    }, { once: true });
+  }
+
   ham.addEventListener('click', () => {
-    ham.classList.toggle('open');
-    links.classList.toggle('open');
-    document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+    if (links.classList.contains('open') || links.classList.contains('closing')) {
+      closeMenu();
+    } else {
+      ham.classList.add('open');
+      links.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
   });
 
   links.querySelectorAll('.nav-link').forEach(a => {
-    a.addEventListener('click', () => {
-      ham.classList.remove('open');
-      links.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    a.addEventListener('click', closeMenu);
   });
 }
 

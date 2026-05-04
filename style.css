@@ -199,12 +199,25 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 }
 .nav-cta:hover { background:var(--gold-h); transform:translateY(-1px); }
 
-.hamburger { display:none; flex-direction:column; gap:5px; padding:4px; }
-.hamburger span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; transition:all var(--dur); }
+.hamburger {
+  display:none; flex-direction:column; justify-content:center; align-items:center;
+  gap:5px; width:44px; height:44px; padding:0;
+  border-radius:8px; background:transparent;
+  transition:background .2s ease;
+}
+.hamburger:hover { background:rgba(255,255,255,.12); }
+#navbar.scrolled .hamburger:hover { background:rgba(0,0,0,.07); }
+.hamburger span {
+  display:block; height:2px; border-radius:2px; background:#fff;
+  transition:transform .38s cubic-bezier(.23,1,.32,1), opacity .25s ease, width .3s ease;
+}
+.hamburger span:nth-child(1) { width:22px; }
+.hamburger span:nth-child(2) { width:14px; }
+.hamburger span:nth-child(3) { width:22px; }
 #navbar.scrolled .hamburger span { background:var(--text); }
-.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); width:22px; }
 .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
-.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); width:22px; }
 
 /* Mobile CTA injected in nav — hidden on desktop */
 .nav-mobile-cta { display:none; }
@@ -571,7 +584,9 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
 /* ── 19. KEYFRAMES ── */
 @keyframes fadeUp      { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn      { from{opacity:0} to{opacity:1} }
-@keyframes mobileNavIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+@keyframes mobileNavIn  { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+@keyframes mobileMenuIn { from{opacity:0;transform:translateY(-12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes mobileMenuOut{ from{opacity:1;transform:translateY(0)} to{opacity:0;transform:translateY(-12px)} }
 
 /* ── 20. RESPONSIVE ── */
 @media (max-width:1100px) {
@@ -587,7 +602,7 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
   .nav-links,.nav-cta { display:none; }
 
   /* ── Menu ouvert ── */
-  .nav-links.open {
+  .nav-links.open, .nav-links.closing {
     display:flex; flex-direction:column;
     position:fixed; top:var(--nav-h); left:0; right:0; bottom:0;
     background:var(--navy);
@@ -597,9 +612,13 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
     justify-content:flex-start;
     gap:0;
   }
-  .nav-links.open li {
+  .nav-links.open  { animation:mobileMenuIn  .38s cubic-bezier(.16,1,.3,1) forwards; }
+  .nav-links.closing { animation:mobileMenuOut .3s cubic-bezier(.4,0,1,1) forwards; }
+  .nav-links.open li, .nav-links.closing li {
     width:100%;
     border-bottom:1px solid rgba(255,255,255,.07);
+  }
+  .nav-links.open li {
     opacity:0; transform:translateY(10px);
     animation:mobileNavIn .4s var(--ease-out) forwards;
   }
