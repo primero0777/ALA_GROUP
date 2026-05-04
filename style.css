@@ -603,6 +603,12 @@ input,select,textarea { font-family:inherit; font-size:inherit; }
   #navbar.scrolled { height: var(--nav-h); }
   .nav-links,.nav-cta { display:none; }
 
+  /* ── Navbar mobile : espace pour le hamburger ── */
+  .nav-container { padding:0 1rem; gap:.75rem; }
+  .nav-logo { font-size:1.1rem; letter-spacing:.03em; }
+  .nav-actions { gap:.375rem; }
+  .lang-btn,.theme-btn { width:32px; height:32px; font-size:.75rem; }
+
   /* ── Menu ouvert ── */
   .nav-links.open, .nav-links.closing {
     display:flex; flex-direction:column;
