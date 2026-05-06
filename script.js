@@ -202,12 +202,12 @@ function initNav() {
     document.documentElement.style.setProperty('--menu-top', nav.offsetHeight + 'px');
   }
 
-  /* iOS-safe scroll lock: fixes the "tiny menu" bug on Safari mobile */
-  let _savedScroll = 0;
+  /* Scroll to top + lock body (iOS-safe) */
   function lockScroll() {
-    _savedScroll = window.scrollY;
+    window.scrollTo(0, 0);
+    nav.classList.remove('scrolled');
     document.body.style.position = 'fixed';
-    document.body.style.top      = `-${_savedScroll}px`;
+    document.body.style.top      = '0';
     document.body.style.left     = '0';
     document.body.style.right    = '0';
     document.body.style.overflow = 'hidden';
@@ -218,7 +218,6 @@ function initNav() {
     document.body.style.left     = '';
     document.body.style.right    = '';
     document.body.style.overflow = '';
-    window.scrollTo(0, _savedScroll);
   }
 
   window.addEventListener('scroll', () => {
