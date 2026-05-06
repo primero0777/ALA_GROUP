@@ -242,10 +242,10 @@ function initNav() {
     if (links.classList.contains('open') || links.classList.contains('closing')) {
       closeMenu();
     } else {
+      lockScroll();
       syncMenuTop();
       ham.classList.add('open');
       links.classList.add('open');
-      lockScroll();
     }
   });
 
