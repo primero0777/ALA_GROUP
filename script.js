@@ -197,8 +197,28 @@ function initNav() {
     cta.innerHTML = `<a href="devis.html"><i class="fas fa-arrow-right"></i>${ctaLabel}</a>`;
     links.appendChild(cta);
   }
+
   function syncMenuTop() {
     document.documentElement.style.setProperty('--menu-top', nav.offsetHeight + 'px');
+  }
+
+  /* iOS-safe scroll lock: fixes the "tiny menu" bug on Safari mobile */
+  let _savedScroll = 0;
+  function lockScroll() {
+    _savedScroll = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top      = `-${_savedScroll}px`;
+    document.body.style.left     = '0';
+    document.body.style.right    = '0';
+    document.body.style.overflow = 'hidden';
+  }
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top      = '';
+    document.body.style.left     = '';
+    document.body.style.right    = '';
+    document.body.style.overflow = '';
+    window.scrollTo(0, _savedScroll);
   }
 
   window.addEventListener('scroll', () => {
@@ -214,7 +234,7 @@ function initNav() {
     links.addEventListener('animationend', () => {
       links.classList.remove('open', 'closing');
       ham.classList.remove('open');
-      document.body.style.overflow = '';
+      unlockScroll();
     }, { once: true });
   }
 
@@ -225,7 +245,7 @@ function initNav() {
       syncMenuTop();
       ham.classList.add('open');
       links.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      lockScroll();
     }
   });
 
