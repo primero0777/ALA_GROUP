@@ -278,6 +278,11 @@ function initHeroRotate() {
 
 /* ── 9. SCROLL REVEAL ── */
 function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('in'));
+    return;
+  }
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -286,12 +291,16 @@ function initReveal() {
       }
     });
   }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  els.forEach(el => io.observe(el));
 }
 
 /* ── 10. ANIMATED COUNTERS ── */
 function initCounters() {
+  const targets = document.querySelectorAll('.stat-n[data-target]');
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach(el => { el.textContent = el.dataset.target; });
+    return;
+  }
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
@@ -311,7 +320,7 @@ function initCounters() {
     });
   }, { threshold: 0.5 });
 
-  document.querySelectorAll('.stat-n[data-target]').forEach(el => io.observe(el));
+  targets.forEach(el => io.observe(el));
 }
 
 /* ── 11. PROJECT FILTER ── */

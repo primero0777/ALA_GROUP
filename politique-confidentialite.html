@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Politique de confidentialité d'ARCHIRAM BUILDING – Protection de vos données personnelles.">
+  <title>Politique de Confidentialité — ARCHIRAM BUILDING</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32"  href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="16x16"  href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="96x96"  href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/LOGO Archi.png">
+  <link rel="apple-touch-icon" sizes="180x180"     href="assets/LOGO Archi.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0B1C3A">
+  <meta name="msapplication-TileColor" content="#0B1C3A">
+  <meta name="msapplication-TileImage" content="assets/LOGO Archi.png">
+  <meta name="msapplication-config" content="none">
+
+  <style>
+    /* ══════════════════════════════
+       LAYOUT PRINCIPAL
+    ══════════════════════════════ */
+    .pc-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 7rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    .pc-sidebar {
+      position: sticky;
+      top: 5.5rem;
+      padding-right: 3rem;
+    }
+    .pc-sidebar-title {
+      font-size: .6rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold, #C9A84C);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .pc-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-left: 1px solid var(--border-2, rgba(11,28,58,.1));
+    }
+    [data-theme="dark"] .pc-toc { border-color: rgba(255,255,255,.07); }
+    .pc-toc li a {
+      display: flex;
+      align-items: baseline;
+      gap: .625rem;
+      padding: .55rem 0 .55rem 1.25rem;
+      font-size: .78rem;
+      color: var(--text-3, #888);
+      text-decoration: none;
+      transition: color .2s, border-color .2s;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+      line-height: 1.35;
+    }
+    .pc-toc li a:hover,
+    .pc-toc li a.active {
+      color: var(--gold, #C9A84C);
+      border-left-color: var(--gold, #C9A84C);
+    }
+    .pc-toc-num {
+      font-size: .6rem;
+      letter-spacing: .08em;
+      color: var(--gold, #C9A84C);
+      opacity: .6;
+      flex-shrink: 0;
+      min-width: 22px;
+    }
+    .pc-toc li a.active .pc-toc-num { opacity: 1; }
+
+    /* ── CONTENU ── */
+    .pc-content { min-width: 0; }
+
+    /* badge date */
+    .pc-date {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold, #C9A84C);
+      border: 1px solid rgba(201,168,76,.25);
+      padding: .35rem 1rem;
+      border-radius: 3px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* intro */
+    .pc-intro {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-2, #555);
+      border-left: 3px solid var(--gold, #C9A84C);
+      padding-left: 1.25rem;
+      margin-bottom: 4rem;
+    }
+
+    /* ── SECTIONS ── */
+    .pc-section {
+      padding-bottom: 3.5rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border, rgba(11,28,58,.07));
+      scroll-margin-top: 6rem;
+    }
+    [data-theme="dark"] .pc-section { border-color: rgba(255,255,255,.06); }
+    .pc-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .pc-section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .pc-section-badge {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(201,168,76,.1);
+      border: 1px solid rgba(201,168,76,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold, #C9A84C);
+      font-size: .8rem;
+    }
+    .pc-section-meta { display: flex; flex-direction: column; gap: .2rem; }
+    .pc-section-num {
+      font-size: .58rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold, #C9A84C);
+    }
+    .pc-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--navy, #0B1C3A);
+      line-height: 1.2;
+      margin: 0;
+    }
+    [data-theme="dark"] .pc-section h2 { color: #fff; }
+
+    .pc-section p,
+    .pc-section li {
+      font-size: .9rem;
+      line-height: 1.9;
+      color: var(--text-2, #555);
+    }
+    [data-theme="dark"] .pc-section p,
+    [data-theme="dark"] .pc-section li { color: rgba(255,255,255,.48); }
+    .pc-section p + p { margin-top: .875rem; }
+
+    .pc-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .pc-section ul li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: .5rem;
+    }
+    .pc-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold, #C9A84C);
+    }
+
+    /* highlight box */
+    .pc-highlight {
+      background: rgba(201,168,76,.05);
+      border: 1px solid rgba(201,168,76,.15);
+      border-left: 3px solid var(--gold, #C9A84C);
+      border-radius: 0 6px 6px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+    }
+    [data-theme="dark"] .pc-highlight { background: rgba(201,168,76,.04); }
+    .pc-highlight p { margin: 0 !important; }
+
+    /* bloc contacts */
+    .pc-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-top: 1.25rem;
+    }
+    .pc-contacts a {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .875rem;
+      color: var(--text-2, #555);
+      text-decoration: none;
+      padding: .625rem .875rem;
+      border-radius: 6px;
+      border: 1px solid var(--border, rgba(11,28,58,.08));
+      transition: all .2s;
+    }
+    [data-theme="dark"] .pc-contacts a {
+      color: rgba(255,255,255,.45);
+      border-color: rgba(255,255,255,.07);
+    }
+    .pc-contacts a i { color: var(--gold, #C9A84C); width: 16px; text-align: center; }
+    .pc-contacts a:hover {
+      border-color: var(--gold, #C9A84C);
+      color: var(--gold, #C9A84C);
+      background: rgba(201,168,76,.05);
+    }
+
+    /* bouton retour */
+    .pc-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .625rem;
+      margin-top: 2rem;
+      padding: .625rem 1.375rem;
+      border: 1px solid rgba(201,168,76,.3);
+      border-radius: 4px;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold, #C9A84C);
+      text-decoration: none;
+      transition: all .22s;
+    }
+    .pc-back:hover { background: var(--gold, #C9A84C); color: #0B1C3A; }
+
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media (max-width: 900px) {
+      .pc-wrap { grid-template-columns: 1fr; padding: 3rem 1.25rem 5rem; }
+      .pc-sidebar { display: none; }
+    }
+    @media (max-width: 600px) {
+      .pc-section-header { flex-direction: column; align-items: flex-start; gap: .625rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"   class="nav-link">Accueil</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="projects.html" class="nav-link">Projets</a></li>
+      <li><a href="about.html"   class="nav-link">À Propos</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" aria-label="Langue"><span id="langLabel">EN</span></button>
+      <button class="theme-btn" id="themeToggle" aria-label="Thème"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <a href="devis.html" class="nav-cta">Devis gratuit</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero (même style que les autres pages) -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="cur">Politique de confidentialité</span>
+      </nav>
+      <h1 class="page-h1">Politique de <em>Confidentialité</em></h1>
+      <p class="page-sub">Transparence et protection de vos données personnelles — ARCHIRAM BUILDING.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Corps de page -->
+<div class="pc-wrap">
+
+  <!-- ── Sommaire latéral ── -->
+  <aside class="pc-sidebar" aria-label="Sommaire">
+    <span class="pc-sidebar-title">Sommaire</span>
+    <ul class="pc-toc" id="pcToc">
+      <li><a href="#art01"><span class="pc-toc-num">01</span> Responsable du traitement</a></li>
+      <li><a href="#art02"><span class="pc-toc-num">02</span> Données collectées</a></li>
+      <li><a href="#art03"><span class="pc-toc-num">03</span> Finalités &amp; base légale</a></li>
+      <li><a href="#art04"><span class="pc-toc-num">04</span> Durée de conservation</a></li>
+      <li><a href="#art05"><span class="pc-toc-num">05</span> Partage des données</a></li>
+      <li><a href="#art06"><span class="pc-toc-num">06</span> Cookies</a></li>
+      <li><a href="#art07"><span class="pc-toc-num">07</span> Vos droits</a></li>
+      <li><a href="#art08"><span class="pc-toc-num">08</span> Sécurité</a></li>
+      <li><a href="#art09"><span class="pc-toc-num">09</span> Liens tiers</a></li>
+      <li><a href="#art10"><span class="pc-toc-num">10</span> Modifications</a></li>
+      <li><a href="#art11"><span class="pc-toc-num">11</span> Nous contacter</a></li>
+    </ul>
+  </aside>
+
+  <!-- ── Contenu ── -->
+  <div class="pc-content">
+
+    <span class="pc-date"><i class="fas fa-calendar-alt"></i> Dernière mise à jour : Mai 2026</span>
+
+    <p class="pc-intro">
+      ARCHIRAM BUILDING (Archiram Link Africa), ci-après « nous » ou « la Société », attache une importance primordiale à la protection de vos données personnelles. Cette politique vous informe de la manière dont nous collectons, utilisons et protégeons vos informations lorsque vous consultez notre site web.
+    </p>
+
+    <!-- Art 01 -->
+    <div class="pc-section" id="art01">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-building"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 01</span>
+          <h2>Responsable du traitement</h2>
+        </div>
+      </div>
+      <p>Le responsable du traitement de vos données personnelles est :</p>
+      <div class="pc-highlight">
+        <p><strong>ARCHIRAM BUILDING – Archiram Link Africa</strong><br>
+        Avedji Wessomé, Lomé, Togo<br>
+        Activité : Ingénierie BTP, Architecture et Construction Écologique</p>
+      </div>
+      <div class="pc-contacts">
+        <a href="mailto:binaeltoudeka@gmail.com"><i class="fas fa-envelope"></i> binaeltoudeka@gmail.com</a>
+        <a href="mailto:archi.hiram@outlook.fr"><i class="fas fa-envelope"></i> archi.hiram@outlook.fr</a>
+        <a href="https://wa.me/22898067744" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+      </div>
+    </div>
+
+    <!-- Art 02 -->
+    <div class="pc-section" id="art02">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-database"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 02</span>
+          <h2>Données collectées</h2>
+        </div>
+      </div>
+      <p>Nous collectons uniquement les données que vous nous transmettez volontairement via notre formulaire de contact ou de demande de devis :</p>
+      <ul>
+        <li>Nom et prénom</li>
+        <li>Numéro de téléphone</li>
+        <li>Adresse e-mail <em>(facultative)</em></li>
+        <li>Type de projet envisagé</li>
+        <li>Contenu de votre message ou description du projet</li>
+      </ul>
+      <p>Nous ne collectons aucune donnée sensible (santé, religion, opinions politiques, etc.). Aucun paiement ni donnée bancaire ne transite par notre site.</p>
+    </div>
+
+    <!-- Art 03 -->
+    <div class="pc-section" id="art03">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-balance-scale"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 03</span>
+          <h2>Finalités et base légale du traitement</h2>
+        </div>
+      </div>
+      <p>Vos données sont traitées exclusivement aux fins suivantes :</p>
+      <ul>
+        <li><strong>Répondre à vos demandes</strong> — traitement des demandes de devis, de renseignements et de prise de contact.</li>
+        <li><strong>Gestion de la relation client</strong> — suivi de votre dossier et de l'avancement de votre projet.</li>
+        <li><strong>Communication commerciale</strong> — envoi de propositions liées à votre demande uniquement, sans démarchage automatisé.</li>
+      </ul>
+      <p>La base légale du traitement est votre <strong>consentement explicite</strong> (exprimé en soumettant le formulaire) ainsi que notre <strong>intérêt légitime</strong> à répondre à vos sollicitations.</p>
+    </div>
+
+    <!-- Art 04 -->
+    <div class="pc-section" id="art04">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-clock"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 04</span>
+          <h2>Durée de conservation</h2>
+        </div>
+      </div>
+      <p>Vos données sont conservées pour la durée strictement nécessaire à la finalité pour laquelle elles ont été collectées :</p>
+      <ul>
+        <li><strong>Prospects (sans contrat conclu)</strong> — 3 ans à compter du dernier contact.</li>
+        <li><strong>Clients (contrat conclu)</strong> — 5 ans à compter de la fin de la relation contractuelle, conformément aux obligations légales en matière de comptabilité et de garanties.</li>
+      </ul>
+      <p>À l'issue de ces délais, vos données sont supprimées ou anonymisées de façon irréversible.</p>
+    </div>
+
+    <!-- Art 05 -->
+    <div class="pc-section" id="art05">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-share-alt"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 05</span>
+          <h2>Partage et transfert des données</h2>
+        </div>
+      </div>
+      <p>Nous ne vendons, ne louons et ne cédons jamais vos données personnelles à des tiers à des fins commerciales.</p>
+      <p>Vos données peuvent être transmises à nos prestataires techniques (hébergement, messagerie) uniquement dans la mesure nécessaire à l'exécution du service. Ces prestataires sont contractuellement tenus de respecter la confidentialité de vos informations.</p>
+      <div class="pc-highlight">
+        <p><strong>Transfert via WhatsApp :</strong> lorsque vous utilisez notre formulaire de contact, votre message peut être redirigé vers WhatsApp (Meta Platforms, Inc.). Consultez la <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--gold,#C9A84C)">politique de confidentialité de WhatsApp</a> pour en savoir plus.</p>
+      </div>
+    </div>
+
+    <!-- Art 06 -->
+    <div class="pc-section" id="art06">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-cookie-bite"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 06</span>
+          <h2>Cookies et technologies de suivi</h2>
+        </div>
+      </div>
+      <p>Notre site utilise uniquement des cookies techniques strictement nécessaires à son fonctionnement. Ils ne collectent aucune donnée personnelle identifiable et ne requièrent pas de consentement préalable.</p>
+      <p>Nous n'utilisons ni cookies publicitaires, ni trackers tiers, ni outils d'analyse comportementale.</p>
+      <ul>
+        <li><strong>theme</strong> — mémorisation de votre préférence d'affichage (clair / sombre).</li>
+        <li><strong>lang</strong> — mémorisation de votre préférence de langue (français / anglais).</li>
+      </ul>
+      <p>Ces préférences sont stockées localement dans votre navigateur via <em>localStorage</em> et ne sont jamais transmises à nos serveurs.</p>
+    </div>
+
+    <!-- Art 07 -->
+    <div class="pc-section" id="art07">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-user-shield"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 07</span>
+          <h2>Vos droits</h2>
+        </div>
+      </div>
+      <p>Conformément aux réglementations applicables en matière de protection des données personnelles, vous disposez des droits suivants :</p>
+      <ul>
+        <li><strong>Droit d'accès</strong> — obtenir la confirmation que vos données sont traitées et en recevoir une copie.</li>
+        <li><strong>Droit de rectification</strong> — demander la correction de données inexactes ou incomplètes.</li>
+        <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données, sous réserve de nos obligations légales.</li>
+        <li><strong>Droit à la limitation</strong> — demander la suspension temporaire du traitement.</li>
+        <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré et lisible.</li>
+        <li><strong>Droit d'opposition</strong> — vous opposer au traitement pour des raisons tenant à votre situation particulière.</li>
+        <li><strong>Retrait du consentement</strong> — à tout moment, sans affecter la licéité du traitement antérieur.</li>
+      </ul>
+      <p>Pour exercer l'un de ces droits, contactez-nous via les coordonnées de l'article 11. Nous nous engageons à vous répondre dans un délai maximum de <strong>30 jours</strong>.</p>
+    </div>
+
+    <!-- Art 08 -->
+    <div class="pc-section" id="art08">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-lock"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 08</span>
+          <h2>Sécurité des données</h2>
+        </div>
+      </div>
+      <p>Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, toute divulgation, altération ou destruction.</p>
+      <p>En cas de violation de données susceptible d'engendrer un risque pour vos droits et libertés, nous nous engageons à vous en informer dans les meilleurs délais.</p>
+    </div>
+
+    <!-- Art 09 -->
+    <div class="pc-section" id="art09">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-external-link-alt"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 09</span>
+          <h2>Liens vers des sites tiers</h2>
+        </div>
+      </div>
+      <p>Notre site peut contenir des liens vers des sites externes (réseaux sociaux, partenaires). Nous n'exerçons aucun contrôle sur ces sites et déclinons toute responsabilité quant à leurs pratiques en matière de confidentialité. Nous vous encourageons à consulter leurs politiques respectives.</p>
+    </div>
+
+    <!-- Art 10 -->
+    <div class="pc-section" id="art10">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-sync-alt"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 10</span>
+          <h2>Modifications de la politique</h2>
+        </div>
+      </div>
+      <p>ARCHIRAM BUILDING se réserve le droit de modifier la présente politique à tout moment, notamment pour se conformer à l'évolution de la réglementation. La date de dernière mise à jour figurant en haut de cette page sera actualisée à chaque modification. Nous vous invitons à la consulter régulièrement.</p>
+    </div>
+
+    <!-- Art 11 -->
+    <div class="pc-section" id="art11">
+      <div class="pc-section-header">
+        <div class="pc-section-badge"><i class="fas fa-envelope-open-text"></i></div>
+        <div class="pc-section-meta">
+          <span class="pc-section-num">Article 11</span>
+          <h2>Nous contacter</h2>
+        </div>
+      </div>
+      <p>Pour toute question relative à cette politique ou pour exercer vos droits :</p>
+      <div class="pc-contacts">
+        <a href="mailto:binaeltoudeka@gmail.com"><i class="fas fa-envelope"></i> binaeltoudeka@gmail.com</a>
+        <a href="mailto:archi.hiram@outlook.fr"><i class="fas fa-envelope"></i> archi.hiram@outlook.fr</a>
+        <a href="https://wa.me/22898067744" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="contact.html"><i class="fas fa-map-marker-alt"></i> Avedji Wessomé, Lomé, Togo</a>
+      </div>
+      <a href="index.html" class="pc-back"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+    </div>
+
+  </div><!-- /pc-content -->
+</div><!-- /pc-wrap -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
+        <p class="footer-tag">Architecture. Construction. Excellence.</p>
+        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Navigation</p>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projets</a></li>
+          <li><a href="about.html">À Propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Services</p>
+        <ul>
+          <li><a href="services.html">Architecture</a></li>
+          <li><a href="services.html">Construction Écologique</a></li>
+          <li><a href="services.html">Ingénierie BTP</a></li>
+          <li><a href="services.html">Art Éco &amp; Upcycling</a></li>
+          <li><a href="services.html">Location Matériaux</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading">Contact</p>
+        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
+        <a href="mailto:archi.hiram@outlook.fr" class="footer-email">archi.hiram@outlook.fr</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. <span>Tous droits réservés.</span></p>
+      <div class="footer-links">
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tip">Discutons sur WhatsApp</span>
+</a>
+<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  /* Highlight du sommaire selon la section visible */
+  (function () {
+    const links = document.querySelectorAll('#pcToc a');
+    const sections = document.querySelectorAll('.pc-section[id]');
+    if (!links.length || !sections.length) return;
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector('#pcToc a[href="#' + e.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(s => io.observe(s));
+  })();
+</script>
+</body>
+</html>

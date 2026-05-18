@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choix de Police — ARCHIRAM BUILDING</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Playfair+Display:wght@700;900&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Oswald:wght@700&family=Abril+Fatface&family=Raleway:wght@900&family=Fraunces:ital,wght@0,900;1,900&family=Big+Shoulders+Display:wght@900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@800&family=Josefin+Sans:wght@700&family=Syne:wght@800&family=Libre+Baskerville:wght@700&family=Cinzel:wght@700;900&family=Unbounded:wght@700;900&family=Fjalla+One&family=Space+Grotesk:wght@700&family=Lexend+Mega:wght@700;900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Teko:wght@700&family=Rubik+Mono+One&family=Righteous&family=Syncopate:wght@700&family=Jockey+One&family=Alfa+Slab+One&family=Bree+Serif&family=Lobster&family=Secular+One&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --navy:#0B1C3A; --navy2:#0d2040; --gold:#C9A84C; }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background: #060E1E;
+      color: #fff;
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .site-header {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .site-header small {
+      display: block;
+      font-size: .6rem; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: .5rem;
+    }
+    .site-header h1 {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 700; color: #fff;
+    }
+    .site-header p { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: .4rem; }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,.04);
+      margin-top: 1px;
+    }
+
+    /* CARD */
+    .card {
+      background: #060E1E;
+      padding: 2.5rem 2rem 2rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: background .3s;
+      animation: fadeIn .5s ease both;
+    }
+    .card:hover { background: #0a1628; }
+    .card.picked { background: #0d1f3a; outline: 2px solid var(--gold); z-index: 1; }
+
+    @keyframes fadeIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+    /* stagger */
+    .card:nth-child(1) {animation-delay:.03s} .card:nth-child(2) {animation-delay:.06s}
+    .card:nth-child(3) {animation-delay:.09s} .card:nth-child(4) {animation-delay:.12s}
+    .card:nth-child(5) {animation-delay:.15s} .card:nth-child(6) {animation-delay:.18s}
+    .card:nth-child(7) {animation-delay:.21s} .card:nth-child(8) {animation-delay:.24s}
+    .card:nth-child(9) {animation-delay:.27s} .card:nth-child(10){animation-delay:.30s}
+    .card:nth-child(11){animation-delay:.33s} .card:nth-child(12){animation-delay:.36s}
+    .card:nth-child(13){animation-delay:.39s} .card:nth-child(14){animation-delay:.42s}
+    .card:nth-child(15){animation-delay:.45s} .card:nth-child(16){animation-delay:.48s}
+    .card:nth-child(17){animation-delay:.51s} .card:nth-child(18){animation-delay:.54s}
+    .card:nth-child(19){animation-delay:.57s} .card:nth-child(20){animation-delay:.60s}
+    .card:nth-child(21){animation-delay:.63s} .card:nth-child(22){animation-delay:.66s}
+    .card:nth-child(23){animation-delay:.69s} .card:nth-child(24){animation-delay:.72s}
+    .card:nth-child(25){animation-delay:.75s} .card:nth-child(26){animation-delay:.78s}
+    .card:nth-child(27){animation-delay:.81s} .card:nth-child(28){animation-delay:.84s}
+    .card:nth-child(29){animation-delay:.87s} .card:nth-child(30){animation-delay:.90s}
+
+    /* gold left border on hover */
+    .card::before {
+      content:'';
+      position: absolute; left:0; top:0; bottom:0; width:3px;
+      background: var(--gold);
+      transform: scaleY(0);
+      transition: transform .35s cubic-bezier(.16,1,.3,1);
+      transform-origin: bottom;
+    }
+    .card:hover::before, .card.picked::before { transform: scaleY(1); }
+
+    /* badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .58rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.25rem;
+    }
+    .badge-num {
+      background: var(--gold); color: #060E1E;
+      width: 18px; height: 18px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: .6rem; font-weight: 900;
+    }
+
+    /* BIG title */
+    .big-title {
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      min-height: 110px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .big-title .l1 { display:block; color:#fff; }
+    .big-title .l2 { display:block; color: var(--gold); }
+
+    /* alphabet specimen */
+    .specimen {
+      font-size: .8rem;
+      color: rgba(255,255,255,.2);
+      letter-spacing: .04em;
+      margin-bottom: .875rem;
+      line-height: 1.4;
+    }
+
+    /* divider */
+    .divider { height:1px; background:rgba(255,255,255,.06); margin:.875rem 0; }
+
+    /* mini nav */
+    .mini-nav {
+      display: flex; gap: .875rem; flex-wrap: wrap;
+      margin-bottom: .875rem;
+    }
+    .mini-nav span { font-size: .72rem; color: rgba(255,255,255,.35); }
+    .card:hover .mini-nav span { color: rgba(255,255,255,.65); }
+
+    /* mini body */
+    .mini-body {
+      font-family: system-ui, sans-serif !important;
+      font-size: .72rem; font-weight: 400;
+      color: rgba(255,255,255,.25); line-height: 1.6;
+      margin-bottom: .875rem;
+    }
+
+    /* stats row */
+    .stats { display:flex; gap:1.5rem; margin-bottom:1rem; }
+    .stat-n { font-size:1.5rem; color: var(--gold); line-height:1; display:block; }
+    .stat-l { font-size:.52rem; color:rgba(255,255,255,.25); text-transform:uppercase; letter-spacing:.1em; }
+
+    /* card footer */
+    .card-foot {
+      display: flex; align-items:center; justify-content:space-between;
+      flex-wrap: wrap; gap:.5rem;
+      margin-top:.5rem;
+    }
+    .font-tag { font-size:.6rem; color:rgba(255,255,255,.2); font-family:system-ui; letter-spacing:.06em; }
+    .pick-btn {
+      font-size:.6rem; letter-spacing:.12em; text-transform:uppercase;
+      color: var(--gold); border:1px solid rgba(201,168,76,.3);
+      padding:.3rem .875rem; border-radius:3px;
+      transition: all .2s; background: transparent;
+      cursor: pointer; font-family: system-ui;
+    }
+    .card:hover .pick-btn { background: var(--gold); color: #060E1E; border-color: var(--gold); }
+    .card.picked .pick-btn { background: var(--gold); color: #060E1E; border-color: var(--gold); }
+
+    /* ── BOTTOM BAR ── */
+    .bar {
+      position: fixed; bottom:0; left:0; right:0;
+      background: rgba(6,14,30,.97);
+      border-top: 2px solid var(--gold);
+      padding: 1rem 2rem;
+      display: flex; align-items:center; justify-content:center; gap:1.5rem;
+      flex-wrap: wrap;
+      transform: translateY(100%);
+      transition: transform .4s cubic-bezier(.16,1,.3,1);
+      z-index: 999;
+    }
+    .bar.show { transform: translateY(0); }
+    .bar-label { font-size:.7rem; color:rgba(255,255,255,.4); }
+    .bar-name { font-size:1rem; font-weight:700; color: var(--gold); }
+    .bar-confirm {
+      background: var(--gold); color: #060E1E;
+      border: none; border-radius: 4px;
+      padding: .5rem 1.5rem;
+      font-size: .7rem; font-weight: 700; letter-spacing:.1em;
+      text-transform: uppercase; cursor: pointer;
+      transition: opacity .2s;
+    }
+    .bar-confirm:hover { opacity:.85; }
+
+    /* ── FONTS APPLIED ── */
+    /* Each card uses data-n, font applied via specific classes below */
+    .f1  { font-family:'Montserrat',sans-serif; font-weight:900; }
+    .f2  { font-family:'Playfair Display',serif; font-weight:900; font-style:italic; }
+    .f3  { font-family:'Bebas Neue',sans-serif; letter-spacing:.06em; font-size:4rem !important; }
+    .f4  { font-family:'Cormorant Garamond',serif; font-weight:700; font-style:italic; font-size:3.8rem !important; }
+    .f5  { font-family:'Oswald',sans-serif; font-weight:700; font-size:3.4rem !important; }
+    .f6  { font-family:'Abril Fatface',display; font-size:3.2rem !important; }
+    .f7  { font-family:'Raleway',sans-serif; font-weight:900; }
+    .f8  { font-family:'Fraunces',serif; font-weight:900; font-style:italic; }
+    .f9  { font-family:'Big Shoulders Display',display; font-weight:900; font-size:4rem !important; }
+    .f10 { font-family:'DM Serif Display',serif; font-style:italic; font-size:3.2rem !important; }
+    .f11 { font-family:'Anton',sans-serif; letter-spacing:.03em; font-size:3.8rem !important; }
+    .f12 { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:3.8rem !important; }
+    .f13 { font-family:'Josefin Sans',sans-serif; font-weight:700; letter-spacing:.08em; }
+    .f14 { font-family:'Syne',sans-serif; font-weight:800; }
+    .f15 { font-family:'Libre Baskerville',serif; font-weight:700; font-size:2.6rem !important; }
+    .f16 { font-family:'Cinzel',serif; font-weight:900; letter-spacing:.05em; font-size:2.2rem !important; }
+    .f17 { font-family:'Unbounded',sans-serif; font-weight:900; font-size:1.9rem !important; }
+    .f18 { font-family:'Fjalla One',sans-serif; font-size:3.5rem !important; }
+    .f19 { font-family:'Space Grotesk',sans-serif; font-weight:700; }
+    .f20 { font-family:'Lexend Mega',sans-serif; font-weight:900; font-size:2rem !important; }
+    .f21 { font-family:'Black Han Sans',sans-serif; font-size:3rem !important; }
+    .f22 { font-family:'Teko',sans-serif; font-weight:700; font-size:4.5rem !important; letter-spacing:.04em; }
+    .f23 { font-family:'Rubik Mono One',monospace; font-size:2rem !important; }
+    .f24 { font-family:'Righteous',sans-serif; font-size:3rem !important; }
+    .f25 { font-family:'Syncopate',sans-serif; font-weight:700; letter-spacing:.08em; font-size:2rem !important; }
+    .f26 { font-family:'Jockey One',sans-serif; font-size:3.5rem !important; }
+    .f27 { font-family:'Alfa Slab One',serif; font-size:2.8rem !important; }
+    .f28 { font-family:'Bree Serif',serif; font-size:2.8rem !important; }
+    .f29 { font-family:'Lobster',cursive; font-size:3.2rem !important; }
+    .f30 { font-family:'Secular One',sans-serif; font-size:3rem !important; }
+
+    /* small specimen uses same font */
+    .sp1  { font-family:'Montserrat',sans-serif; font-weight:700; }
+    .sp2  { font-family:'Playfair Display',serif; }
+    .sp3  { font-family:'Bebas Neue',sans-serif; }
+    .sp4  { font-family:'Cormorant Garamond',serif; }
+    .sp5  { font-family:'Oswald',sans-serif; }
+    .sp6  { font-family:'Abril Fatface',display; }
+    .sp7  { font-family:'Raleway',sans-serif; }
+    .sp8  { font-family:'Fraunces',serif; }
+    .sp9  { font-family:'Big Shoulders Display',display; font-weight:700; }
+    .sp10 { font-family:'DM Serif Display',serif; }
+    .sp11 { font-family:'Anton',sans-serif; }
+    .sp12 { font-family:'Barlow Condensed',sans-serif; font-weight:700; }
+    .sp13 { font-family:'Josefin Sans',sans-serif; }
+    .sp14 { font-family:'Syne',sans-serif; }
+    .sp15 { font-family:'Libre Baskerville',serif; }
+    .sp16 { font-family:'Cinzel',serif; }
+    .sp17 { font-family:'Unbounded',sans-serif; }
+    .sp18 { font-family:'Fjalla One',sans-serif; }
+    .sp19 { font-family:'Space Grotesk',sans-serif; }
+    .sp20 { font-family:'Lexend Mega',sans-serif; }
+    .sp21 { font-family:'Black Han Sans',sans-serif; }
+    .sp22 { font-family:'Teko',sans-serif; }
+    .sp23 { font-family:'Rubik Mono One',monospace; }
+    .sp24 { font-family:'Righteous',sans-serif; }
+    .sp25 { font-family:'Syncopate',sans-serif; }
+    .sp26 { font-family:'Jockey One',sans-serif; }
+    .sp27 { font-family:'Alfa Slab One',serif; }
+    .sp28 { font-family:'Bree Serif',serif; }
+    .sp29 { font-family:'Lobster',cursive; }
+    .sp30 { font-family:'Secular One',sans-serif; }
+  </style>
+</head>
+<body>
+
+<div class="site-header">
+  <small>Page temporaire · font-preview.html</small>
+  <h1>30 Polices — Choisissez pour ARCHIRAM BUILDING</h1>
+  <p>Des personnalités très différentes · Clique pour sélectionner</p>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<!-- BOTTOM BAR -->
+<div class="bar" id="bar">
+  <span class="bar-label">Vous avez choisi :</span>
+  <span class="bar-name" id="barName">—</span>
+  <button class="bar-confirm" id="barConfirm">✓ Confirmer ce choix</button>
+</div>
+
+<script>
+const fonts = [
+  { n:1,  name:'Montserrat',         sub:'Sans-serif géométrique · Gras massif',   cat:'Sans-serif' },
+  { n:2,  name:'Playfair Display',   sub:'Serif élégant · Style magazine luxe',    cat:'Serif' },
+  { n:3,  name:'Bebas Neue',         sub:'Display ultra bold · All caps · Impact', cat:'Display' },
+  { n:4,  name:'Cormorant Garamond', sub:'Serif fin & italique · Haute couture',   cat:'Serif' },
+  { n:5,  name:'Oswald',             sub:'Condensé fort · Style architectural',    cat:'Condensé' },
+  { n:6,  name:'Abril Fatface',      sub:'Display massif · Style affiche vintage', cat:'Display' },
+  { n:7,  name:'Raleway',            sub:'Sans-serif élégant · Lignes épurées',   cat:'Sans-serif' },
+  { n:8,  name:'Fraunces',           sub:'Serif organique italique · Tendance',    cat:'Serif' },
+  { n:9,  name:'Big Shoulders',      sub:'Condensé XL · Très impactant & bold',   cat:'Condensé' },
+  { n:10, name:'DM Serif Display',   sub:'Serif italic · Élégance éditoriale',    cat:'Serif' },
+  { n:11, name:'Anton',              sub:'Display massif · Poster & affiche',      cat:'Display' },
+  { n:12, name:'Barlow Condensed',   sub:'Condensé technique · Modern & fort',    cat:'Condensé' },
+  { n:13, name:'Josefin Sans',       sub:'Géométrique Art Déco · Minimaliste',    cat:'Sans-serif' },
+  { n:14, name:'Syne',               sub:'Originalité & design · Très tendance',  cat:'Sans-serif' },
+  { n:15, name:'Libre Baskerville',  sub:'Serif classique revisité · Autorité',   cat:'Serif' },
+  { n:16, name:'Cinzel',             sub:'Inspiré romain antique · Prestige pur', cat:'Serif' },
+  { n:17, name:'Unbounded',          sub:'Géométrique carré · Futur & tech',       cat:'Sans-serif' },
+  { n:18, name:'Fjalla One',         sub:'Condensé scandinave · Éditorial',       cat:'Condensé' },
+  { n:19, name:'Space Grotesk',      sub:'Géométrique technique · Start-up',      cat:'Sans-serif' },
+  { n:20, name:'Lexend Mega',        sub:'Compact et large · Lisibilité max',     cat:'Sans-serif' },
+  { n:21, name:'Black Han Sans',     sub:'Display coréen · Très bold & unique',   cat:'Display' },
+  { n:22, name:'Teko',               sub:'Condensé ultra tall · Très impactant',  cat:'Condensé' },
+  { n:23, name:'Rubik Mono One',     sub:'Monospace bold · Style tech & code',    cat:'Display' },
+  { n:24, name:'Righteous',          sub:'Rétro géométrique · Fun & solide',      cat:'Display' },
+  { n:25, name:'Syncopate',          sub:'Espacé · Très graphique & moderne',     cat:'Sans-serif' },
+  { n:26, name:'Jockey One',         sub:'Display condensé · Impact sport',       cat:'Display' },
+  { n:27, name:'Alfa Slab One',      sub:'Slab Serif massif · Robustesse BTP',   cat:'Serif' },
+  { n:28, name:'Bree Serif',         sub:'Serif amical · Chaleureux & fort',     cat:'Serif' },
+  { n:29, name:'Lobster',            sub:'Script gras · Signature & identité',   cat:'Script' },
+  { n:30, name:'Secular One',        sub:'Sans-serif hébreu-inspiré · Unique',   cat:'Sans-serif' },
+];
+
+const grid = document.getElementById('grid');
+const bar  = document.getElementById('bar');
+const barName = document.getElementById('barName');
+const barConfirm = document.getElementById('barConfirm');
+let picked = null;
+
+fonts.forEach(f => {
+  const n = f.n;
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.n = n;
+
+  const catColors = { 'Serif':'#7ab8f5','Sans-serif':'#a8e6cf','Condensé':'#ffd93d','Display':'#ff9a9e','Script':'#c3b1e1' };
+  const catColor = catColors[f.cat] || '#fff';
+
+  card.innerHTML = `
+    <div class="badge">
+      <span class="badge-num">${n}</span>
+      ${f.name}
+      <span style="color:${catColor};font-size:.5rem;margin-left:.2rem">[${f.cat}]</span>
+    </div>
+
+    <div class="big-title">
+      <span class="l1 f${n}">Nous bâtissons</span>
+      <span class="l2 f${n}">l'Excellence</span>
+    </div>
+
+    <p class="specimen sp${n}">A B C D E F G · 0 1 2 3 4 5 6 7 8 9 · a b c d e f g</p>
+
+    <div class="divider"></div>
+
+    <div class="mini-nav sp${n}">
+      <span>Services</span><span>Projets</span><span>À Propos</span><span>Contact</span>
+    </div>
+
+    <p class="mini-body">Ingénierie BTP, construction écologique et architecture intérieure à Lomé, Togo. Des bâtiments qui résistent à l'épreuve du temps et au regard de l'Afrique.</p>
+
+    <div class="stats">
+      <div><span class="stat-n sp${n}">12+</span><span class="stat-l">Années</span></div>
+      <div><span class="stat-n sp${n}">80+</span><span class="stat-l">Projets</span></div>
+      <div><span class="stat-n sp${n}">98%</span><span class="stat-l">Clients</span></div>
+    </div>
+
+    <div class="card-foot">
+      <span class="font-tag">${f.sub}</span>
+      <button class="pick-btn" onclick="selectCard(${n})">Choisir →</button>
+    </div>
+  `;
+
+  card.addEventListener('click', () => selectCard(n));
+  grid.appendChild(card);
+});
+
+function selectCard(n) {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('picked'));
+  const card = document.querySelector(`.card[data-n="${n}"]`);
+  card.classList.add('picked');
+  picked = n;
+  const font = fonts.find(f => f.n === n);
+  barName.textContent = `N°${String(n).padStart(2,'0')} — ${font.name}`;
+  bar.classList.add('show');
+  card.scrollIntoView({ behavior:'smooth', block:'center' });
+}
+
+barConfirm.addEventListener('click', () => {
+  if (!picked) return;
+  const font = fonts.find(f => f.n === picked);
+  alert(`✅ Choix confirmé !\n\nPolice N°${String(picked).padStart(2,'0')} — ${font.name}\n\nDonne ce numéro et on l'applique sur tout le site !`);
+});
+</script>
+</body>
+</html>
