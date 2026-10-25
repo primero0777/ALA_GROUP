@@ -8,7 +8,7 @@
   <title>Services — ARCHIRAM BUILDING</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <!-- Favicons — tous navigateurs -->
@@ -87,7 +87,7 @@ window.PAGE_LANG = {
 
 <!-- Page Hero -->
 <section class="page-hero">
-  <div class="container">
+  <div class="wrap">
     <div class="page-hero-inner">
       <nav class="breadcrumb" aria-label="Fil d'Ariane">
         <a href="index.html">Accueil</a>
@@ -100,26 +100,38 @@ window.PAGE_LANG = {
   </div>
 </section>
 
+<!-- Bannière accroche -->
+<section class="desire-banner">
+  <div class="wrap">
+    <div class="desire-inner reveal">
+      <span class="desire-eyebrow"><i class="fas fa-star"></i> ARCHIRAM BUILDING</span>
+      <h2 class="desire-title">L'objet de<br><em>vos désirs</em></h2>
+      <p class="desire-sub">Chaque projet est unique. Nous transformons vos ambitions en réalisations d'exception — de l'esquisse à la remise des clés.</p>
+      <a href="devis.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Concrétiser mon projet</a>
+    </div>
+  </div>
+</section>
+
 <!-- Why ARCHIRAM -->
 <section class="section">
-  <div class="container">
+  <div class="wrap">
     <div class="sec-header reveal">
       <p class="sec-tag" data-i18n="why_tag">Pourquoi ARCHIRAM</p>
       <h2 class="sec-title" data-i18n="why_title">L'excellence,<br>notre standard</h2>
     </div>
     <div class="pillars-grid">
       <div class="pillar reveal" style="--d:0ms">
-        <div class="pillar-icon"><i class="fas fa-medal"></i></div>
+        <div class="pillar-icon" style="background:var(--gold-t);color:var(--gold)"><i class="fas fa-medal"></i></div>
         <h4 data-i18n="p1_title">Expertise reconnue</h4>
         <p data-i18n="p1_desc">10 ans d'expérience dans la conception et la réalisation de projets architecturaux d'exception en Afrique de l'Ouest.</p>
       </div>
       <div class="pillar reveal" style="--d:100ms">
-        <div class="pillar-icon"><i class="fas fa-gem"></i></div>
+        <div class="pillar-icon" style="background:rgba(56,189,248,.12);color:var(--sky)"><i class="fas fa-leaf"></i></div>
         <h4 data-i18n="p2_title">Matériaux durables</h4>
         <p data-i18n="p2_desc">Sélection rigoureuse des matériaux les plus qualitatifs pour des constructions durables et esthétiquement supérieures.</p>
       </div>
       <div class="pillar reveal" style="--d:200ms">
-        <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="pillar-icon" style="background:rgba(74,222,128,.12);color:var(--emerald)"><i class="fas fa-shield-alt"></i></div>
         <h4 data-i18n="p3_title">Livraison garantie</h4>
         <p data-i18n="p3_desc">Respect strict des délais et du budget convenus, avec suivi de chantier transparent et reporting régulier.</p>
       </div>
@@ -129,7 +141,7 @@ window.PAGE_LANG = {
 
 <!-- Services Alternés -->
 <section class="section section-alt">
-  <div class="container">
+  <div class="wrap">
 
     <!-- Service 1 — Architecture -->
     <div class="srv-alt reveal">
@@ -293,34 +305,88 @@ window.PAGE_LANG = {
       </div>
     </div>
 
+    <!-- Service 10 — Montage d'Ascenseurs (reverse) -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-body" style="order:1">
+        <p class="srv-alt-num">10</p>
+        <i class="fas fa-arrow-up srv-alt-icon"></i>
+        <h3>Montage d'Ascenseurs</h3>
+        <p>Installation, mise en service et maintenance d'ascenseurs pour immeubles résidentiels, commerciaux et industriels. Nous assurons conformité aux normes de sécurité, fiabilité mécanique et confort d'utilisation à chaque étage.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Installation &amp; mise en service complète</li>
+          <li class="srv-feat">Ascenseurs résidentiels &amp; commerciaux</li>
+          <li class="srv-feat">Maintenance préventive &amp; corrective</li>
+          <li class="srv-feat">Mise aux normes &amp; certification sécurité</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Installation d'ascenseur dans un immeuble" loading="lazy"></div>
+    </div>
+
+    <!-- Service 11 — Informatique -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Infrastructure informatique et réseau" loading="lazy"></div>
+      <div class="srv-alt-body">
+        <p class="srv-alt-num">11</p>
+        <i class="fas fa-laptop-code srv-alt-icon"></i>
+        <h3>Informatique</h3>
+        <p>Conception, installation et maintenance d'infrastructures informatiques pour entreprises et particuliers. Déploiement de réseaux, postes de travail, serveurs et solutions cloud adaptés à vos besoins opérationnels.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Déploiement réseaux &amp; Wi-Fi</li>
+          <li class="srv-feat">Installation postes &amp; serveurs</li>
+          <li class="srv-feat">Solutions cloud &amp; sauvegarde</li>
+          <li class="srv-feat">Support technique &amp; maintenance</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+    </div>
+
+    <!-- Service 12 — Courant Faible (reverse) -->
+    <div class="srv-alt reveal">
+      <div class="srv-alt-body" style="order:1">
+        <p class="srv-alt-num">12</p>
+        <i class="fas fa-wifi srv-alt-icon"></i>
+        <h3>Courant Faible</h3>
+        <p>Installation des systèmes de courant faible pour une sécurité et une connectivité optimales : vidéosurveillance, contrôle d'accès, interphonie, alarme intrusion et câblage structuré pour locaux professionnels et résidentiels.</p>
+        <ul class="srv-feat-list">
+          <li class="srv-feat">Vidéosurveillance &amp; CCTV</li>
+          <li class="srv-feat">Contrôle d'accès &amp; interphonie</li>
+          <li class="srv-feat">Alarme intrusion &amp; incendie</li>
+          <li class="srv-feat">Câblage structuré &amp; fibre optique</li>
+        </ul>
+        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+      </div>
+      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80" alt="Systèmes de courant faible et vidéosurveillance" loading="lazy"></div>
+    </div>
+
   </div>
 </section>
 
 <!-- Process -->
 <section class="section">
-  <div class="container">
+  <div class="wrap">
     <div class="sec-header reveal">
       <p class="sec-tag" data-i18n="proc_tag">Notre Processus</p>
       <h2 class="sec-title" data-i18n="proc_title">Comment nous<br>travaillons</h2>
     </div>
     <div class="process-grid">
-      <div class="proc-step reveal" style="--d:0ms">
-        <div class="proc-num">01</div>
+      <div class="proc-step-inner reveal" style="--d:0ms">
+        <div class="proc-num"><i class="fas fa-comments"></i></div>
         <h4 data-i18n="proc1_title">Consultation</h4>
         <p data-i18n="proc1_desc">Rencontre initiale pour comprendre votre projet, vos besoins et votre vision personnelle.</p>
       </div>
-      <div class="proc-step reveal" style="--d:100ms">
-        <div class="proc-num">02</div>
+      <div class="proc-step-inner reveal" style="--d:100ms">
+        <div class="proc-num"><i class="fas fa-pencil-ruler"></i></div>
         <h4 data-i18n="proc2_title">Conception</h4>
         <p data-i18n="proc2_desc">Élaboration des plans et propositions de design sur mesure adaptés à vos attentes.</p>
       </div>
-      <div class="proc-step reveal" style="--d:200ms">
-        <div class="proc-num">03</div>
+      <div class="proc-step-inner reveal" style="--d:200ms">
+        <div class="proc-num"><i class="fas fa-hard-hat"></i></div>
         <h4 data-i18n="proc3_title">Réalisation</h4>
         <p data-i18n="proc3_desc">Exécution rigoureuse des travaux avec suivi qualité à chaque étape du chantier.</p>
       </div>
-      <div class="proc-step reveal" style="--d:300ms">
-        <div class="proc-num">04</div>
+      <div class="proc-step-inner reveal" style="--d:300ms">
+        <div class="proc-num"><i class="fas fa-key"></i></div>
         <h4 data-i18n="proc4_title">Livraison</h4>
         <p data-i18n="proc4_desc">Remise des clés et accompagnement post-livraison pour votre satisfaction totale.</p>
       </div>
@@ -330,7 +396,7 @@ window.PAGE_LANG = {
 
 <!-- FAQ -->
 <section class="section section-alt">
-  <div class="container">
+  <div class="wrap">
     <div class="sec-header reveal">
       <p class="sec-tag" data-i18n="faq_tag">FAQ</p>
       <h2 class="sec-title" data-i18n="faq_title">Questions fréquentes</h2>
@@ -341,13 +407,13 @@ window.PAGE_LANG = {
 
 <!-- CTA -->
 <section class="section">
-  <div class="container">
+  <div class="wrap">
     <div class="cta-banner reveal">
       <h2 data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
       <p data-i18n="cta_sub">Contactez-nous dès aujourd'hui pour une consultation offerte sans engagement.</p>
       <div class="cta-actions">
-        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1">Obtenir un devis gratuit</a>
-        <a href="https://wa.me/22898067744" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta_btn2">Nous appeler</a>
+        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1"><i class="fas fa-file-alt"></i> Obtenir un devis gratuit</a>
+        <a href="https://wa.me/22898067744" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta_btn2"><i class="fab fa-whatsapp"></i> Nous appeler</a>
       </div>
     </div>
   </div>
@@ -355,48 +421,52 @@ window.PAGE_LANG = {
 
 <!-- Footer -->
 <footer id="footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
         <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
         <p class="footer-tag">Architecture. Construction. Excellence.</p>
-        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+        <p class="footer-addr"><i class="fas fa-map-marker-alt"></i> Avedji Wessomé, Lomé, Togo</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
       <div class="footer-col">
-        <p class="footer-heading">Navigation</p>
+        <p class="footer-heading"><i class="fas fa-compass"></i> Navigation</p>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="projects.html"><i class="fas fa-building"></i> Projets</a></li>
+          <li><a href="about.html"><i class="fas fa-users"></i> À Propos</a></li>
+          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <p class="footer-heading">Services</p>
+        <p class="footer-heading"><i class="fas fa-th-large"></i> Services</p>
         <ul>
-          <li><a href="devis.html">Architecture</a></li>
-          <li><a href="devis.html">Construction Écologique</a></li>
-          <li><a href="devis.html">Ingénierie BTP</a></li>
-          <li><a href="devis.html">Art Éco &amp; Upcycling</a></li>
-          <li><a href="devis.html">Location Matériaux</a></li>
+          <li><a href="devis.html"><i class="fas fa-drafting-compass"></i> Architecture</a></li>
+          <li><a href="devis.html"><i class="fas fa-leaf"></i> Construction Écologique</a></li>
+          <li><a href="devis.html"><i class="fas fa-hard-hat"></i> Ingénierie BTP</a></li>
+          <li><a href="devis.html"><i class="fas fa-arrow-up"></i> Montage Ascenseurs</a></li>
+          <li><a href="devis.html"><i class="fas fa-laptop-code"></i> Informatique</a></li>
+          <li><a href="devis.html"><i class="fas fa-wifi"></i> Courant Faible</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <p class="footer-heading">Contact</p>
+        <p class="footer-heading"><i class="fas fa-phone-alt"></i> Contact</p>
         <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
-        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
-        <a href="mailto:archi.hiram@outlook.fr" class="footer-email">archi.hiram@outlook.fr</a>
+        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email"><i class="fas fa-envelope"></i> binaeltoudeka@gmail.com</a>
+        <a href="mailto:archi.hiram@outlook.fr" class="footer-email"><i class="fas fa-envelope"></i> archi.hiram@outlook.fr</a>
+        <a href="devis.html" class="btn btn-primary" style="margin-top:1rem;font-size:.7rem"><i class="fas fa-file-alt"></i> Devis gratuit</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
+      <p>© 2026 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
       <div class="footer-links">
-        <a href="politique-confidentialite.html">Politique de confidentialité</a>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="politique-confidentialite.html"><i class="fas fa-lock"></i> Politique de confidentialité</a>
       </div>
     </div>
   </div>
