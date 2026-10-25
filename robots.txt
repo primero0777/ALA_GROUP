@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cahier%20de%20charges/
+Disallow: /font-preview.html
+
+Sitemap: https://VOTRE-DOMAINE.com/sitemap.xml

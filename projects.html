@@ -1,389 +1,323 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio ARCHIRAM BUILDING — Découvrez nos réalisations architecturales en résidentiel, commercial et design intérieur à Lomé, Togo.">
-  <title>Projets — ARCHIRAM BUILDING</title>
+  <title data-i18n="meta_title">Nos réalisations – ARCHIRAM BUILDING, Lomé</title>
+  <meta name="description" content="Photos de chantiers ARCHIRAM BUILDING à Lomé : immeuble résidentiel, aménagement de chambres et suites, serrures connectées." data-i18n-attr="content:meta_desc">
+  <link rel="canonical" href="https://VOTRE-DOMAINE.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARCHIRAM BUILDING">
+  <meta property="og:url" content="https://VOTRE-DOMAINE.com/projects.html">
+  <meta property="og:title" content="Nos réalisations – ARCHIRAM BUILDING, Lomé" data-i18n-attr="content:meta_title">
+  <meta property="og:description" content="Photos de chantiers ARCHIRAM BUILDING à Lomé : immeuble résidentiel, aménagement de chambres et suites, serrures connectées." data-i18n-attr="content:meta_desc">
+  <meta property="og:image" content="https://VOTRE-DOMAINE.com/assets/img/immeuble-facade.webp">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Favicons — tous navigateurs -->
-  <link rel="icon" type="image/png" sizes="32x32"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="16x16"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="96x96"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/LOGO Archi.png">
-  <link rel="apple-touch-icon" sizes="180x180"     href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#141414">
-  <meta name="msapplication-TileColor" content="#141414">
-  <meta name="msapplication-TileImage" content="assets/LOGO Archi.png">
-  <meta name="msapplication-config" content="none">
-  <style>
-    /* Projects page hero — mosaic background */
-    .proj-page-hero {
-      position: relative;
-      padding: calc(var(--nav-h) + 5rem) 0 4rem;
-      background: var(--navy);
-      overflow: hidden;
-    }
-    .proj-hero-mosaic {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 1fr;
-      opacity: .12;
-      filter: saturate(.3);
-    }
-    .proj-hero-mosaic img { width: 100%; height: 100%; object-fit: cover; }
-    .proj-hero-mosaic::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, var(--navy) 0%, rgba(11,28,58,.6) 50%, var(--navy) 100%);
-    }
-    .proj-page-hero .page-hero-inner { position: relative; z-index: 1; }
-
-    /* Mosaic grid */
-    .proj-masonry {
-      columns: 3;
-      column-gap: 1.25rem;
-    }
-    .proj-m-card {
-      break-inside: avoid;
-      margin-bottom: 1.25rem;
-      border-radius: var(--radius);
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-    }
-    .proj-m-card img { width: 100%; display: block; transition: transform .6s var(--ease); }
-    .proj-m-card:hover img { transform: scale(1.06); }
-    .proj-m-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(11,28,58,.9) 0%, transparent 60%);
-      opacity: 0; transition: opacity .4s;
-      display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;
-    }
-    .proj-m-card:hover .proj-m-overlay { opacity: 1; }
-    .proj-m-card.hidden { display: none; }
-
-    /* Stats strip */
-    .proj-stats-strip {
-      background: var(--navy);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      text-align: center;
-    }
-    .pss-item {
-      padding: 2.5rem 1rem;
-      border-right: 1px solid rgba(255,255,255,.07);
-    }
-    .pss-item:last-child { border-right: none; }
-    .pss-n { font-family: var(--font-d); font-size: 2.75rem; font-weight: 300; color: var(--gold); display: block; line-height: 1; }
-    .pss-l { font-size: .6875rem; color: rgba(255,255,255,.5); letter-spacing: .1em; text-transform: uppercase; margin-top: .25rem; display: block; }
-
-    @media (max-width: 900px) {
-      .proj-masonry { columns: 2; }
-      .proj-hero-mosaic { grid-template-columns: repeat(3, 1fr); }
-      .proj-stats-strip { grid-template-columns: repeat(2, 1fr); }
-      .pss-item { border-bottom: 1px solid rgba(255,255,255,.07); }
-    }
-    @media (max-width: 580px) {
-      .proj-masonry { columns: 1; }
-      .proj-hero-mosaic { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
+  <meta name="theme-color" content="#13202C">
 </head>
 <body>
 
-<script>
-window.PAGE_LANG = {
-  fr: {
-    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
-    ph_title:'Notre <em>Portfolio</em>',
-    ph_sub:'150+ projets réalisés au Togo, au Ghana et en Afrique de l\'Ouest. Chaque réalisation est une signature.',
-    flt_all:'Tous', flt_res:'Résidentiel', flt_com:'Commercial', flt_int:'Intérieur',
-    modal_start:'Démarrer un projet similaire',
-    pss1:'Projets réalisés', pss2:'Pays d\'intervention', pss3:'Clients satisfaits', pss4:'Années d\'expérience'
-  },
-  en: {
-    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
-    ph_title:'Our <em>Portfolio</em>',
-    ph_sub:'150+ projects delivered in Togo, Ghana and across West Africa. Every build is a signature.',
-    flt_all:'All', flt_res:'Residential', flt_com:'Commercial', flt_int:'Interior',
-    modal_start:'Start a similar project',
-    pss1:'Projects delivered', pss2:'Countries', pss3:'Satisfied clients', pss4:'Years of experience'
-  }
-};
-</script>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
-<!-- Navbar -->
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
-      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
-      <li><a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projets</a></li>
-      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
-      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+<header id="navbar">
+  <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
+    <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
+      <img src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+    </a>
+    <ul class="nav-menu" id="navLinks">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-item" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-item active" aria-current="page" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-item" data-i18n="nav_about">À propos</a></li>
+      <li><a href="contact.html" class="nav-item" data-i18n="nav_contact">Contact</a></li>
+      <li class="nav-mobile-cta"><a href="devis.html" class="btn btn-primary" data-from="menu"><span data-i18n="nav_cta">Devis gratuit</span></a></li>
     </ul>
-    <div class="nav-actions">
-      <button class="lang-btn" id="langToggle"><span id="langLabel">EN</span></button>
-      <button class="theme-btn" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
-      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
+      <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
+      <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<!-- Hero -->
-<section class="proj-page-hero">
-  <div class="proj-hero-mosaic" aria-hidden="true">
-    <img src="assets/ala_build.jpg" alt="">
-    <img src="assets/photo_2026-05-02_20-50-42.jpg" alt="">
-    <img src="assets/fauteui+deco.jpg" alt="">
-    <img src="assets/photo_2026-05-02_20-50-41.jpg" alt="">
-    <img src="assets/ens_chbre.jpg" alt="">
-    <img src="assets/lavabo_moderne.jpg" alt="">
-  </div>
-  <div class="container">
-    <div class="page-hero-inner">
-      <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span class="sep"><i class="fas fa-chevron-right"></i></span>
-        <span class="cur" data-i18n="nav_projects">Projets</span>
+<main id="main">
+<section class="page-head" aria-labelledby="pageTitle">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-i18n-attr="aria-label:crumb_label">
+        <a href="index.html" data-i18n="crumb_home">Accueil</a>
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+        <span aria-current="page" data-i18n="nav_projects">Projets</span>
       </nav>
-      <h1 class="page-h1" data-i18n="ph_title">Notre <em>Portfolio</em></h1>
-      <p class="page-sub" data-i18n="ph_sub">150+ projets réalisés au Togo, au Ghana et en Afrique de l'Ouest. Chaque réalisation est une signature.</p>
+    <h1 id="pageTitle" data-i18n="pg_title">Nos réalisations</h1>
+    <p class="page-lead" data-i18n="pg_lead">Chaque fiche présente un chantier photographié par nos équipes. Ouvrez-la pour voir toutes les photos.</p>
+  </div>
+</section>
+
+<section class="sec sec-tight" aria-label="Réalisations">
+  <div class="wrap">
+    <div class="proj-toolbar"><div class="proj-filters" role="group" aria-label="Filtrer les projets" data-i18n-attr="aria-label:flt_label" data-filter-group="projGrid">
+        <button type="button" class="flt active" data-filter="all" aria-pressed="true" data-i18n="flt_all">Tous</button>
+        <button type="button" class="flt" data-filter="residential" aria-pressed="false" data-i18n="flt_res">Résidentiel</button>
+        <button type="button" class="flt" data-filter="interior" aria-pressed="false" data-i18n="flt_int">Intérieur</button>
+        <button type="button" class="flt" data-filter="technical" aria-pressed="false" data-i18n="flt_tech">Équipements</button>
+      </div></div>
+    <div class="proj-grid proj-grid-home" id="projGrid">
+      <article class="proj-card" data-cat="residential" id="immeuble">
+        <button type="button" class="proj-media proj-open" aria-haspopup="dialog">
+          <img src="assets/img/immeuble-facade.webp" srcset="assets/img/immeuble-facade-640.webp 640w, assets/img/immeuble-facade.webp 756w" sizes="(max-width: 860px) 100vw, 66vw" width="756" height="1008" alt="Façade de l&#x27;immeuble vue d&#x27;en bas, carreaux verts et porte rouge" loading="lazy" decoding="async">
+          <span class="proj-count"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-images"></use></svg><span>3 photos</span></span>
+        </button>
+        <div class="proj-cap">
+          <div>
+            <h2 class="proj-title"><span data-i18n="pj_immeuble_t">Immeuble résidentiel à façade céramique</span></h2>
+            <p data-i18n="pj_immeuble_s">Façade en carreaux verts, balcons en loggia et soubassement en pierre.</p>
+          </div>
+          <span class="proj-cat" data-i18n="flt_res">Résidentiel</span>
+        </div>
+        <template>
+          <div class="dlg-head">
+            <span class="proj-cat" data-i18n="flt_res">Résidentiel</span>
+            <h2 id="dlgTitle" data-i18n="pj_immeuble_t">Immeuble résidentiel à façade céramique</h2>
+            <p class="dlg-place"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-location-dot"></use></svg>Lomé, Togo</p>
+            <p data-i18n="pj_immeuble_l">Immeuble d'habitation sur plusieurs niveaux. La façade principale est habillée de carreaux céramiques verts posés en relief, les balcons sont traités en loggia et le rez-de-chaussée reçoit un parement en pierre.</p>
+            <a href="devis.html" class="btn btn-primary" data-from="project-immeuble"><span data-i18n="pj_similar">Démarrer un projet similaire</span></a>
+          </div>
+          <div class="dlg-gallery">
+            <figure><img src="assets/img/immeuble-facade.webp" srcset="assets/img/immeuble-facade-640.webp 640w, assets/img/immeuble-facade.webp 756w" sizes="(max-width: 860px) 100vw, 50vw" width="756" height="1008" alt="Façade de l&#x27;immeuble vue d&#x27;en bas, carreaux verts et porte rouge" data-i18n-attr="alt:pj_immeuble_a0" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/immeuble-facade-large.webp" srcset="assets/img/immeuble-facade-large-640.webp 640w, assets/img/immeuble-facade-large.webp 1008w" sizes="(max-width: 860px) 100vw, 50vw" width="1008" height="756" alt="Vue d&#x27;ensemble de l&#x27;immeuble et de ses voisins" data-i18n-attr="alt:pj_immeuble_a1" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/immeuble-balcons.webp" srcset="assets/img/immeuble-balcons-640.webp 640w, assets/img/immeuble-balcons.webp 960w" sizes="(max-width: 860px) 100vw, 50vw" width="960" height="1280" alt="Détail des balcons en loggia" data-i18n-attr="alt:pj_immeuble_a2" loading="lazy" decoding="async"></figure>
+          </div>
+        </template>
+      </article>
+      <article class="proj-card" data-cat="interior" id="suites">
+        <button type="button" class="proj-media proj-open" aria-haspopup="dialog">
+          <img src="assets/img/suite-boiseries.webp" srcset="assets/img/suite-boiseries-640.webp 640w, assets/img/suite-boiseries.webp 1080w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="1080" height="720" alt="Chambre avec boiseries et lampes suspendues" loading="lazy" decoding="async">
+          <span class="proj-count"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-images"></use></svg><span>6 photos</span></span>
+        </button>
+        <div class="proj-cap">
+          <div>
+            <h2 class="proj-title"><span data-i18n="pj_suites_t">Aménagement de chambres et suites</span></h2>
+            <p data-i18n="pj_suites_s">Boiseries murales, éclairage suspendu, textile wax et salle de bain sur mesure.</p>
+          </div>
+          <span class="proj-cat" data-i18n="flt_int">Intérieur</span>
+        </div>
+        <template>
+          <div class="dlg-head">
+            <span class="proj-cat" data-i18n="flt_int">Intérieur</span>
+            <h2 id="dlgTitle" data-i18n="pj_suites_t">Aménagement de chambres et suites</h2>
+            <p class="dlg-place"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-location-dot"></use></svg>Lomé, Togo</p>
+            <p data-i18n="pj_suites_l">Aménagement intérieur complet de chambres : panneaux muraux en bois à joints creux, têtes de lit capitonnées, suspensions en verre, coin salon avec mobilier aux formes arrondies et salle de bain avec meuble vasque bleu et miroir ovale.</p>
+            <a href="devis.html" class="btn btn-primary" data-from="project-suites"><span data-i18n="pj_similar">Démarrer un projet similaire</span></a>
+          </div>
+          <div class="dlg-gallery">
+            <figure><img src="assets/img/suite-boiseries.webp" srcset="assets/img/suite-boiseries-640.webp 640w, assets/img/suite-boiseries.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" width="1080" height="720" alt="Chambre avec boiseries et lampes suspendues" data-i18n-attr="alt:pj_suites_a0" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/suite-baie-vitree.webp" srcset="assets/img/suite-baie-vitree-640.webp 640w, assets/img/suite-baie-vitree.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" width="1080" height="720" alt="Chambre ouverte sur une baie vitrée" data-i18n-attr="alt:pj_suites_a1" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/suite-lit.webp" srcset="assets/img/suite-lit-640.webp 640w, assets/img/suite-lit.webp 720w" sizes="(max-width: 860px) 100vw, 50vw" width="720" height="1080" alt="Lit avec jeté en tissu wax" data-i18n-attr="alt:pj_suites_a2" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/suite-coin-salon.webp" srcset="assets/img/suite-coin-salon-640.webp 640w, assets/img/suite-coin-salon.webp 1008w" sizes="(max-width: 860px) 100vw, 50vw" width="1008" height="756" alt="Suite avec coin salon et bureau" data-i18n-attr="alt:pj_suites_a3" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/salon-fauteuil-jaune.webp" srcset="assets/img/salon-fauteuil-jaune-640.webp 640w, assets/img/salon-fauteuil-jaune.webp 1080w" sizes="(max-width: 860px) 100vw, 50vw" width="1080" height="720" alt="Coin salon avec canapé arrondi et fauteuil jaune" data-i18n-attr="alt:pj_suites_a4" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/salle-de-bain.webp" srcset="assets/img/salle-de-bain-640.webp 640w, assets/img/salle-de-bain.webp 756w" sizes="(max-width: 860px) 100vw, 50vw" width="756" height="1008" alt="Salle de bain avec miroir ovale et meuble bleu" data-i18n-attr="alt:pj_suites_a5" loading="lazy" decoding="async"></figure>
+          </div>
+        </template>
+      </article>
+      <article class="proj-card" data-cat="technical" id="serrures">
+        <button type="button" class="proj-media proj-open" aria-haspopup="dialog">
+          <img src="assets/img/serrure-porte-vitree.webp" srcset="assets/img/serrure-porte-vitree-640.webp 640w, assets/img/serrure-porte-vitree.webp 809w" sizes="(max-width: 600px) 100vw, (max-width: 860px) 50vw, 33vw" width="809" height="1080" alt="Serrure connectée sur une porte vitrée" loading="lazy" decoding="async">
+          <span class="proj-count"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-images"></use></svg><span>2 photos</span></span>
+        </button>
+        <div class="proj-cap">
+          <div>
+            <h2 class="proj-title"><span data-i18n="pj_serrures_t">Serrures connectées et contrôle d'accès</span></h2>
+            <p data-i18n="pj_serrures_s">Serrures à code et à empreinte posées sur portes vitrées et portes pleines.</p>
+          </div>
+          <span class="proj-cat" data-i18n="flt_tech">Équipements</span>
+        </div>
+        <template>
+          <div class="dlg-head">
+            <span class="proj-cat" data-i18n="flt_tech">Équipements</span>
+            <h2 id="dlgTitle" data-i18n="pj_serrures_t">Serrures connectées et contrôle d'accès</h2>
+            <p class="dlg-place"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-location-dot"></use></svg>Lomé, Togo</p>
+            <p data-i18n="pj_serrures_l">Pose de serrures connectées avec clavier tactile et lecteur d'empreinte, sur des portes vitrées à cadre aluminium et sur des portes pleines. Un exemple de nos travaux de courant faible.</p>
+            <a href="devis.html" class="btn btn-primary" data-from="project-serrures"><span data-i18n="pj_similar">Démarrer un projet similaire</span></a>
+          </div>
+          <div class="dlg-gallery">
+            <figure><img src="assets/img/serrure-porte-vitree.webp" srcset="assets/img/serrure-porte-vitree-640.webp 640w, assets/img/serrure-porte-vitree.webp 809w" sizes="(max-width: 860px) 100vw, 50vw" width="809" height="1080" alt="Serrure connectée sur une porte vitrée" data-i18n-attr="alt:pj_serrures_a0" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/serrure-porte-pleine.webp" srcset="assets/img/serrure-porte-pleine-640.webp 640w, assets/img/serrure-porte-pleine.webp 756w" sizes="(max-width: 860px) 100vw, 50vw" width="756" height="1008" alt="Serrure connectée sur une porte pleine" data-i18n-attr="alt:pj_serrures_a1" loading="lazy" decoding="async"></figure>
+          </div>
+        </template>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Stats strip -->
-<div class="proj-stats-strip">
-  <div class="pss-item"><span class="pss-n">150+</span><span class="pss-l" data-i18n="pss1">Projets réalisés</span></div>
-  <div class="pss-item"><span class="pss-n">3</span><span class="pss-l" data-i18n="pss2">Pays d'intervention</span></div>
-  <div class="pss-item"><span class="pss-n">98%</span><span class="pss-l" data-i18n="pss3">Clients satisfaits</span></div>
-  <div class="pss-item"><span class="pss-n">10+</span><span class="pss-l" data-i18n="pss4">Années d'expérience</span></div>
-</div>
-
-<!-- Gallery -->
-<section class="section">
-  <div class="container">
-    <div class="proj-filter reveal">
-      <button class="flt-btn active" data-filter="all" data-i18n="flt_all">Tous</button>
-      <button class="flt-btn" data-filter="residential" data-i18n="flt_res">Résidentiel</button>
-      <button class="flt-btn" data-filter="commercial" data-i18n="flt_com">Commercial</button>
-      <button class="flt-btn" data-filter="interior" data-i18n="flt_int">Intérieur</button>
-    </div>
-
-    <div class="proj-masonry" id="projMasonry">
-      <!-- Cards filled by JS -->
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section-alt">
-  <div class="container" style="text-align:center">
-    <div class="reveal">
-      <p class="sec-tag">Votre projet</p>
-      <h2 class="sec-title" style="max-width:520px;margin:0 auto 1.5rem">Vous avez un projet en tête ?</h2>
-      <p style="color:var(--text-3);margin-bottom:2rem;max-width:440px;margin-left:auto;margin-right:auto">Décrivez-nous votre vision et recevez une estimation personnalisée en 48h.</p>
-      <a href="devis.html" class="btn btn-primary">Obtenir un devis gratuit</a>
+<section id="before-after" class="sec sec-chalk" aria-labelledby="baTitle">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2 id="baTitle" data-i18n="t_title">Ce que change une rénovation</h2>
+    </header>
+    <div class="media-pair">
+      <div class="reveal">
+        <h3 data-i18n="ba_title">Avant / après</h3>
+        <p class="media-note" data-i18n="ba_note">Faites glisser la poignée ou utilisez les flèches du clavier.</p>
+        <div class="ba-wrap">
+          <div class="ba-after">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=1200" srcset="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=640 640w, https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(max-width: 860px) 100vw, 60vw" width="1200" height="750" alt="" loading="lazy" decoding="async">
+            <span class="ba-tag ba-tag-r" data-i18n="ba_after">Après</span>
+          </div>
+          <div class="ba-before">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=1200" srcset="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=640 640w, https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(max-width: 860px) 100vw, 60vw" width="1200" height="750" alt="" loading="lazy" decoding="async">
+            <span class="ba-tag ba-tag-l" data-i18n="ba_before">Avant</span>
+          </div>
+          <div class="ba-handle" aria-hidden="true"><span class="ba-knob"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-left"></use></svg><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></span></div>
+          <input class="ba-range" type="range" min="2" max="98" value="50" aria-label="Comparer avant et après" data-i18n-attr="aria-label:ba_label">
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 data-i18n="vid_title">Sur le chantier</h3>
+        <p class="media-note" data-i18n="vid_note">La vidéo est chargée depuis YouTube quand vous la lancez.</p>
+        <div class="embed-box vid-box">
+          <img src="assets/img/suite-lit.webp" srcset="assets/img/suite-lit-640.webp 640w, assets/img/suite-lit.webp 720w" sizes="(max-width: 860px) 100vw, 40vw" width="720" height="1080" alt="" loading="lazy" decoding="async" style="object-position:50% 60%">
+          <button type="button" class="vid-btn" data-embed="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?autoplay=1" data-embed-title="Vidéo ARCHIRAM BUILDING" data-track="video_play"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-play"></use></svg><span data-i18n="vid_play">Lancer la vidéo</span></button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<dialog id="projDialog" class="dlg" aria-labelledby="dlgTitle">
+  <button type="button" class="dlg-close" aria-label="Fermer" data-i18n-attr="aria-label:dlg_close"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-xmark"></use></svg></button>
+  <div class="dlg-body"></div>
+</dialog>
+
+<section class="cta-band" aria-labelledby="ctaTitle">
+  <div class="wrap cta-inner reveal">
+    <div>
+      <h2 id="ctaTitle" data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
+      <p data-i18n="cta_sub">Décrivez-le en quelques lignes : nous répondons sous 24 heures, sur WhatsApp ou par email.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="devis.html" class="btn btn-primary" data-from="cta"><span data-i18n="cta_btn1">Demander un devis gratuit</span></a>
+      <a href="https://wa.me/22898067744" class="btn btn-line" target="_blank" rel="noopener" data-from="cta"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg><span data-i18n="cta_btn2">Écrire sur WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
 <footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
-        <p class="footer-tag">Architecture. Construction. Excellence.</p>
-        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="130" height="50" loading="lazy">
+        <p data-i18n="ft_tag">Concevoir, construire et aménager en Afrique de l'Ouest.</p>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="footer"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg></a>
+        </div>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Navigation</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_nav">Navigation</p>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="devis.html" data-i18n="nav_cta" data-from="footer">Devis gratuit</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Catégories</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_srv">Services</p>
         <ul>
-          <li><a href="#" data-filter-link="residential">Résidentiel</a></li>
-          <li><a href="#" data-filter-link="commercial">Commercial</a></li>
-          <li><a href="#" data-filter-link="interior">Intérieur</a></li>
-          <li><a href="devis.html">Devis gratuit</a></li>
+          <li><a href="services.html#architecture" data-i18n="srv1_title">Architecture</a></li>
+          <li><a href="services.html#construction-ecologique" data-i18n="srv2_title">Construction écologique</a></li>
+          <li><a href="services.html#architecture-interieure" data-i18n="srv3_title">Architecture intérieure</a></li>
+          <li><a href="services.html#ingenierie-btp" data-i18n="srv4_title">Ingénierie BTP</a></li>
+          <li><a href="services.html#systemes-techniques" data-i18n="srv9_title">Systèmes techniques</a></li>
+          <li><a href="services.html#courant-faible" data-i18n="srv12_title">Courant faible</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Contact</p>
-        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
-        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
-        <a href="mailto:archi.hiram@outlook.fr" class="footer-email">archi.hiram@outlook.fr</a>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_contact">Contact</p>
+        <ul>
+          <li><a href="https://wa.me/22898067744" target="_blank" rel="noopener" data-from="footer">WhatsApp : +228 98 06 77 44</a></li>
+          <li><a href="mailto:binaeltoudeka@gmail.com">binaeltoudeka@gmail.com</a></li>
+          <li><a href="mailto:archi.hiram@outlook.fr">archi.hiram@outlook.fr</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Avedji%20Wessom%C3%A9%2C%20Lom%C3%A9%2C%20Togo" target="_blank" rel="noopener">Avedji Wessomé, Lomé, Togo</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="politique-confidentialite.html">Politique de confidentialité</a>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="foot-bar">
+      <p>© <span data-year>2026</span> ARCHIRAM BUILDING – Archiram Link Africa. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <a href="politique-confidentialite.html" data-i18n="ft_privacy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<!-- Project Modal -->
-<div id="projModal" class="proj-modal" role="dialog" aria-modal="true">
-  <div class="modal-inner">
-    <button class="modal-close" id="modalClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
-    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
-    <div class="modal-body">
-      <span class="proj-cat" id="modalCat"></span>
-      <h2 id="modalTitle"></h2>
-      <p class="modal-desc" id="modalDesc"></p>
-      <div class="modal-meta">
-        <div class="mm"><p class="mm-lbl">Localisation</p><p class="mm-val" id="modalLoc"></p></div>
-        <div class="mm"><p class="mm-lbl">Année</p><p class="mm-val" id="modalYear"></p></div>
-        <div class="mm"><p class="mm-lbl">Surface</p><p class="mm-val" id="modalArea"></p></div>
-      </div>
-      <a href="devis.html" class="btn btn-primary" id="modalCta" data-i18n="modal_start">Démarrer un projet similaire</a>
-    </div>
-  </div>
-</div>
-
-<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20r%C3%A9alisations." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <span class="wa-tip">Discutons sur WhatsApp</span>
+<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations." class="wa-fab" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="fab">
+  <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg>
+  <span class="wa-label" data-i18n="wa_tip">Discutons sur WhatsApp</span>
 </a>
-<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<button id="back-top" type="button" aria-label="Retour en haut" data-i18n-attr="aria-label:back_top"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg></button>
 
-<script src="script.js"></script>
 <script>
-const PROJECTS = [
-  { cat:'residential', img:'assets/ala_build.jpg', title_fr:'Villa Moderne Avedji', title_en:'Modern Villa Avedji', desc_fr:'Résidence contemporaine de standing sur 3 niveaux avec piscine et espaces paysagés. Architecture bioclimatique intégrée.', desc_en:'Contemporary high-end 3-level residence with pool and landscaped areas. Integrated bioclimatic architecture.', loc:'Lomé, Togo', year:'2024', area:'480 m²' },
-  { cat:'commercial', img:'assets/photo_2026-05-02_20-50-42.jpg', title_fr:'Siège Social Tech Togo', title_en:'Tech Togo Headquarters', desc_fr:'Bâtiment de bureaux nouvelle génération alliant performance énergétique et identité de marque forte.', desc_en:'Next-generation office building combining energy performance and strong brand identity.', loc:'Lomé, Togo', year:'2023', area:'2 200 m²' },
-  { cat:'interior', img:'assets/fauteui+deco.jpg', title_fr:'Bureau Coconut', title_en:'Coconut Office', desc_fr:'Transformation complète d\'un plateau de bureaux en espace de travail moderne avec mobilier sur mesure.', desc_en:'Complete transformation of an office floor into a modern workspace with bespoke furniture.', loc:'Lomé, Togo', year:'2023', area:'320 m²' },
-  { cat:'residential', img:'assets/photo_2026-05-02_20-50-41.jpg', title_fr:'Résidence Éco-Durable', title_en:'Eco-Sustainable Residence', desc_fr:'Maison passive à faible consommation énergétique, panneaux solaires et récupération d\'eau de pluie.', desc_en:'Low-energy passive house with solar panels and rainwater harvesting.', loc:'Lomé, Togo', year:'2022', area:'350 m²' },
-  { cat:'commercial', img:'assets/ens_chbre.jpg', title_fr:'Complexe Hôtelier Accra', title_en:'Accra Hotel Complex', desc_fr:'Complexe hôtelier 4 étoiles avec 80 chambres, restaurant gastronomique et centre de conférences.', desc_en:'4-star hotel complex with 80 rooms, gastronomic restaurant and conference center.', loc:'Accra, Ghana', year:'2022', area:'5 400 m²' },
-  { cat:'interior', img:'assets/lavabo_moderne.jpg', title_fr:'Appartement Minimaliste', title_en:'Minimalist Apartment', desc_fr:'Aménagement intérieur épuré d\'un penthouse avec palette ton-sur-ton et matériaux nobles.', desc_en:'Clean interior fit-out of a penthouse with tone-on-tone palette and noble materials.', loc:'Lomé, Togo', year:'2021', area:'180 m²' },
-  { cat:'residential', img:'assets/chbre+san.jpg', title_fr:'Villa Bord de Mer', title_en:'Seaside Villa', desc_fr:'Villa contemporaine avec vue panoramique sur l\'Atlantique. Grandes baies vitrées, terrasses suspendues.', desc_en:'Contemporary villa with panoramic Atlantic Ocean view. Large bay windows and suspended terraces.', loc:'Lomé, Togo', year:'2021', area:'620 m²' },
-  { cat:'commercial', img:'assets/ala_build.jpg', title_fr:'Centre Commercial Adidogomé', title_en:'Adidogomé Shopping Centre', desc_fr:'Centre commercial de 45 boutiques sur 2 niveaux avec parking souterrain et espace restauration.', desc_en:'Shopping centre with 45 stores over 2 levels, underground parking and food court.', loc:'Lomé, Togo', year:'2020', area:'8 000 m²' },
-  { cat:'interior', img:'assets/chbre.jpg', title_fr:'Loft Industriel Rénové', title_en:'Renovated Industrial Loft', desc_fr:'Conversion d\'un entrepôt en loft contemporain conservant les éléments industriels d\'origine.', desc_en:'Warehouse conversion into a contemporary loft preserving the original industrial elements.', loc:'Lomé, Togo', year:'2020', area:'260 m²' },
-  { cat:'residential', img:'assets/photo_2026-05-02_20-50-42.jpg', title_fr:'Maison Contemporaine', title_en:'Contemporary Home', desc_fr:'Maison familiale moderne avec patio central, matériaux locaux revisités et jardin paysager.', desc_en:'Modern family home with central patio, revisited local materials and landscaped garden.', loc:'Aného, Togo', year:'2019', area:'290 m²' },
-  { cat:'commercial', img:'assets/photo_2026-05-02_20-50-41.jpg', title_fr:'Immeuble de Bureaux K3', title_en:'K3 Office Building', desc_fr:'Tour de bureaux R+7 avec façade double peau et atrium central baigné de lumière naturelle.', desc_en:'7-storey office tower with double-skin facade and central atrium bathed in natural light.', loc:'Lomé, Togo', year:'2019', area:'4 100 m²' },
-  { cat:'interior', img:'assets/lit.jpg', title_fr:'Penthouse Lomé Centre', title_en:'Lomé Centre Penthouse', desc_fr:'Penthouse de 300m² entièrement reconfiguré, cuisine ouverte professionnelle et terrasse rooftop.', desc_en:'Fully reconfigured 300m² penthouse with professional open kitchen and rooftop terrace.', loc:'Lomé, Togo', year:'2018', area:'300 m²' }
-];
-
-function buildCard(p, i) {
-  const lang = localStorage.getItem('ala-lang') || 'fr';
-  const title = lang === 'en' ? p.title_en : p.title_fr;
-  const catLabel = { residential: lang==='en'?'Residential':'Résidentiel', commercial:'Commercial', interior: lang==='en'?'Interior':'Intérieur' }[p.cat];
-  return `
-    <div class="proj-m-card reveal" data-cat="${p.cat}" data-idx="${i}">
-      <img src="${p.img}" alt="${title}" loading="lazy">
-      <div class="proj-m-overlay">
-        <span class="proj-cat">${catLabel}</span>
-        <h3 style="font-family:var(--font-d);font-size:1.125rem;font-weight:400;color:#fff;margin-top:.25rem">${title}</h3>
-        <p style="font-size:.75rem;color:rgba(255,255,255,.55);margin-top:.2rem">${p.loc} — ${p.year}</p>
-      </div>
-    </div>`;
-}
-
-function renderProjects(filter) {
-  const lang = localStorage.getItem('ala-lang') || 'fr';
-  const masonry = document.getElementById('projMasonry');
-  masonry.innerHTML = PROJECTS
-    .map((p, i) => ({ p, i }))
-    .filter(({ p }) => filter === 'all' || p.cat === filter)
-    .map(({ p, i }) => buildCard(p, i))
-    .join('');
-
-  masonry.querySelectorAll('.proj-m-card').forEach(card => {
-    card.addEventListener('click', () => openModal(+card.dataset.idx));
-  });
-
-  // Re-trigger reveal
-  setTimeout(() => {
-    masonry.querySelectorAll('.reveal').forEach(el => {
-      requestAnimationFrame(() => el.classList.add('in'));
-    });
-  }, 50);
-}
-
-function openModal(i) {
-  const lang = localStorage.getItem('ala-lang') || 'fr';
-  const p = PROJECTS[i];
-  const title = lang === 'en' ? p.title_en : p.title_fr;
-  const desc  = lang === 'en' ? p.desc_en  : p.desc_fr;
-  const catLabel = { residential: lang==='en'?'Residential':'Résidentiel', commercial:'Commercial', interior: lang==='en'?'Interior':'Intérieur' }[p.cat];
-  document.getElementById('modalImg').src = p.img;
-  document.getElementById('modalImg').alt = title;
-  document.getElementById('modalCat').textContent = catLabel;
-  document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalDesc').textContent = desc;
-  document.getElementById('modalLoc').textContent = p.loc;
-  document.getElementById('modalYear').textContent = p.year;
-  document.getElementById('modalArea').textContent = p.area;
-  document.getElementById('projModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-// Filter
-let activeFilter = 'all';
-document.querySelectorAll('.flt-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.flt-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
-    renderProjects(activeFilter);
-  });
-});
-
-// Modal close
-document.getElementById('modalClose').addEventListener('click', closeModal);
-document.getElementById('projModal').addEventListener('click', e => { if (e.target === document.getElementById('projModal')) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-function closeModal() {
-  document.getElementById('projModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-// Render on load
-renderProjects('all');
-
-// Re-render on lang change
-document.getElementById('langToggle').addEventListener('click', () => setTimeout(() => renderProjects(activeFilter), 50));
-
-// Footer filter links
-document.querySelectorAll('[data-filter-link]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const f = a.dataset.filterLink;
-    document.querySelectorAll('.flt-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.filter === f);
-    });
-    activeFilter = f;
-    renderProjects(f);
-    document.getElementById('projMasonry').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
+/* Textes anglais de cette page (le français est dans le HTML) */
+window.PAGE_LANG = {
+  "en": {
+    "pj_immeuble_t": "Residential building with a ceramic façade",
+    "pj_immeuble_s": "Green tiled façade, recessed balconies and a stone base.",
+    "pj_immeuble_l": "A multi-storey residential building. The main façade is clad in raised green ceramic tiles, the balconies are recessed loggias and the ground floor has a stone facing.",
+    "pj_immeuble_a0": "Building façade seen from below, green tiles and red door",
+    "pj_immeuble_a1": "Overall view of the building and its neighbours",
+    "pj_immeuble_a2": "Detail of the recessed balconies",
+    "pj_suites_t": "Bedroom and suite fit-out",
+    "pj_suites_s": "Wood wall panelling, pendant lighting, wax textiles and a made-to-measure bathroom.",
+    "pj_suites_l": "Complete interior fit-out of bedrooms: grooved wood wall panels, upholstered headboards, glass pendant lights, a lounge corner with rounded furniture, and a bathroom with a blue vanity unit and an oval mirror.",
+    "pj_suites_a0": "Bedroom with wood panelling and pendant lamps",
+    "pj_suites_a1": "Bedroom opening onto a glazed door",
+    "pj_suites_a2": "Bed with a wax-print throw",
+    "pj_suites_a3": "Suite with lounge corner and desk",
+    "pj_suites_a4": "Lounge corner with a rounded sofa and a yellow armchair",
+    "pj_suites_a5": "Bathroom with an oval mirror and a blue vanity",
+    "pj_serrures_t": "Smart locks and access control",
+    "pj_serrures_s": "Keypad and fingerprint locks fitted on glazed and solid doors.",
+    "pj_serrures_l": "Installation of smart locks with touch keypads and fingerprint readers, on aluminium-framed glass doors and on solid doors. An example of our low-voltage work.",
+    "pj_serrures_a0": "Smart lock on a glazed door",
+    "pj_serrures_a1": "Smart lock on a solid door",
+    "flt_all": "All",
+    "flt_res": "Residential",
+    "flt_int": "Interior",
+    "flt_tech": "Equipment",
+    "flt_label": "Filter projects",
+    "t_title": "What a renovation changes",
+    "ba_title": "Before / after",
+    "ba_note": "Drag the handle or use the arrow keys.",
+    "ba_before": "Before",
+    "ba_after": "After",
+    "ba_label": "Compare before and after",
+    "vid_title": "On site",
+    "vid_note": "The video loads from YouTube when you play it.",
+    "vid_play": "Play the video",
+    "meta_title": "Our work – ARCHIRAM BUILDING, Lomé",
+    "meta_desc": "Photos of projects by ARCHIRAM BUILDING in Lomé: residential building, bedroom and suite fit-out, smart locks.",
+    "pg_title": "Our work",
+    "pg_lead": "Each sheet shows a project photographed by our teams. Open it to see every photo.",
+    "pj_similar": "Start a similar project",
+    "dlg_close": "Close"
+  }
+};
 </script>
+<script src="script.js"></script>
 </body>
 </html>

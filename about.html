@@ -1,766 +1,340 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="À propos d'ARCHIRAM BUILDING – Archiram Link Africa. Découvrez notre histoire, nos valeurs, notre équipe et notre vision pour l'architecture en Afrique de l'Ouest.">
-  <title>À Propos — ARCHIRAM BUILDING</title>
+  <title data-i18n="meta_title">À propos – ARCHIRAM BUILDING, Lomé</title>
+  <meta name="description" content="Fondée à Lomé en juillet 2024, ARCHIRAM BUILDING réunit ingénieurs, architectes et créateurs pour bâtir durablement en Afrique de l&#x27;Ouest." data-i18n-attr="content:meta_desc">
+  <link rel="canonical" href="https://VOTRE-DOMAINE.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARCHIRAM BUILDING">
+  <meta property="og:url" content="https://VOTRE-DOMAINE.com/about.html">
+  <meta property="og:title" content="À propos – ARCHIRAM BUILDING, Lomé" data-i18n-attr="content:meta_title">
+  <meta property="og:description" content="Fondée à Lomé en juillet 2024, ARCHIRAM BUILDING réunit ingénieurs, architectes et créateurs pour bâtir durablement en Afrique de l&#x27;Ouest." data-i18n-attr="content:meta_desc">
+  <meta property="og:image" content="https://VOTRE-DOMAINE.com/assets/img/immeuble-facade.webp">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Favicons — tous navigateurs -->
-  <link rel="icon" type="image/png" sizes="32x32"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="16x16"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="96x96"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/LOGO Archi.png">
-  <link rel="apple-touch-icon" sizes="180x180"     href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#141414">
-  <meta name="msapplication-TileColor" content="#141414">
-  <meta name="msapplication-TileImage" content="assets/LOGO Archi.png">
-  <meta name="msapplication-config" content="none">
-  <style>
-    /* ── ABOUT PAGE HERO ── */
-    .about-hero {
-      position: relative;
-      padding: calc(var(--nav-h) + 5rem) 0 4.5rem;
-      background: var(--navy);
-      overflow: hidden;
-    }
-    .about-hero-mosaic {
-      position: absolute; inset: 0;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      opacity: .13;
-      filter: saturate(.25);
-    }
-    .about-hero-mosaic img { width:100%; height:100%; object-fit:cover; }
-    .about-hero-mosaic::after {
-      content:'';
-      position: absolute; inset: 0;
-      background: linear-gradient(120deg, var(--navy) 0%, rgba(11,28,58,.5) 55%, var(--navy) 100%);
-    }
-    .about-hero .page-hero-inner { position:relative; z-index:1; }
-    .about-hero .page-h1 em { color:var(--gold); font-style:italic; }
-
-    /* ── BREADCRUMB ── */
-    .breadcrumb {
-      display:flex; align-items:center; gap:.5rem;
-      font-size:.75rem; color:rgba(255,255,255,.5); margin-bottom:1.5rem;
-    }
-    .breadcrumb a { color:rgba(255,255,255,.5); transition:color var(--dur); }
-    .breadcrumb a:hover { color:var(--gold); }
-    .breadcrumb .sep { font-size:.5rem; opacity:.4; }
-    .breadcrumb .cur { color:var(--gold); }
-    .page-h1 {
-      font-family:var(--font-d); font-size:clamp(2.75rem,6vw,5rem);
-      font-weight:300; line-height:1.1; color:#fff; margin-bottom:1.25rem;
-    }
-    .page-sub {
-      font-size:1.0625rem; color:rgba(255,255,255,.6);
-      max-width:580px; line-height:1.75; font-weight:300;
-    }
-
-    /* ── STATS STRIP ── */
-    .about-stats-strip {
-      background: var(--navy);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      text-align: center;
-    }
-    .ass-item {
-      padding: 2.5rem 1rem;
-      border-right: 1px solid rgba(255,255,255,.07);
-    }
-    .ass-item:last-child { border-right: none; }
-    .ass-n {
-      font-family:var(--font-d); font-size:2.75rem;
-      font-weight:300; color:var(--gold); display:block; line-height:1;
-    }
-    .ass-l {
-      font-size:.6875rem; color:rgba(255,255,255,.45);
-      letter-spacing:.1em; text-transform:uppercase; margin-top:.375rem; display:block;
-    }
-
-    /* ── HISTOIRE (split) ── */
-    .histoire-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-    .histoire-img-wrap {
-      position: relative;
-    }
-    .histoire-img-wrap img {
-      width:100%; border-radius:var(--radius); box-shadow:var(--sh-lg);
-      aspect-ratio:4/5; object-fit:cover;
-    }
-    .histoire-badge {
-      position:absolute; bottom:-1.5rem; right:-1.5rem;
-      background:var(--gold); color:var(--navy);
-      padding:1.5rem 1.75rem; border-radius:var(--radius);
-      text-align:center; box-shadow:var(--gold-glow);
-    }
-    .histoire-badge strong {
-      display:block; font-family:var(--font-d);
-      font-size:2.5rem; font-weight:300; line-height:1;
-    }
-    .histoire-badge span {
-      font-size:.625rem; font-weight:700;
-      letter-spacing:.15em; text-transform:uppercase;
-    }
-    .histoire-body { padding-right:1rem; }
-    .histoire-body .sec-tag { text-align:left; display:block; margin-bottom:.875rem; }
-    .histoire-body .sec-title { text-align:left; margin-bottom:1.75rem; }
-    .histoire-body p {
-      font-size:.9375rem; color:var(--text-3); line-height:1.85; margin-bottom:1.25rem;
-    }
-    .histoire-body p:last-of-type { margin-bottom:2rem; }
-    .histoire-body .btn { display:inline-flex; }
-
-    /* ── VALEURS ── */
-    .valeurs-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-    .valeur-card {
-      padding: 2.5rem 2rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      text-align: center;
-      transition: all .4s var(--ease);
-      position: relative; overflow: hidden;
-    }
-    .valeur-card::before {
-      content:''; position:absolute; inset:0;
-      background:linear-gradient(135deg,var(--gold-light),transparent);
-      opacity:0; transition:opacity .4s;
-    }
-    .valeur-card:hover { transform:translateY(-8px); box-shadow:var(--sh-lg); border-color:var(--gold); }
-    .valeur-card:hover::before { opacity:1; }
-    .valeur-icon {
-      width:60px; height:60px; border-radius:50%;
-      background:var(--gold-light);
-      display:flex; align-items:center; justify-content:center;
-      font-size:1.375rem; color:var(--gold);
-      margin:0 auto 1.5rem;
-      transition: all .3s;
-    }
-    .valeur-card:hover .valeur-icon { background:var(--gold); color:var(--navy); transform:scale(1.08); }
-    .valeur-card h4 {
-      font-family:var(--font-d); font-size:1.375rem;
-      font-weight:400; color:var(--text); margin-bottom:.75rem;
-    }
-    .valeur-card p { font-size:.875rem; color:var(--text-3); line-height:1.7; }
-
-    /* ── EQUIPE ── */
-    .equipe-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
-    .team-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: all .4s var(--ease);
-    }
-    .team-card:hover { transform:translateY(-6px); box-shadow:var(--sh-lg); }
-    .team-img {
-      aspect-ratio: 3/4;
-      overflow: hidden;
-      position: relative;
-    }
-    .team-img img {
-      width:100%; height:100%; object-fit:cover; object-position:top center;
-      transition: transform .6s var(--ease);
-    }
-    .team-card:hover .team-img img { transform:scale(1.06); }
-    .team-overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(to top, rgba(11,28,58,.9) 0%, transparent 50%);
-      opacity:0; transition:opacity .4s;
-      display:flex; align-items:flex-end; padding:1.5rem;
-    }
-    .team-card:hover .team-overlay { opacity:1; }
-    .team-social { display:flex; gap:.5rem; }
-    .team-social a {
-      width:34px; height:34px; border-radius:50%;
-      background:rgba(255,255,255,.15); color:#fff;
-      display:flex; align-items:center; justify-content:center;
-      font-size:.75rem; transition:all .3s; backdrop-filter:blur(4px);
-    }
-    .team-social a:hover { background:var(--gold); color:var(--navy); }
-    .team-info { padding:1.375rem 1.5rem; }
-    .team-name {
-      font-family:var(--font-d); font-size:1.25rem;
-      font-weight:400; color:var(--text); margin-bottom:.2rem;
-    }
-    .team-role {
-      font-size:.75rem; font-weight:600; letter-spacing:.1em;
-      text-transform:uppercase; color:var(--gold); margin-bottom:.625rem;
-    }
-    .team-bio { font-size:.8125rem; color:var(--text-3); line-height:1.65; }
-
-    /* ── VISION (full-width quote) ── */
-    .vision-section {
-      background: var(--navy);
-      padding: 7rem 0;
-      position: relative; overflow: hidden;
-    }
-    .vision-section::before {
-      content: '"';
-      position: absolute; top:-2rem; left:5%;
-      font-family: var(--font-d);
-      font-size: 30rem; line-height:1;
-      color: rgba(201,168,76,.04);
-      pointer-events:none;
-    }
-    .vision-inner {
-      max-width: 860px; margin:0 auto;
-      text-align: center; position:relative; z-index:1;
-    }
-    .vision-quote {
-      font-family:var(--font-d); font-size:clamp(1.75rem,3.5vw,2.75rem);
-      font-weight:300; font-style:italic; color:#fff; line-height:1.5;
-      margin-bottom:2rem;
-    }
-    .vision-quote em { color:var(--gold); font-style:inherit; }
-    .vision-author {
-      display:flex; align-items:center; justify-content:center; gap:1rem;
-    }
-    .vision-author img {
-      width:52px; height:52px; border-radius:50%;
-      object-fit:cover; border:2px solid var(--gold);
-    }
-    .vision-author-name { font-weight:600; color:#fff; font-size:.9375rem; text-align:left; }
-    .vision-author-role {
-      font-size:.75rem; color:rgba(255,255,255,.45);
-      letter-spacing:.08em; text-transform:uppercase; margin-top:2px;
-    }
-
-    /* ── TEMOIGNAGES ── */
-    .testi-wrap { max-width:760px; margin:0 auto; }
-
-    /* ── TIMELINE (Notre parcours) ── */
-    .timeline {
-      position: relative;
-      max-width: 780px;
-      margin: 0 auto;
-    }
-    .timeline::before {
-      content:'';
-      position:absolute; top:0; bottom:0; left:50%;
-      width:1px; background:var(--border);
-      transform:translateX(-50%);
-    }
-    .tl-item {
-      display:grid; grid-template-columns:1fr 60px 1fr;
-      gap:0; margin-bottom:3rem; align-items:start;
-    }
-    .tl-body-left { text-align:right; padding-right:2.5rem; padding-top:.3rem; }
-    .tl-body-right { text-align:left; padding-left:2.5rem; padding-top:.3rem; }
-    .tl-body-empty { }
-    .tl-dot-col {
-      display:flex; flex-direction:column; align-items:center;
-    }
-    .tl-dot {
-      width:16px; height:16px; border-radius:50%;
-      background:var(--gold); border:3px solid var(--bg);
-      box-shadow:0 0 0 2px var(--gold); flex-shrink:0; margin-top:.3rem;
-    }
-    .tl-year {
-      font-family:var(--font-d); font-size:.875rem; font-weight:500;
-      color:var(--gold); letter-spacing:.06em; margin-bottom:.375rem; display:block;
-    }
-    .tl-title {
-      font-family:var(--font-d); font-size:1.25rem;
-      font-weight:400; color:var(--text); margin-bottom:.375rem;
-    }
-    .tl-desc { font-size:.8125rem; color:var(--text-3); line-height:1.7; }
-
-    /* ── CTA BANNER ── */
-    .cta-banner {
-      background: var(--navy);
-      border-radius: 1.25rem;
-      padding: 4rem 3rem;
-      text-align: center;
-      position: relative; overflow:hidden;
-    }
-    .cta-banner::before {
-      content:'';
-      position:absolute; inset:0;
-      background: radial-gradient(ellipse 80% 80% at 50% 120%, rgba(201,168,76,.18) 0%, transparent 70%);
-    }
-    .cta-banner > * { position:relative; z-index:1; }
-    .cta-banner h2 {
-      font-family:var(--font-d); font-size:clamp(2rem,4vw,3rem);
-      font-weight:300; color:#fff; margin-bottom:1rem;
-    }
-    .cta-banner p { color:rgba(255,255,255,.6); font-size:1rem; margin-bottom:2rem; }
-    .cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width:1100px) {
-      .valeurs-grid { grid-template-columns:repeat(2,1fr); }
-      .equipe-grid { grid-template-columns:repeat(2,1fr); }
-      .histoire-grid { grid-template-columns:1fr; gap:3rem; }
-      .histoire-img-wrap { max-width:520px; }
-      .histoire-badge { bottom:-1rem; right:-.75rem; }
-    }
-    @media (max-width:768px) {
-      .about-stats-strip { grid-template-columns:repeat(2,1fr); }
-      .ass-item { border-bottom:1px solid rgba(255,255,255,.07); }
-      .timeline::before { left:0; }
-      .tl-item { grid-template-columns:32px 1fr; }
-      .tl-body-left { display:none; }
-      .tl-body-right { padding-left:1.5rem; }
-      .tl-dot-col { align-items:flex-start; }
-    }
-    @media (max-width:580px) {
-      .valeurs-grid { grid-template-columns:1fr; }
-      .equipe-grid { grid-template-columns:1fr; }
-      .about-stats-strip { grid-template-columns:1fr 1fr; }
-      .histoire-img-wrap { max-width:100%; }
-    }
-  </style>
+  <meta name="theme-color" content="#13202C">
 </head>
 <body>
 
-<script>
-window.PAGE_LANG = {
-  fr: {
-    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
-    ph_title:'Notre <em>Histoire</em>',
-    ph_sub:'Fondée en juillet 2024, ARCHIRAM BUILDING est une startup spécialisée en ingénierie BTP, construction écologique et architecture intérieure, engagée pour un bâti durable en Afrique de l\'Ouest.',
-    ass1:'Projets réalisés', ass2:'Mois d\'activité', ass3:'Pays d\'intervention', ass4:'Clients satisfaits',
-    hist_tag:'Notre Origine', hist_title:'Une startup\néco-engagée',
-    hist_p1:'ARCHIRAM BUILDING – Archiram Link Africa – est une startup fondée à Lomé en juillet 2024 avec une vision claire : proposer des solutions de construction éco-responsables et innovantes, ancrées dans les réalités de l\'Afrique de l\'Ouest.',
-    hist_p2:'Portée par une équipe passionnée d\'ingénieurs, d\'architectes et de créateurs, ARCHIRAM BUILDING allie rigueur technique et approche écologique pour concevoir des bâtiments durables, des intérieurs raffinés et des œuvres d\'art upcycling qui donnent une seconde vie aux matériaux.',
-    hist_p3:'Chaque projet est une déclaration d\'engagement : construire mieux, plus propre, et avec une identité esthétique forte ancrée dans notre culture.',
-    hist_cta:'Voir nos réalisations',
-    val_tag:'Nos Valeurs', val_title:'L\'ADN d\'ARCHIRAM BUILDING',
-    val1_title:'Excellence', val1_desc:'Chaque détail compte. Nous n\'acceptons rien de moins que le meilleur dans nos conceptions, nos matériaux et nos finitions.',
-    val2_title:'Intégrité', val2_desc:'Transparence totale sur les coûts, délais et processus. La confiance de nos clients est notre bien le plus précieux.',
-    val3_title:'Innovation', val3_desc:'Nous intégrons les dernières technologies de conception et les matériaux les plus avancés pour bâtir les projets de demain.',
-    val4_title:'Durabilité', val4_desc:'Architecture éco-responsable, intégration au contexte local et construction durable pour les générations futures.',
-    team_tag:'Notre Équipe', team_title:'Les Architectes\nderrière l\'excellence',
-    tm1_name:'Kofi Amedzro', tm1_role:'Fondateur & Architecte Principal', tm1_bio:'10 ans d\'expérience en architecture résidentielle et commerciale. Diplômé de l\'ESAC Lomé et de l\'École Polytechnique de Paris.',
-    tm2_name:'Afia Mensah', tm2_role:'Directrice Design Intérieur', tm2_bio:'Spécialiste en aménagement de luxe et design biophilique. Parcours entre l\'Afrique de l\'Ouest, Paris et Dubai.',
-    tm3_name:'Jean-Luc Agbodjan', tm3_role:'Ingénieur Structures', tm3_bio:'Expert en calculs de structures et ingénierie du bâtiment. 8 ans sur des projets de grande envergure au Togo et au Ghana.',
-    tm4_name:'Fatou Coulibaly', tm4_role:'Cheffe de Projets', tm4_bio:'Coordination et pilotage de projets complexes. Garantit la livraison dans les délais et la satisfaction complète du client.',
-    parc_tag:'Notre Parcours', parc_title:'Depuis juillet 2024',
-    vis_quote:'"Nous ne construisons pas simplement des bâtiments. Nous créons des espaces qui <em>inspirent</em>, qui durent et qui racontent l\'histoire d\'un continent en marche."',
-    vis_author:'Kofi Amedzro', vis_role:'Fondateur & Architecte Principal',
-    testi_tag:'Témoignages', testi_title:'Ce que disent\nnos clients',
-    t1_quote:'"ARCHIRAM BUILDING a transformé notre vision en réalité. Un professionnalisme remarquable et une attention aux détails exceptionnelle. Notre villa dépasse toutes nos attentes."',
-    t1_role:'Entrepreneur, Accra',
-    t2_quote:'"De la conception aux finitions, l\'équipe ALA a su comprendre et sublimer notre projet d\'entreprise. Je recommande à 100% pour tout projet d\'envergure."',
-    t2_role:'Directrice, Lomé',
-    t3_quote:'"Notre siège social est devenu une carte de visite architecturale. ALA maîtrise parfaitement la fusion entre fonctionnalité et esthétique contemporaine."',
-    t3_role:'PDG, Lomé',
-    partners_label:'Ils nous font confiance',
-    cta_title:'Prêt à bâtir avec nous ?',
-    cta_sub:'Chaque grand projet commence par une conversation. Discutons de votre vision.',
-    cta_btn1:'Obtenir un devis gratuit', cta_btn2:'Nous contacter'
-  },
-  en: {
-    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
-    ph_title:'Our <em>Story</em>',
-    ph_sub:'Founded in July 2024, ARCHIRAM BUILDING is a startup specialising in civil engineering, ecological construction and interior architecture, committed to sustainable building across West Africa.',
-    ass1:'Projects delivered', ass2:'Months of activity', ass3:'Countries', ass4:'Satisfied clients',
-    hist_tag:'Our Origin', hist_title:'An eco-committed\nstartup',
-    hist_p1:'ARCHIRAM BUILDING – Archiram Link Africa – is a startup founded in Lomé in July 2024 with a clear vision: to provide eco-responsible and innovative construction solutions rooted in the realities of West Africa.',
-    hist_p2:'Driven by a passionate team of engineers, architects and creators, ARCHIRAM BUILDING combines technical rigour with an ecological approach to design durable buildings, refined interiors and upcycling artworks that give materials a second life.',
-    hist_p3:'Every project is a statement of commitment: to build better, cleaner, and with a strong aesthetic identity rooted in our culture.',
-    hist_cta:'View our portfolio',
-    val_tag:'Our Values', val_title:'The DNA of ARCHIRAM BUILDING',
-    val1_title:'Excellence', val1_desc:'Every detail matters. We accept nothing less than the best in our designs, materials and finishes.',
-    val2_title:'Integrity', val2_desc:'Full transparency on costs, timelines and process. Our clients\' trust is our most valuable asset.',
-    val3_title:'Innovation', val3_desc:'We integrate the latest design technologies and most advanced materials to build the projects of tomorrow.',
-    val4_title:'Sustainability', val4_desc:'Eco-responsible architecture, local contextual integration and sustainable construction for future generations.',
-    team_tag:'Our Team', team_title:'The Architects\nbehind excellence',
-    tm1_name:'Kofi Amedzro', tm1_role:'Founder & Lead Architect', tm1_bio:'10 years of experience in residential and commercial architecture. Graduate of ESAC Lomé and École Polytechnique de Paris.',
-    tm2_name:'Afia Mensah', tm2_role:'Interior Design Director', tm2_bio:'Specialist in luxury fit-out and biophilic design. Career spanning West Africa, Paris and Dubai.',
-    tm3_name:'Jean-Luc Agbodjan', tm3_role:'Structural Engineer', tm3_bio:'Expert in structural calculations and building engineering. 8 years on large-scale projects across Togo and Ghana.',
-    tm4_name:'Fatou Coulibaly', tm4_role:'Project Manager', tm4_bio:'Coordination and management of complex projects. Ensures on-time delivery and complete client satisfaction.',
-    parc_tag:'Our Journey', parc_title:'Since July 2024',
-    vis_quote:'"We don\'t just build buildings. We create spaces that <em>inspire</em>, that endure and that tell the story of a continent on the move."',
-    vis_author:'Kofi Amedzro', vis_role:'Founder & Lead Architect',
-    testi_tag:'Testimonials', testi_title:'What our clients\nare saying',
-    t1_quote:'"ARCHIRAM BUILDING turned our vision into reality. Remarkable professionalism and exceptional attention to detail. Our villa exceeds every expectation."',
-    t1_role:'Entrepreneur, Accra',
-    t2_quote:'"From concept to finish, the ALA team understood and elevated our project. I recommend them 100% for any major project."',
-    t2_role:'Director, Lomé',
-    t3_quote:'"Our headquarters has become an architectural calling card. ALA perfectly masters the fusion of functionality and contemporary aesthetics."',
-    t3_role:'CEO, Lomé',
-    partners_label:'They trust us',
-    cta_title:'Ready to build with us?',
-    cta_sub:'Every great project begins with a conversation. Let\'s discuss your vision.',
-    cta_btn1:'Get a free quote', cta_btn2:'Contact us'
-  }
-};
-</script>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
-<!-- Navbar -->
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
-      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
-      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
-      <li><a href="about.html" class="nav-link active" data-i18n="nav_about">À Propos</a></li>
-      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+<header id="navbar">
+  <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
+    <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
+      <img src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+    </a>
+    <ul class="nav-menu" id="navLinks">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-item" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-item" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-item active" aria-current="page" data-i18n="nav_about">À propos</a></li>
+      <li><a href="contact.html" class="nav-item" data-i18n="nav_contact">Contact</a></li>
+      <li class="nav-mobile-cta"><a href="devis.html" class="btn btn-primary" data-from="menu"><span data-i18n="nav_cta">Devis gratuit</span></a></li>
     </ul>
-    <div class="nav-actions">
-      <button class="lang-btn" id="langToggle" aria-label="Switch language"><span id="langLabel">EN</span></button>
-      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
-      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
+      <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
+      <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<!-- Hero -->
-<section class="about-hero">
-  <div class="about-hero-mosaic" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=60" alt="">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=60" alt="">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=60" alt="">
-    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=60" alt="">
-    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=60" alt="">
-  </div>
-  <div class="container">
-    <div class="page-hero-inner">
-      <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span class="sep"><i class="fas fa-chevron-right"></i></span>
-        <span class="cur" data-i18n="nav_about">À Propos</span>
+<main id="main">
+<section class="page-head" aria-labelledby="pageTitle">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-i18n-attr="aria-label:crumb_label">
+        <a href="index.html" data-i18n="crumb_home">Accueil</a>
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+        <span aria-current="page" data-i18n="nav_about">À propos</span>
       </nav>
-      <h1 class="page-h1" data-i18n="ph_title">Notre <em>Histoire</em></h1>
-      <p class="page-sub" data-i18n="ph_sub">Fondée en juillet 2024 à Lomé, ARCHIRAM BUILDING accompagne ses clients de la conception à la livraison, avec une approche éco-responsable ancrée dans les réalités de l'Afrique de l'Ouest.</p>
+    <h1 id="pageTitle" data-i18n="pg_title">Une jeune entreprise, une équipe expérimentée</h1>
+    <p class="page-lead" data-i18n="pg_lead">Fondée à Lomé en juillet 2024, ARCHIRAM BUILDING accompagne ses clients de la conception à la livraison, avec une approche éco-responsable ancrée dans les réalités de l'Afrique de l'Ouest.</p>
+  </div>
+</section>
+
+<section class="sec sec-tight" aria-labelledby="storyTitle">
+  <div class="wrap story">
+    <figure class="story-media reveal"><img src="assets/img/immeuble-balcons.webp" srcset="assets/img/immeuble-balcons-640.webp 640w, assets/img/immeuble-balcons.webp 960w" sizes="(max-width: 860px) 100vw, 45vw" width="960" height="1280" alt="Balcons d&#x27;un immeuble résidentiel construit par ARCHIRAM BUILDING" loading="lazy" decoding="async"></figure>
+    <div class="story-body reveal">
+      <h2 id="storyTitle" data-i18n="story_title">Bâtir l'Afrique de demain</h2>
+      <p data-i18n="hist_p1">ARCHIRAM BUILDING – Archiram Link Africa – est une startup fondée à Lomé en juillet 2024 avec une vision claire : proposer des solutions de construction éco-responsables et innovantes, ancrées dans les réalités de l&#x27;Afrique de l&#x27;Ouest.</p>
+      <p data-i18n="hist_p2">Portée par une équipe passionnée d&#x27;ingénieurs, d&#x27;architectes et de créateurs, ARCHIRAM BUILDING allie rigueur technique et approche écologique pour concevoir des bâtiments durables, des intérieurs raffinés et des œuvres d&#x27;art upcycling qui donnent une seconde vie aux matériaux.</p>
+      <p data-i18n="hist_p3">Chaque projet est une déclaration d&#x27;engagement : construire mieux, plus propre, et avec une identité esthétique forte ancrée dans notre culture.</p>
+      <ul class="hero-facts">
+        <li><span class="fact-n"><span class="stat-num" data-target="10">10</span>+</span><span class="fact-l" data-i18n="f1">ans d'expérience de l'équipe</span></li>
+        <li><span class="fact-n"><span class="stat-num" data-target="20">20</span>+</span><span class="fact-l" data-i18n="f2">projets livrés</span></li>
+        <li><span class="fact-n"><span class="stat-num" data-target="3">3</span></span><span class="fact-l" data-i18n="f3">pays d'intervention</span></li>
+      </ul>
+      <a href="projects.html" class="btn btn-line"><span data-i18n="hist_cta">Voir nos réalisations</span></a>
     </div>
   </div>
 </section>
 
-<!-- Stats Strip -->
-<div class="about-stats-strip">
-  <div class="ass-item"><span class="ass-n">20+</span><span class="ass-l" data-i18n="ass1">Projets réalisés</span></div>
-  <div class="ass-item"><span class="ass-n">10+</span><span class="ass-l" data-i18n="ass2">Ans d'expertise</span></div>
-  <div class="ass-item"><span class="ass-n">3</span><span class="ass-l" data-i18n="ass3">Pays d'intervention</span></div>
-  <div class="ass-item"><span class="ass-n">100%</span><span class="ass-l" data-i18n="ass4">Clients satisfaits</span></div>
-</div>
-
-<!-- Notre Histoire -->
-<section class="section">
-  <div class="container">
-    <div class="histoire-grid">
-      <div class="histoire-img-wrap reveal">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80" alt="Équipe ARCHIRAM BUILDING au travail" loading="lazy">
-        <div class="histoire-badge">
-          <strong>2024</strong>
-          <span>Fondation</span>
-        </div>
+<section class="sec sec-chalk" aria-labelledby="valTitle">
+  <div class="wrap">
+    <header class="sec-head reveal"><h2 id="valTitle" data-i18n="val_title">Ce qui guide notre travail</h2></header>
+    <div class="values">
+      <div class="value reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-gem"></use></svg>
+        <h3 data-i18n="val1_title">Excellence</h3>
+        <p data-i18n="val1_desc">Chaque détail compte. Nous n&#x27;acceptons rien de moins que le meilleur dans nos conceptions, nos matériaux et nos finitions.</p>
       </div>
-      <div class="histoire-body reveal" style="--d:150ms">
-        <p class="sec-tag" data-i18n="hist_tag">Notre Origine</p>
-        <h2 class="sec-title" data-i18n="hist_title">Bâtir l'Afrique<br>de demain</h2>
-        <p data-i18n="hist_p1">ARCHIRAM BUILDING – Archiram Link Africa – est une startup fondée à Lomé en juillet 2024 avec une vision claire : proposer des solutions de construction éco-responsables et innovantes, ancrées dans les réalités de l'Afrique de l'Ouest.</p>
-        <p data-i18n="hist_p2">Portée par une équipe passionnée d'ingénieurs, d'architectes et de créateurs, ARCHIRAM BUILDING allie rigueur technique et approche écologique pour concevoir des bâtiments durables, des intérieurs raffinés et des œuvres d'art upcycling qui donnent une seconde vie aux matériaux.</p>
-        <p data-i18n="hist_p3">Chaque projet est une déclaration d'engagement : construire mieux, plus propre, et avec une identité esthétique forte ancrée dans notre culture.</p>
-        <a href="projects.html" class="btn btn-primary" data-i18n="hist_cta">Voir nos réalisations</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Nos Valeurs -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="val_tag">Nos Valeurs</p>
-      <h2 class="sec-title" data-i18n="val_title">L'ADN d'ARCHIRAM BUILDING</h2>
-    </div>
-    <div class="valeurs-grid">
-      <div class="valeur-card reveal" style="--d:0ms">
-        <div class="valeur-icon"><i class="fas fa-medal"></i></div>
-        <h4 data-i18n="val1_title">Excellence</h4>
-        <p data-i18n="val1_desc">Chaque détail compte. Nous n'acceptons rien de moins que le meilleur dans nos conceptions, nos matériaux et nos finitions.</p>
-      </div>
-      <div class="valeur-card reveal" style="--d:80ms">
-        <div class="valeur-icon"><i class="fas fa-handshake"></i></div>
-        <h4 data-i18n="val2_title">Intégrité</h4>
+      <div class="value reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-handshake"></use></svg>
+        <h3 data-i18n="val2_title">Intégrité</h3>
         <p data-i18n="val2_desc">Transparence totale sur les coûts, délais et processus. La confiance de nos clients est notre bien le plus précieux.</p>
       </div>
-      <div class="valeur-card reveal" style="--d:160ms">
-        <div class="valeur-icon"><i class="fas fa-lightbulb"></i></div>
-        <h4 data-i18n="val3_title">Innovation</h4>
+      <div class="value reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-lightbulb"></use></svg>
+        <h3 data-i18n="val3_title">Innovation</h3>
         <p data-i18n="val3_desc">Nous intégrons les dernières technologies de conception et les matériaux les plus avancés pour bâtir les projets de demain.</p>
       </div>
-      <div class="valeur-card reveal" style="--d:240ms">
-        <div class="valeur-icon"><i class="fas fa-leaf"></i></div>
-        <h4 data-i18n="val4_title">Durabilité</h4>
+      <div class="value reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-seedling"></use></svg>
+        <h3 data-i18n="val4_title">Durabilité</h3>
         <p data-i18n="val4_desc">Architecture éco-responsable, intégration au contexte local et construction durable pour les générations futures.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Notre Parcours (Timeline) -->
-<section class="section">
-  <div class="container">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="parc_tag">Notre Parcours</p>
-      <h2 class="sec-title" data-i18n="parc_title">Depuis juillet 2024</h2>
-    </div>
-    <div class="timeline reveal">
-      <div class="tl-item">
-        <div class="tl-body-left">
-          <span class="tl-year">Juil. 2024</span>
-          <p class="tl-title">Fondation d'ARCHIRAM BUILDING</p>
-          <p class="tl-desc">Création de la startup à Lomé avec une équipe fondatrice d'ingénieurs et d'architectes passionnés par la construction éco-responsable.</p>
-        </div>
-        <div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-body-right tl-body-empty"></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-body-left tl-body-empty"></div>
-        <div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-body-right">
-          <span class="tl-year">Sept. 2024</span>
-          <p class="tl-title">Premiers projets résidentiels</p>
-          <p class="tl-desc">Lancement des premiers chantiers résidentiels à Lomé, avec une approche bioclimatique et des matériaux à faible empreinte carbone.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-body-left">
-          <span class="tl-year">Nov. 2024</span>
-          <p class="tl-title">Lancement de l'Upcycling Art</p>
-          <p class="tl-desc">Création du pôle Art Écologique &amp; Upcycling : décoration et œuvres d'art éco-responsables issues de matériaux recyclés.</p>
-        </div>
-        <div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-body-right tl-body-empty"></div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-body-left tl-body-empty"></div>
-        <div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-body-right">
-          <span class="tl-year">Jan. 2025</span>
-          <p class="tl-title">Service Location de Matériaux</p>
-          <p class="tl-desc">Ouverture du service de location d'équipements de chantier : échafaudages, coffrages et outillage professionnel pour particuliers et pros.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-body-left">
-          <span class="tl-year">2025</span>
-          <p class="tl-title">Expansion &amp; Finitions ERP</p>
-          <p class="tl-desc">Intégration des travaux de finition ERP et systèmes techniques, positionnant ARCHIRAM BUILDING comme acteur global du bâtiment.</p>
-        </div>
-        <div class="tl-dot-col"><div class="tl-dot"></div></div>
-        <div class="tl-body-right tl-body-empty"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Vision Quote -->
-<section class="vision-section">
-  <div class="container">
-    <div class="vision-inner reveal">
-      <p class="vision-quote" data-i18n="vis_quote">"Nous ne construisons pas simplement des bâtiments. Nous créons des espaces qui <em>inspirent</em>, qui durent et qui racontent l'histoire d'un continent en marche."</p>
-      <div class="vision-author">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80" alt="Kofi Amedzro" loading="lazy">
+<section class="sec" aria-labelledby="tlTitle">
+  <div class="wrap tl-layout">
+    <header class="sec-head reveal"><h2 id="tlTitle" data-i18n="tl_title">Depuis juillet 2024</h2></header>
+    <ol class="timeline">
+      <li class="tl-item reveal">
+        <time data-i18n="tl0_d">Juillet 2024</time>
         <div>
-          <p class="vision-author-name" data-i18n="vis_author">Kofi Amedzro</p>
-          <p class="vision-author-role" data-i18n="vis_role">Fondateur &amp; Architecte Principal</p>
+          <h3 data-i18n="tl0_t">Fondation d&#x27;ARCHIRAM BUILDING</h3>
+          <p data-i18n="tl0_p">Création de l&#x27;entreprise à Lomé par une équipe d&#x27;ingénieurs et d&#x27;architectes tournés vers la construction éco-responsable.</p>
         </div>
-      </div>
+      </li>
+      <li class="tl-item reveal">
+        <time data-i18n="tl1_d">Septembre 2024</time>
+        <div>
+          <h3 data-i18n="tl1_t">Premiers chantiers résidentiels</h3>
+          <p data-i18n="tl1_p">Lancement des premiers chantiers à Lomé, avec une approche bioclimatique et des matériaux à faible empreinte carbone.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <time data-i18n="tl2_d">Novembre 2024</time>
+        <div>
+          <h3 data-i18n="tl2_t">Pôle art écologique et upcycling</h3>
+          <p data-i18n="tl2_p">Création d&#x27;un pôle dédié à la décoration et aux œuvres d&#x27;art issues de matériaux recyclés.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <time data-i18n="tl3_d">Janvier 2025</time>
+        <div>
+          <h3 data-i18n="tl3_t">Location de matériel de chantier</h3>
+          <p data-i18n="tl3_p">Ouverture de la location d&#x27;échafaudages, de coffrages et d&#x27;outillage pour particuliers et professionnels.</p>
+        </div>
+      </li>
+      <li class="tl-item reveal">
+        <time data-i18n="tl4_d">2025</time>
+        <div>
+          <h3 data-i18n="tl4_t">Finitions ERP et systèmes techniques</h3>
+          <p data-i18n="tl4_p">Les finitions pour établissements recevant du public et les systèmes techniques complètent l&#x27;offre.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-ink" aria-label="Vision">
+  <div class="wrap">
+    <figure class="vision reveal">
+      <blockquote><p data-i18n="vis_quote">« Nous ne construisons pas simplement des bâtiments. Nous créons des espaces qui inspirent, qui durent et qui racontent l'histoire d'un continent en marche. »</p></blockquote>
+      <figcaption><strong>Kofi Amedzro</strong><span data-i18n="vis_role">Fondateur et architecte principal</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="teamTitle">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2 id="teamTitle" data-i18n="team_title">L'équipe</h2>
+      <p data-i18n="team_lead">Ingénieurs, architectes et chefs de projet qui suivent votre chantier du début à la fin.</p>
+    </header>
+    <ul class="team">
+      <li class="member reveal">
+        <span class="member-av" aria-hidden="true">KA</span>
+        <h3>Kofi Amedzro</h3>
+        <p class="member-role" data-i18n="tm1_role">Fondateur &amp; Architecte Principal</p>
+        <p data-i18n="tm1_bio">Architecte et fondateur d&#x27;ARCHIRAM BUILDING, spécialisé en architecture résidentielle, commerciale et construction éco-responsable en Afrique de l&#x27;Ouest.</p>
+      </li>
+      <li class="member reveal">
+        <span class="member-av" aria-hidden="true">AM</span>
+        <h3>Afia Mensah</h3>
+        <p class="member-role" data-i18n="tm2_role">Directrice Design Intérieur</p>
+        <p data-i18n="tm2_bio">Spécialisée en architecture intérieure et aménagement d&#x27;espaces. Conçoit des intérieurs fonctionnels et esthétiques adaptés au contexte local.</p>
+      </li>
+      <li class="member reveal">
+        <span class="member-av" aria-hidden="true">JA</span>
+        <h3>Jean-Luc Agbodjan</h3>
+        <p class="member-role" data-i18n="tm3_role">Ingénieur Structures</p>
+        <p data-i18n="tm3_bio">Ingénieur en génie civil, responsable des études techniques et du suivi structurel des chantiers. Garant de la solidité et de la conformité de chaque ouvrage.</p>
+      </li>
+      <li class="member reveal">
+        <span class="member-av" aria-hidden="true">FC</span>
+        <h3>Fatou Coulibaly</h3>
+        <p class="member-role" data-i18n="tm4_role">Cheffe de Projets</p>
+        <p data-i18n="tm4_bio">Assure la coordination entre les équipes, les fournisseurs et les clients. Veille au respect des délais et à la qualité de chaque livraison.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="s-partners" aria-labelledby="partnersTitle">
+  <div class="wrap partners-row">
+    <h2 class="partners-title" id="partnersTitle" data-i18n="partners_label">Ils nous font confiance</h2>
+    <div class="partners-belt">
+      <div class="partners-track"><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-city"></use></svg> Résidence Avedji</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-hospital"></use></svg> Cabinet Médical Bé</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-house"></use></svg> Villa Tokoin</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-school"></use></svg> Complexe Scolaire Agbata</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-hotel"></use></svg> Boutique Hôtel Lomé</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-key"></use></svg> Immobilier Kégué</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-landmark"></use></svg> Centre Afrikana</span><span class="ptner"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-building"></use></svg> Résidence Accra Nord</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-city"></use></svg> Résidence Avedji</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-hospital"></use></svg> Cabinet Médical Bé</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-house"></use></svg> Villa Tokoin</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-school"></use></svg> Complexe Scolaire Agbata</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-hotel"></use></svg> Boutique Hôtel Lomé</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-key"></use></svg> Immobilier Kégué</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-landmark"></use></svg> Centre Afrikana</span><span class="ptner" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-building"></use></svg> Résidence Accra Nord</span></div>
     </div>
   </div>
 </section>
 
-<!-- Notre Équipe -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="team_tag">Notre Équipe</p>
-      <h2 class="sec-title" data-i18n="team_title">Les Architectes<br>derrière l'excellence</h2>
+<section class="cta-band" aria-labelledby="ctaTitle">
+  <div class="wrap cta-inner reveal">
+    <div>
+      <h2 id="ctaTitle" data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
+      <p data-i18n="cta_sub">Décrivez-le en quelques lignes : nous répondons sous 24 heures, sur WhatsApp ou par email.</p>
     </div>
-    <div class="equipe-grid">
-      <div class="team-card reveal" style="--d:0ms">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Kofi Amedzro" loading="lazy">
-          <div class="team-overlay">
-            <div class="team-social">
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-info">
-          <p class="team-name" data-i18n="tm1_name">Kofi Amedzro</p>
-          <p class="team-role" data-i18n="tm1_role">Fondateur &amp; Architecte Principal</p>
-          <p class="team-bio" data-i18n="tm1_bio">Architecte et fondateur d'ARCHIRAM BUILDING. Spécialisé en architecture résidentielle, commerciale et construction éco-responsable en Afrique de l'Ouest.</p>
-        </div>
-      </div>
-      <div class="team-card reveal" style="--d:80ms">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Afia Mensah" loading="lazy">
-          <div class="team-overlay">
-            <div class="team-social">
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-info">
-          <p class="team-name" data-i18n="tm2_name">Afia Mensah</p>
-          <p class="team-role" data-i18n="tm2_role">Directrice Design Intérieur</p>
-          <p class="team-bio" data-i18n="tm2_bio">Spécialisée en architecture intérieure et aménagement d'espaces. Conçoit des intérieurs fonctionnels et esthétiques adaptés au contexte local.</p>
-        </div>
-      </div>
-      <div class="team-card reveal" style="--d:160ms">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80" alt="Jean-Luc Agbodjan" loading="lazy">
-          <div class="team-overlay">
-            <div class="team-social">
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-info">
-          <p class="team-name" data-i18n="tm3_name">Jean-Luc Agbodjan</p>
-          <p class="team-role" data-i18n="tm3_role">Ingénieur Structures</p>
-          <p class="team-bio" data-i18n="tm3_bio">Ingénieur en génie civil, responsable des études techniques et du suivi structurel des chantiers. Garant de la solidité et de la conformité de chaque ouvrage.</p>
-        </div>
-      </div>
-      <div class="team-card reveal" style="--d:240ms">
-        <div class="team-img">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Fatou Coulibaly" loading="lazy">
-          <div class="team-overlay">
-            <div class="team-social">
-              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="team-info">
-          <p class="team-name" data-i18n="tm4_name">Fatou Coulibaly</p>
-          <p class="team-role" data-i18n="tm4_role">Cheffe de Projets</p>
-          <p class="team-bio" data-i18n="tm4_bio">Assure la coordination entre les équipes, les fournisseurs et les clients. Veille au respect des délais et à la qualité de chaque livraison.</p>
-        </div>
-      </div>
+    <div class="cta-actions">
+      <a href="devis.html" class="btn btn-primary" data-from="cta"><span data-i18n="cta_btn1">Demander un devis gratuit</span></a>
+      <a href="https://wa.me/22898067744" class="btn btn-line" target="_blank" rel="noopener" data-from="cta"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg><span data-i18n="cta_btn2">Écrire sur WhatsApp</span></a>
     </div>
   </div>
 </section>
 
 
-<!-- Partenaires -->
-<section class="section section-sm section-alt">
-  <div class="container">
-    <p class="partners-label reveal" data-i18n="partners_label">Ils nous font confiance</p>
-    <div class="partners-wrap">
-      <div class="partners-track">
-        <span class="partner"><i class="fas fa-city"></i> Résidence Avedji</span>
-        <span class="partner"><i class="fas fa-hospital"></i> Cabinet Médical Bé</span>
-        <span class="partner"><i class="fas fa-home"></i> Villa Tokoin</span>
-        <span class="partner"><i class="fas fa-school"></i> Complexe Scolaire Agbata</span>
-        <span class="partner"><i class="fas fa-hotel"></i> Boutique Hôtel Lomé</span>
-        <span class="partner"><i class="fas fa-key"></i> Immobilier Kégué</span>
-        <span class="partner"><i class="fas fa-landmark"></i> Centre Afrikana</span>
-        <span class="partner"><i class="fas fa-building"></i> Résidence Accra Nord</span>
-        <span class="partner"><i class="fas fa-city"></i> Résidence Avedji</span>
-        <span class="partner"><i class="fas fa-hospital"></i> Cabinet Médical Bé</span>
-        <span class="partner"><i class="fas fa-home"></i> Villa Tokoin</span>
-        <span class="partner"><i class="fas fa-school"></i> Complexe Scolaire Agbata</span>
-        <span class="partner"><i class="fas fa-hotel"></i> Boutique Hôtel Lomé</span>
-        <span class="partner"><i class="fas fa-key"></i> Immobilier Kégué</span>
-        <span class="partner"><i class="fas fa-landmark"></i> Centre Afrikana</span>
-        <span class="partner"><i class="fas fa-building"></i> Résidence Accra Nord</span>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- CTA -->
-<section class="section">
-  <div class="container">
-    <div class="cta-banner reveal">
-      <h2 data-i18n="cta_title">Prêt à bâtir avec nous ?</h2>
-      <p data-i18n="cta_sub">Chaque grand projet commence par une conversation. Discutons de votre vision.</p>
-      <div class="cta-actions">
-        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1">Obtenir un devis gratuit</a>
-        <a href="contact.html" class="btn btn-ghost" data-i18n="cta_btn2">Nous contacter</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
-        <p class="footer-tag">Architecture. Construction. Excellence.</p>
-        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="130" height="50" loading="lazy">
+        <p data-i18n="ft_tag">Concevoir, construire et aménager en Afrique de l'Ouest.</p>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="footer"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg></a>
+        </div>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Navigation</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_nav">Navigation</p>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="about.html">À Propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="devis.html" data-i18n="nav_cta" data-from="footer">Devis gratuit</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Services</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_srv">Services</p>
         <ul>
-          <li><a href="devis.html">Architecture</a></li>
-          <li><a href="devis.html">Construction Écologique</a></li>
-          <li><a href="devis.html">Ingénierie BTP</a></li>
-          <li><a href="devis.html">Art Éco &amp; Upcycling</a></li>
-          <li><a href="devis.html">Location Matériaux</a></li>
+          <li><a href="services.html#architecture" data-i18n="srv1_title">Architecture</a></li>
+          <li><a href="services.html#construction-ecologique" data-i18n="srv2_title">Construction écologique</a></li>
+          <li><a href="services.html#architecture-interieure" data-i18n="srv3_title">Architecture intérieure</a></li>
+          <li><a href="services.html#ingenierie-btp" data-i18n="srv4_title">Ingénierie BTP</a></li>
+          <li><a href="services.html#systemes-techniques" data-i18n="srv9_title">Systèmes techniques</a></li>
+          <li><a href="services.html#courant-faible" data-i18n="srv12_title">Courant faible</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Contact</p>
-        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
-        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
-        <a href="mailto:archi.hiram@outlook.fr" class="footer-email">archi.hiram@outlook.fr</a>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_contact">Contact</p>
+        <ul>
+          <li><a href="https://wa.me/22898067744" target="_blank" rel="noopener" data-from="footer">WhatsApp : +228 98 06 77 44</a></li>
+          <li><a href="mailto:binaeltoudeka@gmail.com">binaeltoudeka@gmail.com</a></li>
+          <li><a href="mailto:archi.hiram@outlook.fr">archi.hiram@outlook.fr</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Avedji%20Wessom%C3%A9%2C%20Lom%C3%A9%2C%20Togo" target="_blank" rel="noopener">Avedji Wessomé, Lomé, Togo</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="politique-confidentialite.html">Politique de confidentialité</a>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="foot-bar">
+      <p>© <span data-year>2026</span> ARCHIRAM BUILDING – Archiram Link Africa. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <a href="politique-confidentialite.html" data-i18n="ft_privacy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <span class="wa-tip">Discutons sur WhatsApp</span>
+<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations." class="wa-fab" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="fab">
+  <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg>
+  <span class="wa-label" data-i18n="wa_tip">Discutons sur WhatsApp</span>
 </a>
-<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<button id="back-top" type="button" aria-label="Retour en haut" data-i18n-attr="aria-label:back_top"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg></button>
 
+<script>
+/* Textes anglais de cette page (le français est dans le HTML) */
+window.PAGE_LANG = {
+  "en": {
+    "meta_title": "About – ARCHIRAM BUILDING, Lomé",
+    "meta_desc": "Founded in Lomé in July 2024, ARCHIRAM BUILDING brings together engineers, architects and makers for sustainable building in West Africa.",
+    "pg_title": "A young company, an experienced team",
+    "pg_lead": "Founded in Lomé in July 2024, ARCHIRAM BUILDING takes clients from design to handover, with an eco-responsible approach rooted in West African realities.",
+    "story_title": "Building the Africa of tomorrow",
+    "hist_cta": "See our work",
+    "val_title": "What guides our work",
+    "tl_title": "Since July 2024",
+    "team_title": "The team",
+    "team_lead": "Engineers, architects and project managers who follow your project from start to finish.",
+    "vis_quote": "“We don’t just put up buildings. We create spaces that inspire, that last, and that tell the story of a continent on the move.”",
+    "vis_role": "Founder and lead architect",
+    "hist_p1": "ARCHIRAM BUILDING – Archiram Link Africa – is a startup founded in Lomé in July 2024 with a clear vision: to provide eco-responsible and innovative construction solutions rooted in the realities of West Africa.",
+    "hist_p2": "Driven by a passionate team of engineers, architects and creators, ARCHIRAM BUILDING combines technical rigour with an ecological approach to design durable buildings, refined interiors and upcycling artworks that give materials a second life.",
+    "hist_p3": "Every project is a statement of commitment: to build better, cleaner, and with a strong aesthetic identity rooted in our culture.",
+    "val1_title": "Excellence",
+    "val1_desc": "Every detail matters. We accept nothing less than the best in our designs, materials and finishes.",
+    "val2_title": "Integrity",
+    "val2_desc": "Full transparency on costs, timelines and process. Our clients' trust is our most valuable asset.",
+    "val3_title": "Innovation",
+    "val3_desc": "We integrate the latest design technologies and most advanced materials to build the projects of tomorrow.",
+    "val4_title": "Sustainability",
+    "val4_desc": "Eco-responsible architecture, local contextual integration and sustainable construction for future generations.",
+    "tm1_role": "Founder & Lead Architect",
+    "tm1_bio": "Architect and founder of ARCHIRAM BUILDING, specialising in residential and commercial architecture and eco-responsible construction in West Africa.",
+    "tm2_role": "Interior Design Director",
+    "tm2_bio": "Specialist in interior architecture and space planning. Designs functional, attractive interiors suited to the local context.",
+    "tm3_role": "Structural Engineer",
+    "tm3_bio": "Civil engineer in charge of technical studies and structural supervision on site. Responsible for the strength and compliance of every building.",
+    "tm4_role": "Project Manager",
+    "tm4_bio": "Coordinates teams, suppliers and clients. Makes sure every handover is on time and to standard.",
+    "tl0_d": "July 2024",
+    "tl0_t": "ARCHIRAM BUILDING is founded",
+    "tl0_p": "The company is set up in Lomé by a team of engineers and architects focused on eco-responsible construction.",
+    "tl1_d": "September 2024",
+    "tl1_t": "First residential projects",
+    "tl1_p": "First projects start in Lomé, with a bioclimatic approach and low-carbon materials.",
+    "tl2_d": "November 2024",
+    "tl2_t": "Eco art and upcycling studio",
+    "tl2_p": "A studio dedicated to decoration and artwork made from recycled materials is created.",
+    "tl3_d": "January 2025",
+    "tl3_t": "Site equipment rental",
+    "tl3_p": "Rental of scaffolding, formwork and tools opens to individuals and professionals.",
+    "tl4_d": "2025",
+    "tl4_t": "Public-building finishes and building services",
+    "tl4_p": "Finishes for public buildings and building services complete the offer.",
+    "f1": "years of team experience",
+    "f2": "projects delivered",
+    "f3": "countries",
+    "partners_label": "They trust us"
+  }
+};
+</script>
 <script src="script.js"></script>
 </body>
 </html>
