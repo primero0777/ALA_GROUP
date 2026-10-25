@@ -220,6 +220,32 @@ function initLoading() {
   }
 }
 
+/* ── 6b. IMAGE FALLBACK (images distantes indisponibles) ── */
+function initImgFallback() {
+  const FALLBACK = 'assets/LOGO Archi.png';
+  const attach = (img) => {
+    if (img.dataset.fbBound || img.src.indexOf(FALLBACK) !== -1) return;
+    img.dataset.fbBound = '1';
+    if (img.complete && img.naturalWidth === 0 && img.src) {
+      img.src = FALLBACK;
+      img.classList.add('img-fallback');
+      return;
+    }
+    img.addEventListener('error', () => {
+      img.src = FALLBACK;
+      img.classList.add('img-fallback');
+    });
+  };
+  document.querySelectorAll('img').forEach(attach);
+  new MutationObserver((muts) => {
+    muts.forEach((m) => m.addedNodes.forEach((node) => {
+      if (node.nodeType !== 1) return;
+      if (node.tagName === 'IMG') attach(node);
+      if (node.querySelectorAll) node.querySelectorAll('img').forEach(attach);
+    }));
+  }).observe(document.body, { childList: true, subtree: true });
+}
+
 /* ── 7. SCROLL PROGRESS BAR ── */
 function initScrollProgress() {
   const bar = document.getElementById('scroll-progress');
@@ -608,6 +634,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initLang();
   initLoading();
+  initImgFallback();
   initScrollProgress();
   initNav();
   initHeroRotate();

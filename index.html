@@ -8,13 +8,13 @@
   <title>ARCHIRAM BUILDING – Archiram Link Africa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/LOGO Archi.png">
   <link rel="apple-touch-icon" href="assets/LOGO Archi.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#0B1C3A">
+  <meta name="theme-color" content="#141414">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 </div>
 
 <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
-<nav id="navbar">
+<nav id="navbar" class="navbar-light">
   <div class="nav-wrap">
     <a href="index.html" class="nav-brand">
       <img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING">
@@ -56,22 +56,63 @@
 
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
 <section id="hero">
-  <div class="hero-media">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80" alt="Architecture" loading="eager">
-    <div class="hero-mask"></div>
-  </div>
-
-  <div class="hero-body">
+  <div class="hero-top">
+    <div class="hero-dot hero-dot-tl"></div>
+    <div class="hero-dot hero-dot-tr"></div>
     <span class="hero-label" data-i18n="hero_eyebrow">Architecture &amp; Construction — Lomé, Togo</span>
     <h1 class="hero-h1">
       <span class="hero-line1" data-i18n="hero_static">Nous bâtissons</span>
       <span class="hero-line2" id="heroRotate">l'Excellence</span>
     </h1>
     <p class="hero-desc" data-i18n="hero_sub">Startup spécialisée en ingénierie BTP, construction écologique et architecture intérieure en Afrique de l'Ouest.</p>
-    <div class="hero-btns">
-      <a href="projects.html" class="btn btn-gold" data-i18n="hero_cta1">Voir nos projets</a>
-      <a href="contact.html"  class="btn btn-outline" data-i18n="hero_cta2">Nous contacter</a>
+
+    <div class="hero-finder">
+      <div class="hf-tabs">
+        <button type="button" class="hf-tab active" data-tab="devis" data-i18n="hf_tab1">Devis</button>
+        <button type="button" class="hf-tab" data-tab="services" data-i18n="hf_tab2">Services</button>
+      </div>
+      <p class="hf-caption" data-i18n="hf_caption">Votre prochain projet commence ici</p>
+      <form class="hf-bar" id="heroFinder">
+        <div class="hf-field">
+          <span class="hf-flabel" data-i18n="hf_type_label">Type de projet</span>
+          <div class="hf-fctrl">
+            <i class="fas fa-drafting-compass"></i>
+            <select id="hfType">
+              <option value="Architecture" data-i18n="f_t1">Architecture</option>
+              <option value="Construction Écologique" data-i18n="f_t2">Construction Écologique</option>
+              <option value="Architecture Intérieure" data-i18n="f_t3">Architecture Intérieure</option>
+              <option value="Ingénierie BTP" data-i18n="f_t4">Ingénierie BTP</option>
+              <option value="Finitions &amp; Décoration" data-i18n="f_t5">Finitions &amp; Décoration</option>
+              <option value="Autre" data-i18n="f_t10">Autre</option>
+            </select>
+          </div>
+        </div>
+        <div class="hf-sep"></div>
+        <div class="hf-field">
+          <span class="hf-flabel" data-i18n="hf_city_label">Ville</span>
+          <div class="hf-fctrl">
+            <i class="fas fa-map-marker-alt"></i>
+            <select id="hfCity">
+              <option value="Lomé">Lomé</option>
+              <option value="Aného">Aného</option>
+              <option value="Accra">Accra</option>
+              <option value="Autre" data-i18n="f_t10">Autre</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="hf-submit"><span data-i18n="hf_submit">Démarrer</span> <i class="fas fa-arrow-right"></i></button>
+      </form>
     </div>
+
+    <div class="hero-sub-links">
+      <a href="projects.html" data-i18n="hero_cta1">Voir nos projets <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="assets/chbre.jpg" alt="Architecture ARCHIRAM BUILDING" loading="eager">
+    <span class="hero-photo-dot hero-photo-dot-1"></span>
+    <span class="hero-photo-dot hero-photo-dot-2"></span>
   </div>
 
   <div class="hero-kpis">
@@ -242,7 +283,7 @@
     </div>
     <div class="proj-grid" id="projGrid">
       <div class="proj-card reveal" data-cat="residential">
-        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80" alt="Villa Moderne" loading="lazy">
+        <img src="assets/ala_build.jpg" alt="Villa Moderne" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_res">Résidentiel</span>
           <h3>Villa Moderne Avedji</h3>
@@ -250,7 +291,7 @@
         </div>
       </div>
       <div class="proj-card reveal" data-cat="commercial">
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Siège Social" loading="lazy">
+        <img src="assets/photo_2026-05-02_20-50-42.jpg" alt="Siège Social" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_com">Commercial</span>
           <h3>Siège Social Tech Togo</h3>
@@ -258,7 +299,7 @@
         </div>
       </div>
       <div class="proj-card reveal" data-cat="interior">
-        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Intérieur" loading="lazy">
+        <img src="assets/fauteui+deco.jpg" alt="Intérieur" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_int">Intérieur</span>
           <h3>Bureau Coconut</h3>
@@ -266,7 +307,7 @@
         </div>
       </div>
       <div class="proj-card reveal" data-cat="residential">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Résidence" loading="lazy">
+        <img src="assets/photo_2026-05-02_20-50-41.jpg" alt="Résidence" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_res">Résidentiel</span>
           <h3>Résidence Éco-Durable</h3>
@@ -274,7 +315,7 @@
         </div>
       </div>
       <div class="proj-card reveal" data-cat="commercial">
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Complexe" loading="lazy">
+        <img src="assets/ens_chbre.jpg" alt="Complexe" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_com">Commercial</span>
           <h3>Complexe Hôtelier Accra</h3>
@@ -282,7 +323,7 @@
         </div>
       </div>
       <div class="proj-card reveal" data-cat="interior">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Appartement" loading="lazy">
+        <img src="assets/lavabo_moderne.jpg" alt="Appartement" loading="lazy">
         <div class="proj-info">
           <span class="proj-badge" data-i18n="flt_int">Intérieur</span>
           <h3>Appartement Minimaliste</h3>
