@@ -20,7 +20,7 @@ const SHARED_EN = {
   footer_rights: 'All rights reserved.', ft_tag: 'Designing, building and fitting out across West Africa.',
   ft_privacy: 'Privacy policy',
   srv1_title: 'Architecture', srv2_title: 'Eco-construction', srv3_title: 'Interior architecture',
-  srv4_title: 'Civil engineering', srv5_title: 'Finishes and decoration', srv6_title: 'Eco art and upcycling',
+  srv4_title: 'Civil engineering', srv5_title: 'Finishes, renovation and decoration', srv6_title: 'Eco art and upcycling',
   srv7_title: 'Equipment rental', srv8_title: 'Public-building finishes', srv9_title: 'Building services',
   srv10_title: 'Lift installation', srv11_title: 'IT', srv12_title: 'Low-voltage systems',
   wa_tip: 'Chat with us on WhatsApp', wa_label: 'WhatsApp', back_top: 'Back to top',
@@ -34,11 +34,10 @@ const SHARED_EN = {
   f_submit: 'Send via WhatsApp',
   f_note: 'The button opens WhatsApp with your message filled in; nothing is sent until you confirm it there.',
   f_t1: 'Architecture', f_t2: 'Eco-construction', f_t3: 'Interior architecture', f_t4: 'Civil engineering',
-  f_t5: 'Finishes and decoration', f_t6: 'Eco art and upcycling', f_t7: 'Equipment rental',
+  f_t5: 'Finishes, renovation and decoration', f_t6: 'Eco art and upcycling', f_t7: 'Equipment rental',
   f_t8: 'Public-building finishes', f_t9: 'Building services', f_t10: 'Lift installation',
   f_t11: 'IT', f_t12: 'Low-voltage systems', f_t13: 'Other',
-  cd_addr: 'Address', cd_hours: 'Hours', cd_email: 'Email',
-  hours_short: 'Mon–Thu 8 am–6 pm · Fri 8 am–5 pm · Sat 9 am–2 pm',
+  cd_addr: 'Address', cd_hours: 'Hours', cd_email: 'Email', cd_call: 'Or call this number',
   map_open: 'Open in Google Maps'
 };
 
@@ -527,6 +526,16 @@ function initBackTop() {
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
 }
 
+/* ── 16b. OUVRIR LE SERVICE CIBLÉ PAR UN LIEN (services.html#courant-faible) ── */
+function initHashDetails() {
+  const openFromHash = () => {
+    const el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView({ block: 'start' }); }
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+}
+
 /* ── 17. ANNÉE DU PIED DE PAGE ── */
 function initYear() {
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
@@ -549,5 +558,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectDialog();
   initTracking();
   initBackTop();
+  initHashDetails();
   initYear();
 });
