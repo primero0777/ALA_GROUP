@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Remplacez VOTRE-DOMAINE.com par l'adresse du site avant la mise en ligne -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://VOTRE-DOMAINE.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/projects.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/devis.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/about.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://VOTRE-DOMAINE.com/politique-confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+</urlset>

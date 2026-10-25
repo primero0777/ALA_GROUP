@@ -2,370 +2,352 @@
 <html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Devis gratuit ARCHIRAM BUILDING — Obtenez une estimation personnalisée pour votre projet de construction ou rénovation.">
-  <title>Devis Gratuit — ARCHIRAM BUILDING</title>
+  <title data-i18n="meta_title">Devis gratuit – ARCHIRAM BUILDING, Lomé</title>
+  <meta name="description" content="Demandez un devis gratuit à ARCHIRAM BUILDING en trois étapes : type de projet, détails, coordonnées. Envoi par WhatsApp, réponse sous 48 heures." data-i18n-attr="content:meta_desc">
+  <link rel="canonical" href="https://VOTRE-DOMAINE.com/devis.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARCHIRAM BUILDING">
+  <meta property="og:url" content="https://VOTRE-DOMAINE.com/devis.html">
+  <meta property="og:title" content="Devis gratuit – ARCHIRAM BUILDING, Lomé" data-i18n-attr="content:meta_title">
+  <meta property="og:description" content="Demandez un devis gratuit à ARCHIRAM BUILDING en trois étapes : type de projet, détails, coordonnées. Envoi par WhatsApp, réponse sous 48 heures." data-i18n-attr="content:meta_desc">
+  <meta property="og:image" content="https://VOTRE-DOMAINE.com/assets/img/immeuble-facade.webp">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Thème appliqué avant l'affichage, pour éviter un flash clair en mode sombre -->
+  <script>try{if(localStorage.getItem('ala-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Favicons — tous navigateurs -->
-  <link rel="icon" type="image/png" sizes="32x32"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="16x16"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="96x96"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/LOGO Archi.png">
-  <link rel="apple-touch-icon" sizes="180x180"     href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#141414">
-  <meta name="msapplication-TileColor" content="#141414">
-  <meta name="msapplication-TileImage" content="assets/LOGO Archi.png">
-  <meta name="msapplication-config" content="none">
+  <meta name="theme-color" content="#13202C">
 </head>
 <body>
 
-<script>
-window.PAGE_LANG = {
-  fr: {
-    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
-    dv_title:'Votre <span>Devis</span> Gratuit',
-    dv_sub:'3 étapes simples pour recevoir une estimation personnalisée sous 48h.',
-    step1:'Type de projet', step2:'Détails', step3:'Vos coordonnées',
-    s1_title:'Quel type de projet ?', s1_sub:'Sélectionnez la nature de votre projet.',
-    t1:'Architecture', t2:'Construction Écologique', t3:'Architecture Intérieure', t4:'Ingénierie BTP', t5:'Finitions &amp; Décoration', t6:'Art Éco &amp; Upcycling', t7:'Location Matériaux', t8:'Finitions ERP', t9:'Travaux &amp; Systèmes', t10:'Autre',
-    s2_title:'Détails du projet', s2_sub:'Aidez-nous à mieux comprendre votre besoin.',
-    budget_title:'Quel est votre budget estimé ?',
-    b1_price:'< 5 000 000 FCFA', b1_desc:'Petit projet / Rénovation partielle',
-    b2_price:'5M – 15M FCFA', b2_desc:'Maison individuelle / Appartement',
-    b3_price:'15M – 50M FCFA', b3_desc:'Villa haut de gamme / Immeuble',
-    b4_price:'> 50M FCFA', b4_desc:'Grand projet commercial / Complexe',
-    timeline_lbl:'Délai souhaité de démarrage', tl1:'Immédiatement', tl2:'Dans 3 mois', tl3:'Dans 6 mois', tl4:'Dans 1 an et +',
-    desc_lbl:'Description du projet *',
-    desc_ph:'Décrivez votre projet en quelques lignes : superficie souhaitée, nombre de pièces, style architectural, contraintes particulières...',
-    s3_title:'Vos coordonnées', s3_sub:'Comment pouvons-nous vous joindre ?',
-    f_name:'Nom complet *', f_phone:'Téléphone / WhatsApp *', f_email:'Email',
-    f_city:'Ville / Localité *', btn_next:'Continuer', btn_prev:'Retour', btn_submit:'Envoyer ma demande <i class="fab fa-whatsapp"></i>',
-    ok_title:'Demande envoyée !',
-    ok_sub:'Votre demande de devis a bien été transmise. Notre équipe vous contactera dans les 48 heures.'
-  },
-  en: {
-    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
-    dv_title:'Your Free <span>Quote</span>',
-    dv_sub:'3 simple steps to receive a personalised estimate within 48 hours.',
-    step1:'Project type', step2:'Details', step3:'Your details',
-    s1_title:'What type of project?', s1_sub:'Select the nature of your project.',
-    t1:'Architecture', t2:'Ecological Construction', t3:'Interior Architecture', t4:'Civil Engineering', t5:'Finishing &amp; Decoration', t6:'Eco Art &amp; Upcycling', t7:'Equipment Rental', t8:'ERP Finishing', t9:'Technical Works', t10:'Other',
-    s2_title:'Project details', s2_sub:'Help us better understand your needs.',
-    budget_title:'What is your estimated budget?',
-    b1_price:'< 5,000,000 FCFA', b1_desc:'Small project / Partial renovation',
-    b2_price:'5M – 15M FCFA', b2_desc:'Individual house / Apartment',
-    b3_price:'15M – 50M FCFA', b3_desc:'High-end villa / Building',
-    b4_price:'> 50M FCFA', b4_desc:'Large commercial project / Complex',
-    timeline_lbl:'Desired start timeline', tl1:'Immediately', tl2:'Within 3 months', tl3:'Within 6 months', tl4:'In 1 year+',
-    desc_lbl:'Project description *',
-    desc_ph:'Describe your project: desired area, number of rooms, architectural style, special constraints...',
-    s3_title:'Your contact details', s3_sub:'How can we reach you?',
-    f_name:'Full name *', f_phone:'Phone / WhatsApp *', f_email:'Email',
-    f_city:'City / Location *', btn_next:'Continue', btn_prev:'Back', btn_submit:'Send my request <i class="fab fa-whatsapp"></i>',
-    ok_title:'Request sent!',
-    ok_sub:'Your quote request has been submitted. Our team will contact you within 48 hours.'
-  }
-};
-</script>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
-<!-- Navbar -->
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
-      <li><a href="services.html" class="nav-link" data-i18n="nav_services">Services</a></li>
-      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
-      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
-      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+<header id="navbar">
+  <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
+    <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
+      <img class="logo-light" src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+      <img class="logo-dark" src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+    </a>
+    <ul class="nav-menu" id="navLinks">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-item" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-item" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-item" data-i18n="nav_about">À propos</a></li>
+      <li><a href="contact.html" class="nav-item" data-i18n="nav_contact">Contact</a></li>
+      <li class="nav-mobile-cta"><a href="devis.html" class="btn btn-primary" data-from="menu"><span data-i18n="nav_cta">Devis gratuit</span></a></li>
     </ul>
-    <div class="nav-actions">
-      <button class="lang-btn" id="langToggle"><span id="langLabel">EN</span></button>
-      <button class="theme-btn" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
-      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
+      <button class="ctrl-btn" id="themeToggle" type="button" aria-label="Mode clair ou sombre" data-i18n-attr="aria-label:theme_label"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-moon"></use></svg></button>
+      <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
+      <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="page-head" aria-labelledby="pageTitle">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-i18n-attr="aria-label:crumb_label">
+        <a href="index.html" data-i18n="crumb_home">Accueil</a>
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+        <span aria-current="page" data-i18n="crumb_q">Devis gratuit</span>
+      </nav>
+    <h1 id="pageTitle" data-i18n="pg_title">Votre devis gratuit</h1>
+    <p class="page-lead" data-i18n="pg_lead">Trois étapes, environ deux minutes. Votre demande part sur WhatsApp et nous vous répondons sous 48 heures.</p>
   </div>
-</nav>
+</section>
 
-<!-- Wizard Hero -->
-<div class="wizard-hero">
-  <div class="container">
-    <h1 data-i18n="dv_title">Votre <span>Devis</span> Gratuit</h1>
-    <p data-i18n="dv_sub">3 étapes simples pour recevoir une estimation personnalisée sous 48h.</p>
-  </div>
-</div>
+<section class="sec sec-tight" aria-label="Demande de devis">
+  <div class="wrap q-wrap">
+    <ol class="q-progress" aria-label="Étapes" data-i18n-attr="aria-label:q_progress">
+      <li class="active" aria-current="step"><span class="q-n">1</span><span data-i18n="q_s1">Projet</span></li>
+      <li><span class="q-n">2</span><span data-i18n="q_s2">Détails</span></li>
+      <li><span class="q-n">3</span><span data-i18n="q_s3">Contact</span></li>
+    </ol>
 
-<!-- Wizard Body -->
-<div class="wizard-body container">
-
-  <!-- Steps indicator -->
-  <div class="w-steps" id="wSteps">
-    <div class="w-step active" data-step="1">
-      <div class="w-num">1</div>
-      <p class="w-lbl" data-i18n="step1">Type</p>
-    </div>
-    <div class="w-sep" id="sep1"></div>
-    <div class="w-step" data-step="2">
-      <div class="w-num">2</div>
-      <p class="w-lbl" data-i18n="step2">Détails</p>
-    </div>
-    <div class="w-sep" id="sep2"></div>
-    <div class="w-step" data-step="3">
-      <div class="w-num">3</div>
-      <p class="w-lbl" data-i18n="step3">Contact</p>
-    </div>
-  </div>
-
-  <!-- Step 1 — Project type -->
-  <div class="w-panel active" id="panel1">
-    <h2 class="w-title" data-i18n="s1_title">Quel type de projet ?</h2>
-    <p class="w-sub" data-i18n="s1_sub">Sélectionnez la nature de votre projet.</p>
-    <div class="type-grid">
-      <div class="type-card" data-type="Architecture"><i class="fas fa-drafting-compass"></i><p data-i18n="t1">Architecture</p></div>
-      <div class="type-card" data-type="Construction Écologique"><i class="fas fa-leaf"></i><p data-i18n="t2">Construction Écologique</p></div>
-      <div class="type-card" data-type="Architecture Intérieure"><i class="fas fa-couch"></i><p data-i18n="t3">Architecture Intérieure</p></div>
-      <div class="type-card" data-type="Ingénierie BTP"><i class="fas fa-hard-hat"></i><p data-i18n="t4">Ingénierie BTP</p></div>
-      <div class="type-card" data-type="Finitions & Décoration"><i class="fas fa-paint-brush"></i><p data-i18n="t5">Finitions &amp; Décoration</p></div>
-      <div class="type-card" data-type="Art Éco & Upcycling"><i class="fas fa-recycle"></i><p data-i18n="t6">Art Éco &amp; Upcycling</p></div>
-      <div class="type-card" data-type="Location Matériaux"><i class="fas fa-truck"></i><p data-i18n="t7">Location Matériaux</p></div>
-      <div class="type-card" data-type="Finitions ERP"><i class="fas fa-building"></i><p data-i18n="t8">Finitions ERP</p></div>
-      <div class="type-card" data-type="Travaux & Systèmes"><i class="fas fa-tools"></i><p data-i18n="t9">Travaux &amp; Systèmes</p></div>
-      <div class="type-card" data-type="Autre"><i class="fas fa-ellipsis-h"></i><p data-i18n="t10">Autre</p></div>
-    </div>
-    <div class="w-nav">
-      <span></span>
-      <button class="btn btn-primary" id="next1" data-i18n="btn_next" disabled>Continuer</button>
-    </div>
-  </div>
-
-  <!-- Step 2 — Details -->
-  <div class="w-panel" id="panel2">
-    <h2 class="w-title" data-i18n="s2_title">Détails du projet</h2>
-    <p class="w-sub" data-i18n="s2_sub">Aidez-nous à mieux comprendre votre besoin.</p>
-
-    <p class="sec-tag" style="margin-bottom:1rem" data-i18n="budget_title">Quel est votre budget estimé ?</p>
-    <div class="budget-grid">
-      <div class="budget-card" data-budget="< 5M FCFA">
-        <p class="bc-price" data-i18n="b1_price">&lt; 5 000 000 FCFA</p>
-        <p class="bc-desc" data-i18n="b1_desc">Petit projet / Rénovation partielle</p>
+    <form id="quoteForm" class="q-form" novalidate>
+      <div class="q-step">
+        <h2 data-i18n="s1_title">Quel type de projet ?</h2>
+        <fieldset class="q-options" data-required data-summary>
+          <legend data-i18n="s1_legend">Type de projet *</legend>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Architecture">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-compass-drafting"></use></svg><span class="q-opt-title" data-i18n="f_t1">Architecture</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Construction écologique">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-leaf"></use></svg><span class="q-opt-title" data-i18n="f_t2">Construction écologique</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Architecture intérieure">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-couch"></use></svg><span class="q-opt-title" data-i18n="f_t3">Architecture intérieure</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Ingénierie BTP">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-ruler-combined"></use></svg><span class="q-opt-title" data-i18n="f_t4">Ingénierie BTP</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Finitions et décoration">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-paint-roller"></use></svg><span class="q-opt-title" data-i18n="f_t5">Finitions et décoration</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Art écologique et upcycling">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-recycle"></use></svg><span class="q-opt-title" data-i18n="f_t6">Art écologique et upcycling</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Location de matériel">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-truck"></use></svg><span class="q-opt-title" data-i18n="f_t7">Location de matériel</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Finitions ERP">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-building-shield"></use></svg><span class="q-opt-title" data-i18n="f_t8">Finitions ERP</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Systèmes techniques">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plug"></use></svg><span class="q-opt-title" data-i18n="f_t9">Systèmes techniques</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Montage d&#x27;ascenseurs">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-elevator"></use></svg><span class="q-opt-title" data-i18n="f_t10">Montage d&#x27;ascenseurs</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Informatique">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-network-wired"></use></svg><span class="q-opt-title" data-i18n="f_t11">Informatique</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Courant faible">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-video"></use></svg><span class="q-opt-title" data-i18n="f_t12">Courant faible</span></span>
+          </label>
+          <label class="q-opt">
+            <input type="radio" name="type" value="Autre">
+            <span class="q-opt-box"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg><span class="q-opt-title" data-i18n="f_t13">Autre</span></span>
+          </label>
+        </fieldset>
+        <p class="q-choice-err f-err" role="alert"></p>
+        <div class="q-nav"><span></span><button type="button" class="btn btn-primary" data-next><span data-i18n="btn_next">Continuer</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></button></div>
       </div>
-      <div class="budget-card" data-budget="5M-15M FCFA">
-        <p class="bc-price" data-i18n="b2_price">5M – 15M FCFA</p>
-        <p class="bc-desc" data-i18n="b2_desc">Maison individuelle / Appartement</p>
-      </div>
-      <div class="budget-card" data-budget="15M-50M FCFA">
-        <p class="bc-price" data-i18n="b3_price">15M – 50M FCFA</p>
-        <p class="bc-desc" data-i18n="b3_desc">Villa haut de gamme / Immeuble</p>
-      </div>
-      <div class="budget-card" data-budget="> 50M FCFA">
-        <p class="bc-price" data-i18n="b4_price">&gt; 50M FCFA</p>
-        <p class="bc-desc" data-i18n="b4_desc">Grand projet commercial / Complexe</p>
-      </div>
-    </div>
 
-    <div class="form-group" style="margin-top:1.5rem">
-      <label data-i18n="timeline_lbl">Délai souhaité de démarrage</label>
-      <select id="f-timeline">
-        <option value="Immédiatement" data-i18n="tl1">Immédiatement</option>
-        <option value="Dans 3 mois" data-i18n="tl2">Dans 3 mois</option>
-        <option value="Dans 6 mois" data-i18n="tl3">Dans 6 mois</option>
-        <option value="Dans 1 an et +" data-i18n="tl4">Dans 1 an et +</option>
-      </select>
-    </div>
-
-    <div class="form-group" style="margin-top:1.25rem">
-      <label for="f-desc" data-i18n="desc_lbl">Description du projet *</label>
-      <textarea id="f-desc" rows="5" placeholder="Décrivez votre projet..." data-i18n-ph="desc_ph"></textarea>
-    </div>
-
-    <div class="w-nav">
-      <button class="btn btn-ghost" id="prev2" onclick="goStep(1)" style="color:var(--text-2);border-color:var(--border)" data-i18n="btn_prev">Retour</button>
-      <button class="btn btn-primary" id="next2" data-i18n="btn_next">Continuer</button>
-    </div>
-  </div>
-
-  <!-- Step 3 — Contact -->
-  <div class="w-panel" id="panel3">
-    <h2 class="w-title" data-i18n="s3_title">Vos coordonnées</h2>
-    <p class="w-sub" data-i18n="s3_sub">Comment pouvons-nous vous joindre ?</p>
-
-    <div class="contact-form" style="display:flex;flex-direction:column;gap:1.25rem">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="f-name" data-i18n="f_name">Nom complet *</label>
-          <input type="text" id="f-name" placeholder="Votre nom" autocomplete="name">
+      <div class="q-step" hidden>
+        <h2 data-i18n="s2_title">Parlez-nous de votre projet</h2>
+        <fieldset class="q-options q-options-wide" data-summary>
+          <legend data-i18n="budget_legend">Budget estimé</legend>
+          <label class="q-opt q-opt-wide">
+            <input type="radio" name="budget" value="&lt; 5 M FCFA">
+            <span class="q-opt-box"><span class="q-opt-title" data-i18n="b1">Moins de 5 M FCFA</span><span class="q-opt-desc" data-i18n="b1_d">Petit projet ou rénovation partielle</span></span>
+          </label>
+          <label class="q-opt q-opt-wide">
+            <input type="radio" name="budget" value="5 – 15 M FCFA">
+            <span class="q-opt-box"><span class="q-opt-title" data-i18n="b2">5 à 15 M FCFA</span><span class="q-opt-desc" data-i18n="b2_d">Maison individuelle ou appartement</span></span>
+          </label>
+          <label class="q-opt q-opt-wide">
+            <input type="radio" name="budget" value="15 – 50 M FCFA">
+            <span class="q-opt-box"><span class="q-opt-title" data-i18n="b3">15 à 50 M FCFA</span><span class="q-opt-desc" data-i18n="b3_d">Villa haut de gamme ou immeuble</span></span>
+          </label>
+          <label class="q-opt q-opt-wide">
+            <input type="radio" name="budget" value="&gt; 50 M FCFA">
+            <span class="q-opt-box"><span class="q-opt-title" data-i18n="b4">Plus de 50 M FCFA</span><span class="q-opt-desc" data-i18n="b4_d">Grand projet commercial ou complexe</span></span>
+          </label>
+          <label class="q-opt q-opt-wide">
+            <input type="radio" name="budget" value="Je ne sais pas encore">
+            <span class="q-opt-box"><span class="q-opt-title" data-i18n="b5">Je ne sais pas encore</span><span class="q-opt-desc" data-i18n="b5_d">Nous vous aiderons à l&#x27;estimer</span></span>
+          </label>
+        </fieldset>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="q-timeline" data-i18n="timeline_lbl">Quand souhaitez-vous démarrer ?</label>
+            <select id="q-timeline" name="timeline">
+            <option value="Immédiatement" data-i18n="tl1">Immédiatement</option>
+            <option value="Dans 3 mois" data-i18n="tl2">Dans 3 mois</option>
+            <option value="Dans 6 mois" data-i18n="tl3">Dans 6 mois</option>
+            <option value="Dans un an ou plus" data-i18n="tl4">Dans un an ou plus</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label for="q-surface" data-i18n="surface_lbl">Surface approximative (m²)</label>
+            <input type="number" id="q-surface" name="surface" min="1" inputmode="numeric" data-i18n="surface_ph" placeholder="ex. 250">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="f-phone" data-i18n="f_phone">Téléphone / WhatsApp *</label>
-          <input type="tel" id="f-phone" placeholder="+228 XX XX XX XX" autocomplete="tel">
+        <div class="f-group">
+          <label for="q-desc" data-i18n="desc_lbl">Description du projet *</label>
+          <textarea id="q-desc" name="description" rows="5" required data-i18n="desc_ph" placeholder="Terrain, nombre de pièces, style, contraintes, tout ce qui peut nous aider…"></textarea>
+        </div>
+        <div class="q-nav">
+          <button type="button" class="btn btn-line" data-prev><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg><span data-i18n="btn_prev">Retour</span></button>
+          <button type="button" class="btn btn-primary" data-next><span data-i18n="btn_next">Continuer</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"></use></svg></button>
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="f-email" data-i18n="f_email">Email</label>
-          <input type="email" id="f-email" placeholder="votre@email.com" autocomplete="email">
+
+      <div class="q-step" hidden>
+        <h2 data-i18n="s3_title">Comment vous joindre ?</h2>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="q-name" data-i18n="f_name">Nom complet *</label>
+            <input type="text" id="q-name" name="name" required autocomplete="name">
+          </div>
+          <div class="f-group">
+            <label for="q-phone" data-i18n="q_phone">Téléphone / WhatsApp *</label>
+            <input type="tel" id="q-phone" name="phone" required autocomplete="tel" placeholder="+228 XX XX XX XX">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="f-city" data-i18n="f_city">Ville / Localité *</label>
-          <input type="text" id="f-city" placeholder="Lomé, Togo">
+        <div class="f-row">
+          <div class="f-group">
+            <label for="q-email" data-i18n="f_email">Email</label>
+            <input type="email" id="q-email" name="email" autocomplete="email">
+          </div>
+          <div class="f-group">
+            <label for="q-city" data-i18n="q_city">Ville ou localité *</label>
+            <input type="text" id="q-city" name="city" required autocomplete="address-level2" data-i18n="q_city_ph" placeholder="Lomé, Togo">
+          </div>
         </div>
+        <div class="q-nav">
+          <button type="button" class="btn btn-line" data-prev><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-left"></use></svg><span data-i18n="btn_prev">Retour</span></button>
+          <button type="submit" class="btn btn-primary"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg><span data-i18n="btn_submit">Envoyer ma demande sur WhatsApp</span></button>
+        </div>
+        <p class="form-note" data-i18n="q_note">Le bouton ouvre WhatsApp avec votre demande préremplie ; rien n'est envoyé tant que vous ne l'avez pas validé.</p>
+      </div>
+    </form>
+
+    <div class="q-done" id="quoteDone" hidden>
+      <svg class="ic q-done-ic" aria-hidden="true"><use href="assets/icons.svg#i-check"></use></svg>
+      <h2 tabindex="-1" data-i18n="ok_title">Votre demande est prête dans WhatsApp</h2>
+      <p data-i18n="ok_sub">Validez l'envoi dans WhatsApp et nous vous répondons sous 48 heures. Si WhatsApp ne s'est pas ouvert, écrivez-nous directement au +228 98 06 77 44.</p>
+      <div class="q-nav">
+        <a href="index.html" class="btn btn-line"><span data-i18n="ok_home">Retour à l'accueil</span></a>
+        <a href="https://wa.me/22898067744" class="btn btn-primary" target="_blank" rel="noopener" data-from="quote-done"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg><span data-i18n="ok_wa">Ouvrir WhatsApp</span></a>
       </div>
     </div>
-
-    <div class="w-nav">
-      <button class="btn btn-ghost" onclick="goStep(2)" style="color:var(--text-2);border-color:var(--border)" data-i18n="btn_prev">Retour</button>
-      <button class="btn btn-primary" id="submitDevis">Envoyer ma demande <i class="fab fa-whatsapp"></i></button>
-    </div>
   </div>
+</section>
 
-  <!-- Success -->
-  <div class="w-success" id="wSuccess">
-    <div class="w-success-icon"><i class="fab fa-whatsapp"></i></div>
-    <h2 data-i18n="ok_title">Demande envoyée !</h2>
-    <p data-i18n="ok_sub">Votre demande de devis a bien été transmise. Notre équipe vous contactera dans les 48 heures.</p>
-    <a href="index.html" class="btn btn-primary" style="margin-top:2rem;display:inline-flex">Retour à l'accueil</a>
-  </div>
-</div>
+</main>
 
-<!-- Footer -->
 <footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
-        <p class="footer-tag">Architecture. Construction. Excellence.</p>
-        <p class="footer-addr">Avedji Wessomé, Lomé, Togo</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="130" height="50" loading="lazy">
+        <p data-i18n="ft_tag">Concevoir, construire et aménager en Afrique de l'Ouest.</p>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="footer"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg></a>
+        </div>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Navigation</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_nav">Navigation</p>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projets</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="devis.html" data-i18n="nav_cta" data-from="footer">Devis gratuit</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Services</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_srv">Services</p>
         <ul>
-          <li><a href="devis.html">Architecture</a></li>
-          <li><a href="devis.html">Construction Écologique</a></li>
-          <li><a href="devis.html">Ingénierie BTP</a></li>
-          <li><a href="devis.html">Art Éco &amp; Upcycling</a></li>
-          <li><a href="devis.html">Location Matériaux</a></li>
+          <li><a href="services.html#architecture" data-i18n="srv1_title">Architecture</a></li>
+          <li><a href="services.html#construction-ecologique" data-i18n="srv2_title">Construction écologique</a></li>
+          <li><a href="services.html#architecture-interieure" data-i18n="srv3_title">Architecture intérieure</a></li>
+          <li><a href="services.html#ingenierie-btp" data-i18n="srv4_title">Ingénierie BTP</a></li>
+          <li><a href="services.html#systemes-techniques" data-i18n="srv9_title">Systèmes techniques</a></li>
+          <li><a href="services.html#courant-faible" data-i18n="srv12_title">Courant faible</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading">Contact</p>
-        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
-        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email">binaeltoudeka@gmail.com</a>
-        <a href="mailto:archi.hiram@outlook.fr" class="footer-email">archi.hiram@outlook.fr</a>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_contact">Contact</p>
+        <ul>
+          <li><a href="https://wa.me/22898067744" target="_blank" rel="noopener" data-from="footer">WhatsApp : +228 98 06 77 44</a></li>
+          <li><a href="mailto:binaeltoudeka@gmail.com">binaeltoudeka@gmail.com</a></li>
+          <li><a href="mailto:archi.hiram@outlook.fr">archi.hiram@outlook.fr</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Avedji%20Wessom%C3%A9%2C%20Lom%C3%A9%2C%20Togo" target="_blank" rel="noopener">Avedji Wessomé, Lomé, Togo</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="politique-confidentialite.html">Politique de confidentialité</a>
-      </div>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div class="foot-bar">
+      <p>© <span data-year>2026</span> ARCHIRAM BUILDING – Archiram Link Africa. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <a href="politique-confidentialite.html" data-i18n="ft_privacy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20souhaite%20un%20devis." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <span class="wa-tip">Discutons sur WhatsApp</span>
+<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations." class="wa-fab" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="fab">
+  <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg>
+  <span class="wa-label" data-i18n="wa_tip">Discutons sur WhatsApp</span>
 </a>
-<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<button id="back-top" type="button" aria-label="Retour en haut" data-i18n-attr="aria-label:back_top"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg></button>
 
-<script src="script.js"></script>
 <script>
-/* ── Wizard state ── */
-let step = 1;
-let selected = { type: '', budget: '', timeline: '' };
-
-function goStep(n) {
-  document.querySelectorAll('.w-panel').forEach((p, i) => p.classList.toggle('active', i + 1 === n));
-  document.querySelectorAll('.w-step').forEach((s, i) => {
-    s.classList.toggle('active', i + 1 === n);
-    s.classList.toggle('done', i + 1 < n);
-  });
-  document.getElementById('sep1').classList.toggle('done', n > 1);
-  document.getElementById('sep2').classList.toggle('done', n > 2);
-  step = n;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-/* ── Step 1: type selection ── */
-document.querySelectorAll('.type-card').forEach(card => {
-  card.addEventListener('click', () => {
-    document.querySelectorAll('.type-card').forEach(c => c.classList.remove('sel'));
-    card.classList.add('sel');
-    selected.type = card.dataset.type;
-    document.getElementById('next1').disabled = false;
-    document.getElementById('next1').removeAttribute('disabled');
-  });
-});
-document.getElementById('next1').addEventListener('click', () => {
-  if (!selected.type) return;
-  goStep(2);
-});
-
-/* ── Step 2: budget + details ── */
-document.querySelectorAll('.budget-card').forEach(card => {
-  card.addEventListener('click', () => {
-    document.querySelectorAll('.budget-card').forEach(c => c.classList.remove('sel'));
-    card.classList.add('sel');
-    selected.budget = card.dataset.budget;
-  });
-});
-document.getElementById('next2').addEventListener('click', () => {
-  const desc = document.getElementById('f-desc').value.trim();
-  if (!desc) {
-    document.getElementById('f-desc').focus();
-    document.getElementById('f-desc').style.borderColor = 'var(--gold)';
-    return;
-  }
-  selected.timeline = document.getElementById('f-timeline').value;
-  selected.desc = desc;
-  goStep(3);
-});
-
-/* ── Step 3: submit ── */
-document.getElementById('submitDevis').addEventListener('click', () => {
-  const lang = localStorage.getItem('ala-lang') || 'fr';
-  const name  = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const city  = document.getElementById('f-city').value.trim();
-
-  if (!name || !phone || !city) {
-    alert(lang === 'fr' ? 'Veuillez remplir tous les champs obligatoires (*).' : 'Please fill in all required fields (*).');
-    return;
-  }
-
-  const msg = lang === 'fr'
-    ? `🏗️ *Demande de Devis — ARCHIRAM BUILDING*\n\n📋 *Projet:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Non précisé'}\n🗓️ *Délai:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nNom: ${name}\nTél: ${phone}${email ? '\nEmail: ' + email : ''}\nVille: ${city}`
-    : `🏗️ *Quote Request — ARCHIRAM BUILDING*\n\n📋 *Project:* ${selected.type}\n💰 *Budget:* ${selected.budget || 'Not specified'}\n🗓️ *Timeline:* ${selected.timeline}\n\n📝 *Description:*\n${selected.desc}\n\n👤 *Contact:*\nName: ${name}\nPhone: ${phone}${email ? '\nEmail: ' + email : ''}\nCity: ${city}`;
-
-  window.open(`https://wa.me/22898067744?text=${encodeURIComponent(msg)}`, '_blank', 'noopener,noreferrer');
-
-  // Show success
-  document.getElementById('panel3').classList.remove('active');
-  document.getElementById('wSteps').style.display = 'none';
-  document.getElementById('wSuccess').classList.add('show');
-});
+/* Présélectionne le type de projet quand on arrive depuis la page Services (devis.html?type=…) */
+(function () {
+  var want = new URLSearchParams(location.search).get('type');
+  if (!want) return;
+  document.querySelectorAll('input[name="type"]').forEach(function (r) { if (r.value.toLowerCase() === want.toLowerCase()) r.checked = true; });
+})();
 </script>
+<script>
+/* Textes anglais de cette page (le français est dans le HTML) */
+window.PAGE_LANG = {
+  "en": {
+    "meta_title": "Free quote – ARCHIRAM BUILDING, Lomé",
+    "meta_desc": "Request a free quote from ARCHIRAM BUILDING in three steps: project type, details, contact. Sent through WhatsApp, reply within 48 hours.",
+    "pg_title": "Your free quote",
+    "pg_lead": "Three steps, about two minutes. Your request is sent through WhatsApp and we reply within 48 hours.",
+    "crumb_q": "Free quote",
+    "q_s1": "Project",
+    "q_s2": "Details",
+    "q_s3": "Contact",
+    "q_progress": "Steps",
+    "s1_title": "What kind of project?",
+    "s1_legend": "Project type *",
+    "s2_title": "Tell us about your project",
+    "budget_legend": "Estimated budget",
+    "timeline_lbl": "When would you like to start?",
+    "surface_lbl": "Approximate area (m²)",
+    "surface_ph": "e.g. 250",
+    "desc_lbl": "Project description *",
+    "desc_ph": "Plot, number of rooms, style, constraints, anything useful…",
+    "s3_title": "How can we reach you?",
+    "q_phone": "Phone / WhatsApp *",
+    "q_city": "City or area *",
+    "q_city_ph": "Lomé, Togo",
+    "btn_next": "Continue",
+    "btn_prev": "Back",
+    "btn_submit": "Send my request on WhatsApp",
+    "q_note": "The button opens WhatsApp with your request filled in; nothing is sent until you confirm it there.",
+    "ok_title": "Your request is ready in WhatsApp",
+    "ok_sub": "Confirm sending in WhatsApp and we'll reply within 48 hours. If WhatsApp didn't open, message us directly on +228 98 06 77 44.",
+    "ok_home": "Back to home",
+    "ok_wa": "Open WhatsApp",
+    "b1": "Under 5M FCFA",
+    "b1_d": "Small project or partial renovation",
+    "b2": "5M to 15M FCFA",
+    "b2_d": "House or apartment",
+    "b3": "15M to 50M FCFA",
+    "b3_d": "High-end villa or apartment building",
+    "b4": "Over 50M FCFA",
+    "b4_d": "Large commercial project or complex",
+    "b5": "I don't know yet",
+    "b5_d": "We'll help you estimate it",
+    "tl1": "Immediately",
+    "tl2": "Within 3 months",
+    "tl3": "Within 6 months",
+    "tl4": "In a year or more"
+  }
+};
+</script>
+<script src="script.js"></script>
 </body>
 </html>

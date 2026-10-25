@@ -2,529 +2,558 @@
 <html lang="fr" data-theme="light">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Services ARCHIRAM BUILDING — Architecture, Construction, Design intérieur, Ingénierie, Finition et Promotion immobilière à Lomé, Togo.">
-  <title>Services — ARCHIRAM BUILDING</title>
+  <title data-i18n="meta_title">Services – ARCHIRAM BUILDING, Lomé</title>
+  <meta name="description" content="Architecture, construction, ingénierie BTP, design intérieur, systèmes techniques et finitions : douze métiers sous un même toit à Lomé, Togo." data-i18n-attr="content:meta_desc">
+  <link rel="canonical" href="https://VOTRE-DOMAINE.com/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ARCHIRAM BUILDING">
+  <meta property="og:url" content="https://VOTRE-DOMAINE.com/services.html">
+  <meta property="og:title" content="Services – ARCHIRAM BUILDING, Lomé" data-i18n-attr="content:meta_title">
+  <meta property="og:description" content="Architecture, construction, ingénierie BTP, design intérieur, systèmes techniques et finitions : douze métiers sous un même toit à Lomé, Togo." data-i18n-attr="content:meta_desc">
+  <meta property="og:image" content="https://VOTRE-DOMAINE.com/assets/img/immeuble-facade.webp">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Thème appliqué avant l'affichage, pour éviter un flash clair en mode sombre -->
+  <script>try{if(localStorage.getItem('ala-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Favicons — tous navigateurs -->
-  <link rel="icon" type="image/png" sizes="32x32"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="16x16"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="96x96"  href="assets/LOGO Archi.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/LOGO Archi.png">
-  <link rel="apple-touch-icon" sizes="180x180"     href="assets/LOGO Archi.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#141414">
-  <meta name="msapplication-TileColor" content="#141414">
-  <meta name="msapplication-TileImage" content="assets/LOGO Archi.png">
-  <meta name="msapplication-config" content="none">
+  <meta name="theme-color" content="#13202C">
 </head>
 <body>
 
-<!-- Translations for this page -->
-<script>
-window.PAGE_LANG = {
-  fr: {
-    nav_home:'Accueil', nav_services:'Services', nav_projects:'Projets', nav_about:'À Propos', nav_contact:'Contact', nav_cta:'Devis gratuit',
-    ph_title:'Nos <em>Services</em>', ph_sub:"Startup fondée en juillet 2024, ARCHIRAM BUILDING vous accompagne de l'ingénierie BTP à la construction écologique, en passant par l'architecture intérieure et l'art upcycling.",
-    why_tag:'Pourquoi ARCHIRAM', why_title:'L\'excellence\néco-responsable',
-    p1_title:'Expertise pluridisciplinaire', p1_desc:'Ingénierie BTP, construction écologique et architecture intérieure réunies sous un même toit pour des projets cohérents et performants.',
-    p2_title:'Matériaux durables', p2_desc:'Sélection rigoureuse de matériaux durables, biosourcés et éco-responsables pour des constructions de qualité respectueuses de l\'environnement.',
-    p3_title:'Livraison garantie', p3_desc:'Respect strict des délais et du budget convenus, avec suivi de chantier transparent et reporting régulier.',
-    proc_tag:'Notre Processus', proc_title:'Comment nous\ntravaillons',
-    proc1_title:'Consultation', proc1_desc:'Rencontre initiale pour comprendre votre projet, vos besoins et votre vision personnelle.',
-    proc2_title:'Conception', proc2_desc:'Élaboration des plans et propositions de design sur mesure adaptés à vos attentes.',
-    proc3_title:'Réalisation', proc3_desc:'Exécution rigoureuse des travaux avec suivi qualité à chaque étape du chantier.',
-    proc4_title:'Livraison', proc4_desc:'Remise des clés et accompagnement post-livraison pour votre satisfaction totale.',
-    faq_tag:'FAQ', faq_title:'Questions fréquentes',
-    cta_title:'Prêt à démarrer votre projet ?',
-    cta_sub:'Contactez-nous dès aujourd\'hui pour une consultation offerte sans engagement.',
-    cta_btn1:'Obtenir un devis gratuit', cta_btn2:'Nous appeler'
-  },
-  en: {
-    nav_home:'Home', nav_services:'Services', nav_projects:'Projects', nav_about:'About', nav_contact:'Contact', nav_cta:'Free Quote',
-    ph_title:'Our <em>Services</em>', ph_sub:'A startup founded in July 2024, ARCHIRAM BUILDING guides you through civil engineering, ecological construction, interior architecture and upcycling art.',
-    why_tag:'Why ARCHIRAM', why_title:'Eco-responsible\nexcellence',
-    p1_title:'Multidisciplinary expertise', p1_desc:'Civil engineering, ecological construction and interior architecture united under one roof for coherent, high-performance projects.',
-    p2_title:'Sustainable materials', p2_desc:'Rigorous selection of durable, bio-sourced and eco-responsible materials for quality constructions that respect the environment.',
-    p3_title:'Guaranteed delivery', p3_desc:'Strict adherence to agreed timelines and budgets, with transparent site monitoring and regular reporting.',
-    proc_tag:'Our Process', proc_title:'How we\nwork',
-    proc1_title:'Consultation', proc1_desc:'Initial meeting to understand your project, needs and personal vision.',
-    proc2_title:'Design', proc2_desc:'Development of bespoke plans and design proposals tailored to your expectations.',
-    proc3_title:'Construction', proc3_desc:'Rigorous execution of works with quality control at every stage of the build.',
-    proc4_title:'Handover', proc4_desc:'Key handover and post-delivery support for your complete satisfaction.',
-    faq_tag:'FAQ', faq_title:'Frequently asked questions',
-    cta_title:'Ready to start your project?',
-    cta_sub:'Contact us today for a free, no-obligation consultation.',
-    cta_btn1:'Get a free quote', cta_btn2:'Call us'
-  }
-};
-</script>
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
 
-<!-- Navbar -->
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
-      <li><a href="services.html" class="nav-link active" data-i18n="nav_services">Services</a></li>
-      <li><a href="projects.html" class="nav-link" data-i18n="nav_projects">Projets</a></li>
-      <li><a href="about.html" class="nav-link" data-i18n="nav_about">À Propos</a></li>
-      <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+<header id="navbar">
+  <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
+    <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
+      <img class="logo-light" src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+      <img class="logo-dark" src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+    </a>
+    <ul class="nav-menu" id="navLinks">
+      <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
+      <li><a href="services.html" class="nav-item active" aria-current="page" data-i18n="nav_services">Services</a></li>
+      <li><a href="projects.html" class="nav-item" data-i18n="nav_projects">Projets</a></li>
+      <li><a href="about.html" class="nav-item" data-i18n="nav_about">À propos</a></li>
+      <li><a href="contact.html" class="nav-item" data-i18n="nav_contact">Contact</a></li>
+      <li class="nav-mobile-cta"><a href="devis.html" class="btn btn-primary" data-from="menu"><span data-i18n="nav_cta">Devis gratuit</span></a></li>
     </ul>
-    <div class="nav-actions">
-      <button class="lang-btn" id="langToggle"><span id="langLabel">EN</span></button>
-      <button class="theme-btn" id="themeToggle"><i class="fas fa-moon" id="themeIcon"></i></button>
-      <a href="devis.html" class="nav-cta" data-i18n="nav_cta">Devis gratuit</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
+      <button class="ctrl-btn" id="themeToggle" type="button" aria-label="Mode clair ou sombre" data-i18n-attr="aria-label:theme_label"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-moon"></use></svg></button>
+      <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
+      <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 
-<!-- Page Hero -->
-<section class="page-hero">
+<main id="main">
+<section class="page-head" aria-labelledby="pageTitle">
   <div class="wrap">
-    <div class="page-hero-inner">
-      <nav class="breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span class="sep"><i class="fas fa-chevron-right"></i></span>
-        <span class="cur" data-i18n="nav_services">Services</span>
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-i18n-attr="aria-label:crumb_label">
+        <a href="index.html" data-i18n="crumb_home">Accueil</a>
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg>
+        <span aria-current="page" data-i18n="nav_services">Services</span>
       </nav>
-      <h1 class="page-h1" data-i18n="ph_title">Nos <em>Services</em></h1>
-      <p class="page-sub" data-i18n="ph_sub">De la conception architecturale à la livraison clé en main, ARCHIRAM BUILDING vous accompagne à chaque étape.</p>
-    </div>
+    <h1 id="pageTitle" data-i18n="pg_title">Douze métiers, un seul interlocuteur</h1>
+    <p class="page-lead" data-i18n="pg_lead">Fondée en juillet 2024 à Lomé, ARCHIRAM BUILDING accompagne votre projet de l'ingénierie BTP aux dernières finitions, en trois grandes étapes.</p>
+    <ul class="jump" aria-label="Aller à une étape" data-i18n-attr="aria-label:jump_label">
+      <li><a href="#p1" data-i18n="p1">Concevoir</a></li>
+      <li><a href="#p2" data-i18n="p2">Construire et équiper</a></li>
+      <li><a href="#p3" data-i18n="p3">Finir et embellir</a></li>
+    </ul>
   </div>
 </section>
 
-<!-- Bannière accroche -->
-<section class="desire-banner">
+<section class="sec sec-tight" aria-labelledby="whyTitle">
   <div class="wrap">
-    <div class="desire-inner reveal">
-      <span class="desire-eyebrow"><i class="fas fa-star"></i> ARCHIRAM BUILDING</span>
-      <h2 class="desire-title">L'objet de<br><em>vos désirs</em></h2>
-      <p class="desire-sub">Chaque projet est unique. Nous transformons vos ambitions en réalisations d'exception — de l'esquisse à la remise des clés.</p>
-      <a href="devis.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Concrétiser mon projet</a>
-    </div>
-  </div>
-</section>
-
-<!-- Why ARCHIRAM -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="why_tag">Pourquoi ARCHIRAM</p>
-      <h2 class="sec-title" data-i18n="why_title">L'excellence,<br>notre standard</h2>
-    </div>
-    <div class="pillars-grid">
-      <div class="pillar reveal" style="--d:0ms">
-        <div class="pillar-icon" style="background:var(--gold-t);color:var(--gold)"><i class="fas fa-medal"></i></div>
-        <h4 data-i18n="p1_title">Expertise reconnue</h4>
-        <p data-i18n="p1_desc">10 ans d'expérience dans la conception et la réalisation de projets architecturaux d'exception en Afrique de l'Ouest.</p>
+    <h2 class="visually-hidden" id="whyTitle" data-i18n="why_title">Pourquoi travailler avec ARCHIRAM</h2>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-medal"></use></svg>
+        <h3 data-i18n="p1_title">Expertise pluridisciplinaire</h3>
+        <p data-i18n="p1_desc">Ingénierie BTP, construction écologique et architecture intérieure réunies sous un même toit pour des projets cohérents et performants.</p>
       </div>
-      <div class="pillar reveal" style="--d:100ms">
-        <div class="pillar-icon" style="background:rgba(56,189,248,.12);color:var(--sky)"><i class="fas fa-leaf"></i></div>
-        <h4 data-i18n="p2_title">Matériaux durables</h4>
-        <p data-i18n="p2_desc">Sélection rigoureuse des matériaux les plus qualitatifs pour des constructions durables et esthétiquement supérieures.</p>
+      <div class="pillar reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-leaf"></use></svg>
+        <h3 data-i18n="p2_title">Matériaux durables</h3>
+        <p data-i18n="p2_desc">Sélection rigoureuse de matériaux durables, biosourcés et éco-responsables pour des constructions de qualité respectueuses de l&#x27;environnement.</p>
       </div>
-      <div class="pillar reveal" style="--d:200ms">
-        <div class="pillar-icon" style="background:rgba(74,222,128,.12);color:var(--emerald)"><i class="fas fa-shield-alt"></i></div>
-        <h4 data-i18n="p3_title">Livraison garantie</h4>
+      <div class="pillar reveal">
+        <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-shield-halved"></use></svg>
+        <h3 data-i18n="p3_title">Livraison garantie</h3>
         <p data-i18n="p3_desc">Respect strict des délais et du budget convenus, avec suivi de chantier transparent et reporting régulier.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services Alternés -->
-<section class="section section-alt">
+<section class="sec phase-sec" id="p1" aria-labelledby="p1Title">
   <div class="wrap">
-
-    <!-- Service 1 — Architecture -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Plans architecturaux" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">01</p>
-        <i class="fas fa-drafting-compass srv-alt-icon"></i>
-        <h3>Architecture</h3>
-        <p>Conception architecturale sur mesure avec une approche esthétique unique. Nos architectes transforment vos idées en plans détaillés, en respectant les normes locales et vos aspirations les plus exigeantes.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Plans architecturaux complets</li>
-          <li class="srv-feat">Permis de construire &amp; conformité</li>
-          <li class="srv-feat">Modélisation 3D &amp; rendu réaliste</li>
-          <li class="srv-feat">Suivi architectural de chantier</li>
+    <header class="sec-head reveal">
+      <h2 id="p1Title" data-i18n="p1">Concevoir</h2>
+      <p data-i18n="p1_intro">Les plans, les calculs et les choix qui décident de tout le reste.</p>
+    </header>
+    <article class="srv-detail reveal" id="architecture">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Plans architecturaux" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-compass-drafting"></use></svg><span data-i18n="srv1_title">Architecture</span></h3>
+        <p data-i18n="sv1_long">Conception architecturale sur mesure avec une approche esthétique unique. Nos architectes transforment vos idées en plans détaillés, en respectant les normes locales et vos aspirations les plus exigeantes.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv1_f0">Plans architecturaux complets</li>
+            <li data-i18n="sv1_f1">Permis de construire et conformité</li>
+            <li data-i18n="sv1_f2">Modélisation 3D et rendu réaliste</li>
+            <li data-i18n="sv1_f3">Suivi architectural de chantier</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Architecture" class="btn btn-line" data-from="service-architecture"><span data-i18n="sv1_cta">Demander un devis pour ce service</span></a>
       </div>
-    </div>
-
-    <!-- Service 2 — Construction Écologique (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">02</p>
-        <i class="fas fa-leaf srv-alt-icon"></i>
-        <h3>Construction Écologique</h3>
-        <p>Maîtrise d'œuvre éco-responsable utilisant des matériaux durables et des techniques à faible impact environnemental. Nous concevons des bâtiments bioclimatiques, sains et performants pour aujourd'hui et demain.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Matériaux biosourcés &amp; durables</li>
-          <li class="srv-feat">Conception bioclimatique</li>
-          <li class="srv-feat">Gestion des eaux &amp; énergies renouvelables</li>
-          <li class="srv-feat">Certification &amp; bilan carbone</li>
+    </article>
+    <article class="srv-detail reveal" id="architecture-interieure">
+      <div class="srv-media"><img src="assets/img/suite-coin-salon.webp" srcset="assets/img/suite-coin-salon-640.webp 640w, assets/img/suite-coin-salon.webp 1008w" sizes="(max-width: 860px) 100vw, 40vw" width="1008" height="756" alt="Suite aménagée par ARCHIRAM avec coin salon" loading="lazy" decoding="async"></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-couch"></use></svg><span data-i18n="srv3_title">Architecture intérieure</span></h3>
+        <p data-i18n="sv3_long">Conception et aménagement d&#x27;espaces intérieurs alliant fonctionnalité, esthétique raffinée et identité personnelle forte. Chaque pièce devient une œuvre à vivre, pensée dans ses moindres détails.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv3_f0">Plan d&#x27;aménagement sur mesure</li>
+            <li data-i18n="sv3_f1">Sélection du mobilier et des matériaux</li>
+            <li data-i18n="sv3_f2">Éclairage architectural</li>
+            <li data-i18n="sv3_f3">Décoration et mise en scène complète</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Architecture%20int%C3%A9rieure" class="btn btn-line" data-from="service-architecture-interieure"><span data-i18n="sv3_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Construction écologique et panneaux solaires" loading="lazy"></div>
-    </div>
-
-    <!-- Service 3 — Architecture Intérieure -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1633681926035-ec1ac984418a?w=800&q=80" alt="Architecture intérieure haut de gamme" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">03</p>
-        <i class="fas fa-couch srv-alt-icon"></i>
-        <h3>Architecture Intérieure</h3>
-        <p>Conception et aménagement d'espaces intérieurs alliant fonctionnalité, esthétique raffinée et identité personnelle forte. Chaque pièce devient une œuvre à vivre, pensée dans ses moindres détails.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Plan d'aménagement sur mesure</li>
-          <li class="srv-feat">Sélection mobilier &amp; matériaux</li>
-          <li class="srv-feat">Éclairage architectural</li>
-          <li class="srv-feat">Décoration &amp; mise en scène complète</li>
+    </article>
+    <article class="srv-detail reveal" id="ingenierie-btp">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Chantier de construction en béton armé" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-ruler-combined"></use></svg><span data-i18n="srv4_title">Ingénierie BTP</span></h3>
+        <p data-i18n="sv4_long">Études techniques approfondies et solutions d&#x27;ingénierie du bâtiment et des travaux publics pour garantir la solidité, la sécurité et la durabilité de vos ouvrages, conformément aux normes en vigueur.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv4_f0">Études de structures et fondations</li>
+            <li data-i18n="sv4_f1">Calculs béton armé et charpente métallique</li>
+            <li data-i18n="sv4_f2">VRD et réseaux divers</li>
+            <li data-i18n="sv4_f3">Expertise technique et certification</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Ing%C3%A9nierie%20BTP" class="btn btn-line" data-from="service-ingenierie-btp"><span data-i18n="sv4_cta">Demander un devis pour ce service</span></a>
       </div>
-    </div>
-
-    <!-- Service 4 — Ingénierie BTP (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">04</p>
-        <i class="fas fa-hard-hat srv-alt-icon"></i>
-        <h3>Ingénierie BTP</h3>
-        <p>Études techniques approfondies et solutions d'ingénierie du bâtiment et des travaux publics pour garantir la solidité, la sécurité et la durabilité de vos ouvrages, conformément aux normes en vigueur.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Études de structures &amp; fondations</li>
-          <li class="srv-feat">Calculs béton armé &amp; charpente métal</li>
-          <li class="srv-feat">VRD &amp; réseaux divers</li>
-          <li class="srv-feat">Expertise technique &amp; certification</li>
+    </article>
+    <article class="srv-detail reveal" id="construction-ecologique">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Panneaux solaires sur une toiture" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-leaf"></use></svg><span data-i18n="srv2_title">Construction écologique</span></h3>
+        <p data-i18n="sv2_long">Maîtrise d&#x27;œuvre éco-responsable utilisant des matériaux durables et des techniques à faible impact environnemental. Nous concevons des bâtiments bioclimatiques, sains et performants pour aujourd&#x27;hui et demain.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv2_f0">Matériaux biosourcés et durables</li>
+            <li data-i18n="sv2_f1">Conception bioclimatique</li>
+            <li data-i18n="sv2_f2">Gestion des eaux et énergies renouvelables</li>
+            <li data-i18n="sv2_f3">Certification et bilan carbone</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Construction%20%C3%A9cologique" class="btn btn-line" data-from="service-construction-ecologique"><span data-i18n="sv2_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=800&q=80" alt="Chantier de construction béton armé" loading="lazy"></div>
-    </div>
-
-    <!-- Service 5 — Finitions & Décoration Intérieure -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80" alt="Travaux de peinture et finitions intérieures" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">05</p>
-        <i class="fas fa-paint-brush srv-alt-icon"></i>
-        <h3>Finitions &amp; Décoration Intérieure</h3>
-        <p>Travaux de finition soignés et décoration intérieure haut de gamme pour sublimer chaque espace. Peintures, revêtements, menuiseries et accessoires choisis avec soin, au détail près.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Revêtements sols &amp; murs de qualité</li>
-          <li class="srv-feat">Menuiseries aluminium &amp; bois</li>
-          <li class="srv-feat">Peinture décorative &amp; effets</li>
-          <li class="srv-feat">Accessoires &amp; touches finales</li>
+    </article>
+  </div>
+</section>
+<section class="sec phase-sec sec-chalk" id="p2" aria-labelledby="p2Title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2 id="p2Title" data-i18n="p2">Construire et équiper</h2>
+      <p data-i18n="p2_intro">Le gros œuvre et tout ce qui fait fonctionner le bâtiment.</p>
+    </header>
+    <article class="srv-detail reveal" id="systemes-techniques">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Installation électrique" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plug"></use></svg><span data-i18n="srv9_title">Systèmes techniques</span></h3>
+        <p data-i18n="sv9_long">Installation et maintenance des systèmes techniques du bâtiment : électricité, plomberie, climatisation, domotique et équipements énergétiques, pour un confort durable.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv9_f0">Électricité et tableau électrique</li>
+            <li data-i18n="sv9_f1">Plomberie et sanitaires</li>
+            <li data-i18n="sv9_f2">Climatisation et ventilation</li>
+            <li data-i18n="sv9_f3">Domotique et énergies renouvelables</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Syst%C3%A8mes%20techniques" class="btn btn-line" data-from="service-systemes-techniques"><span data-i18n="sv9_cta">Demander un devis pour ce service</span></a>
       </div>
-    </div>
-
-    <!-- Service 6 — Art Écologique & Upcycling (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">06</p>
-        <i class="fas fa-recycle srv-alt-icon"></i>
-        <h3>Art Écologique &amp; Upcycling</h3>
-        <p>Création d'œuvres décoratives uniques à partir de matériaux recyclés et réemployés : tableaux, sculptures et installations. L'upcycling art éco-responsable qui embellit vos espaces tout en préservant la planète.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Tableaux &amp; fresques upcycling</li>
-          <li class="srv-feat">Sculptures sur matériaux recyclés</li>
-          <li class="srv-feat">Installations décoratives éco-responsables</li>
-          <li class="srv-feat">Commandes artistiques personnalisées</li>
+    </article>
+    <article class="srv-detail reveal" id="ascenseurs">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Ascenseur dans un immeuble" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-elevator"></use></svg><span data-i18n="srv10_title">Montage d'ascenseurs</span></h3>
+        <p data-i18n="sv10_long">Installation, mise en service et maintenance d&#x27;ascenseurs pour immeubles résidentiels, commerciaux et industriels, dans le respect des normes de sécurité.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv10_f0">Installation et mise en service</li>
+            <li data-i18n="sv10_f1">Ascenseurs résidentiels et commerciaux</li>
+            <li data-i18n="sv10_f2">Maintenance préventive et corrective</li>
+            <li data-i18n="sv10_f3">Mise aux normes et certification</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Montage%20d%27ascenseurs" class="btn btn-line" data-from="service-ascenseurs"><span data-i18n="sv10_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1691430596599-d8268793294b?w=800&q=80" alt="Matériaux recyclés et art upcycling" loading="lazy"></div>
-    </div>
-
-    <!-- Service 7 — Location de Matériaux de Chantier -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1556886283-a3944a060a52?w=800&q=80" alt="Échafaudage sur façade de bâtiment" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">07</p>
-        <i class="fas fa-truck srv-alt-icon"></i>
-        <h3>Location de Matériaux de Chantier</h3>
-        <p>Mise à disposition d'échafaudages, coffrages, outillages et équipements de chantier pour particuliers et professionnels. Livraison sur site et assistance technique pour faciliter vos travaux.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Échafaudages tubulaires &amp; façade</li>
-          <li class="srv-feat">Coffrages &amp; banche</li>
-          <li class="srv-feat">Outillage &amp; engins de chantier</li>
-          <li class="srv-feat">Livraison &amp; assistance technique</li>
+    </article>
+    <article class="srv-detail reveal" id="courant-faible">
+      <div class="srv-media"><img src="assets/img/serrure-porte-vitree.webp" srcset="assets/img/serrure-porte-vitree-640.webp 640w, assets/img/serrure-porte-vitree.webp 809w" sizes="(max-width: 860px) 100vw, 40vw" width="809" height="1080" alt="Serrure connectée posée par ARCHIRAM" loading="lazy" decoding="async"></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-video"></use></svg><span data-i18n="srv12_title">Courant faible</span></h3>
+        <p data-i18n="sv12_long">Systèmes de courant faible pour la sécurité et la connectivité : vidéosurveillance, contrôle d&#x27;accès, interphonie, alarme intrusion et câblage structuré, pour locaux professionnels et résidentiels.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv12_f0">Vidéosurveillance</li>
+            <li data-i18n="sv12_f1">Contrôle d&#x27;accès et interphonie</li>
+            <li data-i18n="sv12_f2">Alarme intrusion et incendie</li>
+            <li data-i18n="sv12_f3">Câblage structuré et fibre optique</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Faire une demande</a>
+        <a href="devis.html?type=Courant%20faible" class="btn btn-line" data-from="service-courant-faible"><span data-i18n="sv12_cta">Demander un devis pour ce service</span></a>
       </div>
-    </div>
-
-    <!-- Service 8 — Finitions ERP (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">08</p>
-        <i class="fas fa-building srv-alt-icon"></i>
-        <h3>Finitions ERP</h3>
-        <p>Travaux de finition et mise en conformité pour Établissements Recevant du Public (commerces, hôtels, écoles, hôpitaux…). Nous assurons sécurité incendie, accessibilité PMR et aménagements réglementaires.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Sécurité incendie &amp; signalétique</li>
-          <li class="srv-feat">Accessibilité PMR</li>
-          <li class="srv-feat">Cloisons &amp; faux-plafonds conformes</li>
-          <li class="srv-feat">Mise aux normes &amp; réception préfectorale</li>
+    </article>
+    <article class="srv-detail reveal" id="informatique">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Matériel informatique et réseau" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-network-wired"></use></svg><span data-i18n="srv11_title">Informatique</span></h3>
+        <p data-i18n="sv11_long">Conception, installation et maintenance d&#x27;infrastructures informatiques pour entreprises et particuliers : réseaux, postes de travail, serveurs et solutions cloud.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv11_f0">Réseaux et Wi-Fi</li>
+            <li data-i18n="sv11_f1">Postes de travail et serveurs</li>
+            <li data-i18n="sv11_f2">Cloud et sauvegarde</li>
+            <li data-i18n="sv11_f3">Support technique et maintenance</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Informatique" class="btn btn-line" data-from="service-informatique"><span data-i18n="sv11_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&q=80" alt="Aménagement intérieur établissement recevant du public" loading="lazy"></div>
-    </div>
-
-    <!-- Service 9 — Travaux & Systèmes Techniques -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Installation électrique et systèmes techniques du bâtiment" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">09</p>
-        <i class="fas fa-tools srv-alt-icon"></i>
-        <h3>Travaux &amp; Systèmes Techniques</h3>
-        <p>Installation et maintenance des systèmes techniques du bâtiment : électricité, plomberie, climatisation, domotique et équipements énergétiques. Un confort optimal et une performance durable pour votre bâtiment.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Électricité &amp; tableau électrique</li>
-          <li class="srv-feat">Plomberie &amp; sanitaires</li>
-          <li class="srv-feat">Climatisation &amp; ventilation</li>
-          <li class="srv-feat">Domotique &amp; énergies renouvelables</li>
+    </article>
+    <article class="srv-detail reveal" id="location-materiel">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1556886283-a3944a060a52?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1556886283-a3944a060a52?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1556886283-a3944a060a52?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Échafaudage sur une façade" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-truck"></use></svg><span data-i18n="srv7_title">Location de matériel</span></h3>
+        <p data-i18n="sv7_long">Mise à disposition d&#x27;échafaudages, coffrages, outillages et équipements de chantier pour particuliers et professionnels. Livraison sur site et assistance technique pour faciliter vos travaux.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv7_f0">Échafaudages tubulaires et de façade</li>
+            <li data-i18n="sv7_f1">Coffrages et banches</li>
+            <li data-i18n="sv7_f2">Outillage et engins de chantier</li>
+            <li data-i18n="sv7_f3">Livraison et assistance technique</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Location%20de%20mat%C3%A9riel" class="btn btn-line" data-from="service-location-materiel"><span data-i18n="sv7_cta">Demander une location</span></a>
       </div>
-    </div>
-
-    <!-- Service 10 — Montage d'Ascenseurs (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">10</p>
-        <i class="fas fa-arrow-up srv-alt-icon"></i>
-        <h3>Montage d'Ascenseurs</h3>
-        <p>Installation, mise en service et maintenance d'ascenseurs pour immeubles résidentiels, commerciaux et industriels. Nous assurons conformité aux normes de sécurité, fiabilité mécanique et confort d'utilisation à chaque étage.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Installation &amp; mise en service complète</li>
-          <li class="srv-feat">Ascenseurs résidentiels &amp; commerciaux</li>
-          <li class="srv-feat">Maintenance préventive &amp; corrective</li>
-          <li class="srv-feat">Mise aux normes &amp; certification sécurité</li>
+    </article>
+  </div>
+</section>
+<section class="sec phase-sec" id="p3" aria-labelledby="p3Title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2 id="p3Title" data-i18n="p3">Finir et embellir</h2>
+      <p data-i18n="p3_intro">Ce que l'on voit et que l'on touche chaque jour.</p>
+    </header>
+    <article class="srv-detail reveal" id="finitions-decoration">
+      <div class="srv-media"><img src="assets/img/suite-boiseries.webp" srcset="assets/img/suite-boiseries-640.webp 640w, assets/img/suite-boiseries.webp 1080w" sizes="(max-width: 860px) 100vw, 40vw" width="1080" height="720" alt="Boiseries murales posées par ARCHIRAM" loading="lazy" decoding="async"></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-paint-roller"></use></svg><span data-i18n="srv5_title">Finitions et décoration</span></h3>
+        <p data-i18n="sv5_long">Travaux de finition soignés et décoration intérieure haut de gamme pour sublimer chaque espace. Peintures, revêtements, menuiseries et accessoires choisis avec soin, au détail près.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv5_f0">Revêtements de sols et murs</li>
+            <li data-i18n="sv5_f1">Menuiseries aluminium et bois</li>
+            <li data-i18n="sv5_f2">Peinture décorative</li>
+            <li data-i18n="sv5_f3">Accessoires et touches finales</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Finitions%20et%20d%C3%A9coration" class="btn btn-line" data-from="service-finitions-decoration"><span data-i18n="sv5_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Installation d'ascenseur dans un immeuble" loading="lazy"></div>
-    </div>
-
-    <!-- Service 11 — Informatique -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80" alt="Infrastructure informatique et réseau" loading="lazy"></div>
-      <div class="srv-alt-body">
-        <p class="srv-alt-num">11</p>
-        <i class="fas fa-laptop-code srv-alt-icon"></i>
-        <h3>Informatique</h3>
-        <p>Conception, installation et maintenance d'infrastructures informatiques pour entreprises et particuliers. Déploiement de réseaux, postes de travail, serveurs et solutions cloud adaptés à vos besoins opérationnels.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Déploiement réseaux &amp; Wi-Fi</li>
-          <li class="srv-feat">Installation postes &amp; serveurs</li>
-          <li class="srv-feat">Solutions cloud &amp; sauvegarde</li>
-          <li class="srv-feat">Support technique &amp; maintenance</li>
+    </article>
+    <article class="srv-detail reveal" id="finitions-erp">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Aménagement intérieur d&#x27;un établissement recevant du public" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-building-shield"></use></svg><span data-i18n="srv8_title">Finitions ERP</span></h3>
+        <p data-i18n="sv8_long">Travaux de finition et mise en conformité pour les établissements recevant du public (commerces, hôtels, écoles, hôpitaux…) : sécurité incendie, accessibilité PMR et aménagements réglementaires.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv8_f0">Sécurité incendie et signalétique</li>
+            <li data-i18n="sv8_f1">Accessibilité PMR</li>
+            <li data-i18n="sv8_f2">Cloisons et faux plafonds conformes</li>
+            <li data-i18n="sv8_f3">Mise aux normes et réception</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Finitions%20ERP" class="btn btn-line" data-from="service-finitions-erp"><span data-i18n="sv8_cta">Demander un devis pour ce service</span></a>
       </div>
-    </div>
-
-    <!-- Service 12 — Courant Faible (reverse) -->
-    <div class="srv-alt reveal">
-      <div class="srv-alt-body" style="order:1">
-        <p class="srv-alt-num">12</p>
-        <i class="fas fa-wifi srv-alt-icon"></i>
-        <h3>Courant Faible</h3>
-        <p>Installation des systèmes de courant faible pour une sécurité et une connectivité optimales : vidéosurveillance, contrôle d'accès, interphonie, alarme intrusion et câblage structuré pour locaux professionnels et résidentiels.</p>
-        <ul class="srv-feat-list">
-          <li class="srv-feat">Vidéosurveillance &amp; CCTV</li>
-          <li class="srv-feat">Contrôle d'accès &amp; interphonie</li>
-          <li class="srv-feat">Alarme intrusion &amp; incendie</li>
-          <li class="srv-feat">Câblage structuré &amp; fibre optique</li>
+    </article>
+    <article class="srv-detail reveal" id="art-upcycling">
+      <div class="srv-media"><img src="https://images.unsplash.com/photo-1691430596599-d8268793294b?auto=format&fit=crop&w=960&q=70" srcset="https://images.unsplash.com/photo-1691430596599-d8268793294b?auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1691430596599-d8268793294b?auto=format&fit=crop&w=960&q=70 960w" sizes="(max-width: 860px) 100vw, 40vw" width="960" height="640" alt="Matériaux recyclés pour une œuvre upcycling" loading="lazy" decoding="async"><span class="srv-credit" data-i18n="img_stock">Photo d'illustration</span></div>
+      <div class="srv-body">
+        <h3><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-recycle"></use></svg><span data-i18n="srv6_title">Art écologique et upcycling</span></h3>
+        <p data-i18n="sv6_long">Création d&#x27;œuvres décoratives uniques à partir de matériaux recyclés et réemployés : tableaux, sculptures et installations qui embellissent vos espaces tout en préservant la planète.</p>
+        <ul class="feat-list">
+            <li data-i18n="sv6_f0">Tableaux et fresques upcycling</li>
+            <li data-i18n="sv6_f1">Sculptures en matériaux recyclés</li>
+            <li data-i18n="sv6_f2">Installations décoratives éco-responsables</li>
+            <li data-i18n="sv6_f3">Commandes artistiques personnalisées</li>
         </ul>
-        <a href="devis.html" class="btn btn-primary">Démarrer un projet</a>
+        <a href="devis.html?type=Art%20%C3%A9cologique%20et%20upcycling" class="btn btn-line" data-from="service-art-upcycling"><span data-i18n="sv6_cta">Demander un devis pour ce service</span></a>
       </div>
-      <div class="srv-alt-img" style="order:2"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80" alt="Systèmes de courant faible et vidéosurveillance" loading="lazy"></div>
-    </div>
-
+    </article>
   </div>
 </section>
 
-<!-- Process -->
-<section class="section">
+<section class="sec sec-ink" aria-labelledby="procTitle">
   <div class="wrap">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="proc_tag">Notre Processus</p>
-      <h2 class="sec-title" data-i18n="proc_title">Comment nous<br>travaillons</h2>
-    </div>
-    <div class="process-grid">
-      <div class="proc-step-inner reveal" style="--d:0ms">
-        <div class="proc-num"><i class="fas fa-comments"></i></div>
-        <h4 data-i18n="proc1_title">Consultation</h4>
-        <p data-i18n="proc1_desc">Rencontre initiale pour comprendre votre projet, vos besoins et votre vision personnelle.</p>
-      </div>
-      <div class="proc-step-inner reveal" style="--d:100ms">
-        <div class="proc-num"><i class="fas fa-pencil-ruler"></i></div>
-        <h4 data-i18n="proc2_title">Conception</h4>
-        <p data-i18n="proc2_desc">Élaboration des plans et propositions de design sur mesure adaptés à vos attentes.</p>
-      </div>
-      <div class="proc-step-inner reveal" style="--d:200ms">
-        <div class="proc-num"><i class="fas fa-hard-hat"></i></div>
-        <h4 data-i18n="proc3_title">Réalisation</h4>
-        <p data-i18n="proc3_desc">Exécution rigoureuse des travaux avec suivi qualité à chaque étape du chantier.</p>
-      </div>
-      <div class="proc-step-inner reveal" style="--d:300ms">
-        <div class="proc-num"><i class="fas fa-key"></i></div>
-        <h4 data-i18n="proc4_title">Livraison</h4>
-        <p data-i18n="proc4_desc">Remise des clés et accompagnement post-livraison pour votre satisfaction totale.</p>
-      </div>
-    </div>
+    <header class="sec-head reveal">
+      <h2 id="procTitle" data-i18n="m_title">Comment se déroule votre projet</h2>
+      <p data-i18n="m_lead">Quatre étapes, et à chacune un point d'étape avec vous avant de passer à la suivante.</p>
+    </header>
+    <ol class="steps">
+      <li class="step reveal">
+        <h3 data-i18n="proc1_title">Consultation</h3>
+        <p data-i18n="m1">On écoute votre besoin, votre terrain et votre budget, sur place ou en visio.</p>
+      </li>
+      <li class="step reveal">
+        <h3 data-i18n="proc2_title">Conception</h3>
+        <p data-i18n="m2">Plans, rendus 3D et choix des matériaux, que vous validez avant tout chantier.</p>
+      </li>
+      <li class="step reveal">
+        <h3 data-i18n="proc3_title">Réalisation</h3>
+        <p data-i18n="m3">Nos équipes construisent ; vous recevez photos et comptes rendus réguliers.</p>
+      </li>
+      <li class="step reveal">
+        <h3 data-i18n="proc4_title">Livraison</h3>
+        <p data-i18n="m4">Remise des clés après une visite de réception, avec garantie.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section section-alt">
-  <div class="wrap">
-    <div class="sec-header reveal">
-      <p class="sec-tag" data-i18n="faq_tag">FAQ</p>
-      <h2 class="sec-title" data-i18n="faq_title">Questions fréquentes</h2>
-    </div>
-    <div class="faq-list reveal" id="faqList"></div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section">
-  <div class="wrap">
-    <div class="cta-banner reveal">
-      <h2 data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
-      <p data-i18n="cta_sub">Contactez-nous dès aujourd'hui pour une consultation offerte sans engagement.</p>
-      <div class="cta-actions">
-        <a href="devis.html" class="btn btn-primary" data-i18n="cta_btn1"><i class="fas fa-file-alt"></i> Obtenir un devis gratuit</a>
-        <a href="https://wa.me/22898067744" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta_btn2"><i class="fab fa-whatsapp"></i> Nous appeler</a>
-      </div>
+<section class="sec" aria-labelledby="faqTitle">
+  <div class="wrap faq-layout">
+    <header class="sec-head reveal"><h2 id="faqTitle" data-i18n="faq_title">Questions fréquentes</h2></header>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary><span data-i18n="sfq0">Quelle est la durée moyenne d&#x27;un projet de construction ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa0">La durée varie selon la complexité du projet. Une villa individuelle prend généralement 6 à 12 mois, un immeuble commercial 12 à 24 mois. Nous établissons un planning détaillé dès la phase de consultation.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="sfq1">Proposez-vous des services clé en main ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa1">Oui, nous proposons une offre complète de A à Z : conception architecturale, ingénierie, construction et finitions. Vous n&#x27;avez qu&#x27;un seul interlocuteur tout au long du projet.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="sfq2">Travaillez-vous en dehors de Lomé ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa2">Absolument. Nous intervenons au Togo, au Ghana et dans d&#x27;autres pays d&#x27;Afrique de l&#x27;Ouest selon les projets. Contactez-nous pour discuter de votre situation géographique.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="sfq3">Comment est calculé le coût d&#x27;un projet ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa3">Le coût dépend de la superficie, des matériaux choisis, de la complexité architecturale et du calendrier. Nous réalisons une estimation gratuite après une consultation initiale.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="sfq4">Offrez-vous une garantie sur vos constructions ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa4">Oui, nous offrons une garantie décennale sur nos constructions conformément aux normes en vigueur, ainsi qu&#x27;une garantie de parfait achèvement d&#x27;un an après réception des travaux.</p>
+      </details>
+      <details class="faq-item">
+        <summary><span data-i18n="sfq5">Est-il possible de modifier les plans en cours de chantier ?</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-plus"></use></svg></summary>
+        <p data-i18n="sfa5">Les modifications mineures sont possibles mais peuvent entraîner des ajustements de coût et de délai. Nous recommandons de finaliser les plans avant le début du chantier pour éviter les surcoûts.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
+<section class="cta-band" aria-labelledby="ctaTitle">
+  <div class="wrap cta-inner reveal">
+    <div>
+      <h2 id="ctaTitle" data-i18n="cta_title">Prêt à démarrer votre projet ?</h2>
+      <p data-i18n="cta_sub">Décrivez-le en quelques lignes : nous répondons sous 24 heures, sur WhatsApp ou par email.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="devis.html" class="btn btn-primary" data-from="cta"><span data-i18n="cta_btn1">Demander un devis gratuit</span></a>
+      <a href="https://wa.me/22898067744" class="btn btn-line" target="_blank" rel="noopener" data-from="cta"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg><span data-i18n="cta_btn2">Écrire sur WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
 <footer id="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <p class="footer-logo"><img src="assets/LOGO Archi.png" alt="ARCHIRAM BUILDING"></p>
-        <p class="footer-tag">Architecture. Construction. Excellence.</p>
-        <p class="footer-addr"><i class="fas fa-map-marker-alt"></i> Avedji Wessomé, Lomé, Togo</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="130" height="50" loading="lazy">
+        <p data-i18n="ft_tag">Concevoir, construire et aménager en Afrique de l'Ouest.</p>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/alabuilding.tg" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-instagram"></use></svg></a>
+          <a href="https://wa.me/22898067744" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="footer"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg></a>
         </div>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading"><i class="fas fa-compass"></i> Navigation</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_nav">Navigation</p>
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
-          <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
-          <li><a href="projects.html"><i class="fas fa-building"></i> Projets</a></li>
-          <li><a href="about.html"><i class="fas fa-users"></i> À Propos</a></li>
-          <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="about.html" data-i18n="nav_about">À propos</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="devis.html" data-i18n="nav_cta" data-from="footer">Devis gratuit</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading"><i class="fas fa-th-large"></i> Services</p>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_srv">Services</p>
         <ul>
-          <li><a href="devis.html"><i class="fas fa-drafting-compass"></i> Architecture</a></li>
-          <li><a href="devis.html"><i class="fas fa-leaf"></i> Construction Écologique</a></li>
-          <li><a href="devis.html"><i class="fas fa-hard-hat"></i> Ingénierie BTP</a></li>
-          <li><a href="devis.html"><i class="fas fa-arrow-up"></i> Montage Ascenseurs</a></li>
-          <li><a href="devis.html"><i class="fas fa-laptop-code"></i> Informatique</a></li>
-          <li><a href="devis.html"><i class="fas fa-wifi"></i> Courant Faible</a></li>
+          <li><a href="services.html#architecture" data-i18n="srv1_title">Architecture</a></li>
+          <li><a href="services.html#construction-ecologique" data-i18n="srv2_title">Construction écologique</a></li>
+          <li><a href="services.html#architecture-interieure" data-i18n="srv3_title">Architecture intérieure</a></li>
+          <li><a href="services.html#ingenierie-btp" data-i18n="srv4_title">Ingénierie BTP</a></li>
+          <li><a href="services.html#systemes-techniques" data-i18n="srv9_title">Systèmes techniques</a></li>
+          <li><a href="services.html#courant-faible" data-i18n="srv12_title">Courant faible</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <p class="footer-heading"><i class="fas fa-phone-alt"></i> Contact</p>
-        <a href="https://wa.me/22898067744" class="footer-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +228 98 06 77 44</a>
-        <a href="mailto:binaeltoudeka@gmail.com" class="footer-email"><i class="fas fa-envelope"></i> binaeltoudeka@gmail.com</a>
-        <a href="mailto:archi.hiram@outlook.fr" class="footer-email"><i class="fas fa-envelope"></i> archi.hiram@outlook.fr</a>
-        <a href="devis.html" class="btn btn-primary" style="margin-top:1rem;font-size:.7rem"><i class="fas fa-file-alt"></i> Devis gratuit</a>
+      <div class="foot-col">
+        <p class="foot-heading" data-i18n="footer_contact">Contact</p>
+        <ul>
+          <li><a href="https://wa.me/22898067744" target="_blank" rel="noopener" data-from="footer">WhatsApp : +228 98 06 77 44</a></li>
+          <li><a href="mailto:binaeltoudeka@gmail.com">binaeltoudeka@gmail.com</a></li>
+          <li><a href="mailto:archi.hiram@outlook.fr">archi.hiram@outlook.fr</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Avedji%20Wessom%C3%A9%2C%20Lom%C3%A9%2C%20Togo" target="_blank" rel="noopener">Avedji Wessomé, Lomé, Togo</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 ARCHIRAM BUILDING – Archiram Link Africa. Tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="politique-confidentialite.html"><i class="fas fa-lock"></i> Politique de confidentialité</a>
-      </div>
+    <div class="foot-bar">
+      <p>© <span data-year>2026</span> ARCHIRAM BUILDING – Archiram Link Africa. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <a href="politique-confidentialite.html" data-i18n="ft_privacy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations%20sur%20vos%20services." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <span class="wa-tip">Discutons sur WhatsApp</span>
+<a href="https://wa.me/22898067744?text=Bonjour%20ARCHIRAM%20BUILDING%2C%20je%20voudrais%20des%20informations." class="wa-fab" target="_blank" rel="noopener" aria-label="WhatsApp" data-from="fab">
+  <svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-whatsapp"></use></svg>
+  <span class="wa-label" data-i18n="wa_tip">Discutons sur WhatsApp</span>
 </a>
-<button id="back-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+<button id="back-top" type="button" aria-label="Retour en haut" data-i18n-attr="aria-label:back_top"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-up"></use></svg></button>
 
-<script src="script.js"></script>
 <script>
-const FAQ_DATA = {
-  fr: [
-    { q: 'Quelle est la durée moyenne d\'un projet de construction ?', a: 'La durée varie selon la complexité du projet. Une villa individuelle prend généralement 6 à 12 mois, un immeuble commercial 12 à 24 mois. Nous établissons un planning détaillé dès la phase de consultation.' },
-    { q: 'Proposez-vous des services clé en main ?', a: 'Oui, nous proposons une offre complète de A à Z : conception architecturale, ingénierie, construction et finitions. Vous n\'avez qu\'un seul interlocuteur tout au long du projet.' },
-    { q: 'Travaillez-vous en dehors de Lomé ?', a: 'Absolument. Nous intervenons au Togo, au Ghana et dans d\'autres pays d\'Afrique de l\'Ouest selon les projets. Contactez-nous pour discuter de votre situation géographique.' },
-    { q: 'Comment est calculé le coût d\'un projet ?', a: 'Le coût dépend de la superficie, des matériaux choisis, de la complexité architecturale et du calendrier. Nous réalisons une estimation gratuite après une consultation initiale.' },
-    { q: 'Offrez-vous une garantie sur vos constructions ?', a: 'Oui, nous offrons une garantie décennale sur nos constructions conformément aux normes en vigueur, ainsi qu\'une garantie de parfait achèvement d\'un an après réception des travaux.' },
-    { q: 'Est-il possible de modifier les plans en cours de chantier ?', a: 'Les modifications mineures sont possibles mais peuvent entraîner des ajustements de coût et de délai. Nous recommandons de finaliser les plans avant le début du chantier pour éviter les surcoûts.' }
-  ],
-  en: [
-    { q: 'How long does a construction project typically take?', a: 'Duration varies by project complexity. A private villa typically takes 6 to 12 months; a commercial building 12 to 24 months. We establish a detailed schedule from the consultation phase.' },
-    { q: 'Do you offer turnkey services?', a: 'Yes, we offer a comprehensive A-to-Z service: architectural design, engineering, construction and finishes. You have a single point of contact throughout the entire project.' },
-    { q: 'Do you work outside Lomé?', a: 'Absolutely. We operate in Togo, Ghana and other West African countries depending on the project. Contact us to discuss your geographic situation.' },
-    { q: 'How is a project cost calculated?', a: 'Cost depends on surface area, chosen materials, architectural complexity and timeline. We provide a free estimate after an initial consultation.' },
-    { q: 'Do you offer a construction warranty?', a: 'Yes, we offer a ten-year warranty on our constructions in accordance with applicable standards, as well as a one-year perfect completion warranty after handover.' },
-    { q: 'Can plans be changed during construction?', a: 'Minor modifications are possible but may result in cost and schedule adjustments. We recommend finalising plans before construction begins to avoid additional costs.' }
-  ]
+/* Textes anglais de cette page (le français est dans le HTML) */
+window.PAGE_LANG = {
+  "en": {
+    "p1_title": "Multidisciplinary expertise",
+    "p1_desc": "Civil engineering, ecological construction and interior architecture united under one roof for coherent, high-performance projects.",
+    "p2_title": "Sustainable materials",
+    "p2_desc": "Rigorous selection of durable, bio-sourced and eco-responsible materials for quality constructions that respect the environment.",
+    "p3_title": "Guaranteed delivery",
+    "p3_desc": "Strict adherence to agreed timelines and budgets, with transparent site monitoring and regular reporting.",
+    "sv1_long": "Bespoke architectural design with a distinctive aesthetic. Our architects turn your ideas into detailed plans that respect local regulations and your highest expectations.",
+    "sv1_cta": "Request a quote for this service",
+    "sv1_f0": "Complete architectural plans",
+    "sv1_f1": "Building permit and compliance",
+    "sv1_f2": "3D modelling and realistic renders",
+    "sv1_f3": "Architectural site supervision",
+    "sv3_long": "Design and fit-out of interiors that combine function, refined aesthetics and a strong personal identity. Every room is thought through down to the last detail.",
+    "sv3_cta": "Request a quote for this service",
+    "sv3_f0": "Bespoke layout plan",
+    "sv3_f1": "Furniture and material selection",
+    "sv3_f2": "Architectural lighting",
+    "sv3_f3": "Full decoration and styling",
+    "sv4_long": "In-depth technical studies and civil engineering solutions to guarantee the strength, safety and durability of your buildings, in line with current standards.",
+    "sv4_cta": "Request a quote for this service",
+    "sv4_f0": "Structural and foundation studies",
+    "sv4_f1": "Reinforced concrete and steel frame calculations",
+    "sv4_f2": "Roads and utility networks",
+    "sv4_f3": "Technical surveys and certification",
+    "sv2_long": "Eco-responsible project management using durable materials and low-impact techniques. We design bioclimatic buildings that are healthy and efficient, today and tomorrow.",
+    "sv2_cta": "Request a quote for this service",
+    "sv2_f0": "Bio-based, durable materials",
+    "sv2_f1": "Bioclimatic design",
+    "sv2_f2": "Water management and renewable energy",
+    "sv2_f3": "Certification and carbon assessment",
+    "sv9_long": "Installation and maintenance of building services: electrical, plumbing, air conditioning, smart home and energy equipment, for lasting comfort.",
+    "sv9_cta": "Request a quote for this service",
+    "sv9_f0": "Electrical work and distribution boards",
+    "sv9_f1": "Plumbing and sanitary fittings",
+    "sv9_f2": "Air conditioning and ventilation",
+    "sv9_f3": "Smart home and renewable energy",
+    "sv10_long": "Installation, commissioning and maintenance of lifts for residential, commercial and industrial buildings, in line with safety standards.",
+    "sv10_cta": "Request a quote for this service",
+    "sv10_f0": "Installation and commissioning",
+    "sv10_f1": "Residential and commercial lifts",
+    "sv10_f2": "Preventive and corrective maintenance",
+    "sv10_f3": "Upgrades and safety certification",
+    "sv12_long": "Low-voltage systems for security and connectivity: CCTV, access control, intercoms, intruder alarms and structured cabling, for homes and businesses.",
+    "sv12_cta": "Request a quote for this service",
+    "sv12_f0": "CCTV",
+    "sv12_f1": "Access control and intercoms",
+    "sv12_f2": "Intruder and fire alarms",
+    "sv12_f3": "Structured cabling and fibre optics",
+    "sv11_long": "Design, installation and maintenance of IT infrastructure for businesses and individuals: networks, workstations, servers and cloud solutions.",
+    "sv11_cta": "Request a quote for this service",
+    "sv11_f0": "Networks and Wi-Fi",
+    "sv11_f1": "Workstations and servers",
+    "sv11_f2": "Cloud and backup",
+    "sv11_f3": "Technical support and maintenance",
+    "sv7_long": "Scaffolding, formwork, tools and site equipment for individuals and professionals, with on-site delivery and technical assistance.",
+    "sv7_cta": "Request a rental",
+    "sv7_f0": "Tube and façade scaffolding",
+    "sv7_f1": "Formwork and shuttering panels",
+    "sv7_f2": "Tools and site machinery",
+    "sv7_f3": "Delivery and technical assistance",
+    "sv5_long": "Careful finishing work and high-end interior decoration. Paint, coverings, joinery and accessories chosen with care, down to the detail.",
+    "sv5_cta": "Request a quote for this service",
+    "sv5_f0": "Floor and wall coverings",
+    "sv5_f1": "Aluminium and wood joinery",
+    "sv5_f2": "Decorative painting",
+    "sv5_f3": "Accessories and finishing touches",
+    "sv8_long": "Finishing work and compliance for buildings open to the public (shops, hotels, schools, hospitals…): fire safety, accessibility for people with reduced mobility and regulatory fit-out.",
+    "sv8_cta": "Request a quote for this service",
+    "sv8_f0": "Fire safety and signage",
+    "sv8_f1": "Step-free accessibility",
+    "sv8_f2": "Compliant partitions and suspended ceilings",
+    "sv8_f3": "Upgrades to standards and handover",
+    "sv6_long": "Unique decorative pieces made from recycled and reused materials: paintings, sculptures and installations that enhance your spaces while protecting the planet.",
+    "sv6_cta": "Request a quote for this service",
+    "sv6_f0": "Upcycled paintings and murals",
+    "sv6_f1": "Sculptures from recycled materials",
+    "sv6_f2": "Eco-responsible decorative installations",
+    "sv6_f3": "Custom art commissions",
+    "sfq0": "How long does a construction project typically take?",
+    "sfa0": "Duration varies by project complexity. A private villa typically takes 6 to 12 months; a commercial building 12 to 24 months. We establish a detailed schedule from the consultation phase.",
+    "sfq1": "Do you offer turnkey services?",
+    "sfa1": "Yes, we offer a comprehensive A-to-Z service: architectural design, engineering, construction and finishes. You have a single point of contact throughout the entire project.",
+    "sfq2": "Do you work outside Lomé?",
+    "sfa2": "Absolutely. We operate in Togo, Ghana and other West African countries depending on the project. Contact us to discuss your geographic situation.",
+    "sfq3": "How is a project cost calculated?",
+    "sfa3": "Cost depends on surface area, chosen materials, architectural complexity and timeline. We provide a free estimate after an initial consultation.",
+    "sfq4": "Do you offer a construction warranty?",
+    "sfa4": "Yes, we offer a ten-year warranty on our constructions in accordance with applicable standards, as well as a one-year perfect completion warranty after handover.",
+    "sfq5": "Can plans be changed during construction?",
+    "sfa5": "Minor modifications are possible but may result in cost and schedule adjustments. We recommend finalising plans before construction begins to avoid additional costs.",
+    "p1": "Design",
+    "p1_intro": "The plans, calculations and choices that shape everything else.",
+    "p2": "Build and equip",
+    "p2_intro": "The structure and everything that makes the building work.",
+    "p3": "Finish and furnish",
+    "p3_intro": "What you see and touch every day.",
+    "hs1": "Custom plans through to building permit.",
+    "hs2": "Durable materials and bioclimatic design.",
+    "hs3": "Room layout, furniture and flow.",
+    "hs4": "Technical studies and structural calculations.",
+    "hs5": "Paint, wall and floor coverings, joinery.",
+    "hs6": "Decorative pieces from recycled materials.",
+    "hs7": "Scaffolding, formwork and tools, delivered.",
+    "hs8": "Fire safety, accessibility, signage.",
+    "hs9": "Electrical, plumbing, air conditioning, smart home.",
+    "hs10": "Installation, commissioning and maintenance.",
+    "hs11": "Networks, servers and workstations.",
+    "hs12": "CCTV, access control, fibre.",
+    "proc1_title": "Consultation",
+    "m1": "We listen to your needs, your plot and your budget, on site or by video call.",
+    "proc2_title": "Design",
+    "m2": "Plans, 3D renders and material choices, all approved by you before work starts.",
+    "proc3_title": "Construction",
+    "m3": "Our teams build; you get regular photos and progress reports.",
+    "proc4_title": "Handover",
+    "m4": "Keys handed over after a final inspection, with a guarantee.",
+    "meta_title": "Services – ARCHIRAM BUILDING, Lomé",
+    "meta_desc": "Architecture, construction, civil engineering, interior design, building services and finishes: twelve trades under one roof in Lomé, Togo.",
+    "pg_title": "Twelve trades, one point of contact",
+    "pg_lead": "Founded in July 2024 in Lomé, ARCHIRAM BUILDING takes your project from civil engineering to the last finishing touches, grouped into three stages.",
+    "jump_label": "Go to a stage",
+    "why_title": "Why work with ARCHIRAM",
+    "img_stock": "Illustration photo",
+    "m_title": "How your project runs",
+    "m_lead": "Four stages, with a check-in with you at the end of each before we move on.",
+    "faq_title": "Frequently asked questions"
+  }
 };
-
-function renderFAQ() {
-  const lang = localStorage.getItem('ala-lang') || 'fr';
-  const items = FAQ_DATA[lang] || FAQ_DATA.fr;
-  const list = document.getElementById('faqList');
-  list.innerHTML = items.map(item => `
-    <div class="faq-item">
-      <div class="faq-q">
-        <span>${item.q}</span>
-        <span class="faq-icon"><i class="fas fa-plus"></i></span>
-      </div>
-      <div class="faq-a"><div class="faq-a-body">${item.a}</div></div>
-    </div>
-  `).join('');
-
-  list.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const isOpen = item.classList.contains('open');
-      list.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-}
-
-renderFAQ();
-document.getElementById('langToggle').addEventListener('click', () => setTimeout(renderFAQ, 50));
 </script>
+<script src="script.js"></script>
 </body>
 </html>
