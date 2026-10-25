@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,6 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Thème appliqué avant l'affichage, pour éviter un flash clair en mode sombre -->
-  <script>try{if(localStorage.getItem('ala-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +32,7 @@
 <header id="navbar">
   <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
     <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
-      <img class="logo-light" src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
-      <img class="logo-dark" src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+      <img src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
     </a>
     <ul class="nav-menu" id="navLinks">
       <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
@@ -48,7 +44,6 @@
     </ul>
     <div class="nav-controls">
       <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
-      <button class="ctrl-btn" id="themeToggle" type="button" aria-label="Mode clair ou sombre" data-i18n-attr="aria-label:theme_label"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-moon"></use></svg></button>
       <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
       <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
         <span></span><span></span><span></span>
@@ -166,6 +161,40 @@
   </div>
 </section>
 
+<section id="before-after" class="sec sec-chalk" aria-labelledby="baTitle">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <h2 id="baTitle" data-i18n="t_title">Ce que change une rénovation</h2>
+    </header>
+    <div class="media-pair">
+      <div class="reveal">
+        <h3 data-i18n="ba_title">Avant / après</h3>
+        <p class="media-note" data-i18n="ba_note">Faites glisser la poignée ou utilisez les flèches du clavier.</p>
+        <div class="ba-wrap">
+          <div class="ba-after">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=1200" srcset="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=640 640w, https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(max-width: 860px) 100vw, 60vw" width="1200" height="750" alt="" loading="lazy" decoding="async">
+            <span class="ba-tag ba-tag-r" data-i18n="ba_after">Après</span>
+          </div>
+          <div class="ba-before">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=1200" srcset="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=640 640w, https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=70&w=1200 1200w" sizes="(max-width: 860px) 100vw, 60vw" width="1200" height="750" alt="" loading="lazy" decoding="async">
+            <span class="ba-tag ba-tag-l" data-i18n="ba_before">Avant</span>
+          </div>
+          <div class="ba-handle" aria-hidden="true"><span class="ba-knob"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-left"></use></svg><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-right"></use></svg></span></div>
+          <input class="ba-range" type="range" min="2" max="98" value="50" aria-label="Comparer avant et après" data-i18n-attr="aria-label:ba_label">
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 data-i18n="vid_title">Sur le chantier</h3>
+        <p class="media-note" data-i18n="vid_note">La vidéo est chargée depuis YouTube quand vous la lancez.</p>
+        <div class="embed-box vid-box">
+          <img src="assets/img/suite-lit.webp" srcset="assets/img/suite-lit-640.webp 640w, assets/img/suite-lit.webp 720w" sizes="(max-width: 860px) 100vw, 40vw" width="720" height="1080" alt="" loading="lazy" decoding="async" style="object-position:50% 60%">
+          <button type="button" class="vid-btn" data-embed="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?autoplay=1" data-embed-title="Vidéo ARCHIRAM BUILDING" data-track="video_play"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-play"></use></svg><span data-i18n="vid_play">Lancer la vidéo</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <dialog id="projDialog" class="dlg" aria-labelledby="dlgTitle">
   <button type="button" class="dlg-close" aria-label="Fermer" data-i18n-attr="aria-label:dlg_close"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-xmark"></use></svg></button>
   <div class="dlg-body"></div>
@@ -271,6 +300,15 @@ window.PAGE_LANG = {
     "flt_int": "Interior",
     "flt_tech": "Equipment",
     "flt_label": "Filter projects",
+    "t_title": "What a renovation changes",
+    "ba_title": "Before / after",
+    "ba_note": "Drag the handle or use the arrow keys.",
+    "ba_before": "Before",
+    "ba_after": "After",
+    "ba_label": "Compare before and after",
+    "vid_title": "On site",
+    "vid_note": "The video loads from YouTube when you play it.",
+    "vid_play": "Play the video",
     "meta_title": "Our work – ARCHIRAM BUILDING, Lomé",
     "meta_desc": "Photos of projects by ARCHIRAM BUILDING in Lomé: residential building, bedroom and suite fit-out, smart locks.",
     "pg_title": "Our work",

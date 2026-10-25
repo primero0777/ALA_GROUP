@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,9 +15,6 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Thème appliqué avant l'affichage, pour éviter un flash clair en mode sombre -->
-  <script>try{if(localStorage.getItem('ala-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,8 +86,7 @@
 <header id="navbar">
   <nav class="wrap nav-wrap" aria-label="Navigation principale" data-i18n-attr="aria-label:nav_label">
     <a href="index.html" class="nav-brand" aria-label="ARCHIRAM BUILDING, accueil" data-i18n-attr="aria-label:home_label">
-      <img class="logo-light" src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
-      <img class="logo-dark" src="assets/logo-on-dark.png" alt="ARCHIRAM BUILDING" width="125" height="48">
+      <img src="assets/logo.png" alt="ARCHIRAM BUILDING" width="125" height="48">
     </a>
     <ul class="nav-menu" id="navLinks">
       <li><a href="index.html" class="nav-item" data-i18n="nav_home">Accueil</a></li>
@@ -102,7 +98,6 @@
     </ul>
     <div class="nav-controls">
       <button class="ctrl-btn" id="langToggle" type="button" aria-label="Changer de langue / Switch language"><span id="langLabel">EN</span></button>
-      <button class="ctrl-btn" id="themeToggle" type="button" aria-label="Mode clair ou sombre" data-i18n-attr="aria-label:theme_label"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-moon"></use></svg></button>
       <a href="devis.html" class="btn btn-primary nav-quote" data-from="header"><span data-i18n="nav_cta">Devis gratuit</span></a>
       <button class="nav-burger" id="hamburger" type="button" aria-label="Menu" aria-controls="navLinks" aria-expanded="false" data-i18n-attr="aria-label:menu_label">
         <span></span><span></span><span></span>

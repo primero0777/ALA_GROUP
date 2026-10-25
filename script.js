@@ -14,7 +14,7 @@ const SHARED_EN = {
   nav_home: 'Home', nav_services: 'Services', nav_projects: 'Projects',
   nav_about: 'About', nav_contact: 'Contact', nav_cta: 'Free quote',
   nav_label: 'Main navigation', lang_label: 'Changer de langue / Switch language',
-  theme_label: 'Light or dark mode', menu_label: 'Menu', home_label: 'ARCHIRAM BUILDING, home',
+  menu_label: 'Menu', home_label: 'ARCHIRAM BUILDING, home',
   crumb_home: 'Home', crumb_label: 'Breadcrumb',
   footer_nav: 'Navigation', footer_srv: 'Services', footer_contact: 'Contact',
   footer_rights: 'All rights reserved.', ft_tag: 'Designing, building and fitting out across West Africa.',
@@ -51,7 +51,6 @@ const MSG = {
     email: "Cette adresse email n'est pas valide.",
     choose: 'Choisissez une option pour continuer.',
     sending: 'Ouverture de WhatsApp…',
-    theme_dark: 'Passer en mode sombre', theme_light: 'Passer en mode clair',
     lang_switch: 'Switch to English'
   },
   en: {
@@ -61,7 +60,6 @@ const MSG = {
     email: 'This email address is not valid.',
     choose: 'Choose an option to continue.',
     sending: 'Opening WhatsApp…',
-    theme_dark: 'Switch to dark mode', theme_light: 'Switch to light mode',
     lang_switch: 'Passer en français'
   }
 };
@@ -77,7 +75,6 @@ const store = {
 };
 
 let currentLang  = store.get('ala-lang') === 'en' ? 'en' : 'fr';
-let currentTheme = store.get('ala-theme') === 'dark' ? 'dark' : 'light';
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const t = (key) => MSG[currentLang][key];
@@ -147,27 +144,6 @@ function initLang() {
   });
 }
 
-/* ── 3. THÈME ── */
-function syncThemeButton() {
-  const use = document.querySelector('#themeToggle use');
-  if (use) use.setAttribute('href', `assets/icons.svg#i-${currentTheme === 'light' ? 'moon' : 'sun'}`);
-  const btn = document.getElementById('themeToggle');
-  if (btn) btn.setAttribute('title', t(currentTheme === 'light' ? 'theme_dark' : 'theme_light'));
-}
-function initTheme() {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  syncThemeButton();
-  document.addEventListener('langchange', syncThemeButton);
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    store.set('ala-theme', currentTheme);
-    syncThemeButton();
-  });
-}
-
 /* ── 4. NAVIGATION ── */
 function initNav() {
   const nav   = document.getElementById('navbar');
@@ -185,13 +161,11 @@ function initNav() {
     syncTop();
     ham.classList.add('open'); links.classList.add('open');
     ham.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
   };
   const close = () => {
     if (!links.classList.contains('open')) return;
     ham.setAttribute('aria-expanded', 'false');
     ham.classList.remove('open');
-    document.body.style.overflow = '';
     if (reduceMotion) { links.classList.remove('open'); return; }
     links.classList.add('closing');
     links.addEventListener('animationend', () => links.classList.remove('open', 'closing'), { once: true });
@@ -200,6 +174,9 @@ function initNav() {
   ham.addEventListener('click', () => (links.classList.contains('open') ? close() : open()));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  /* Clic en dehors du panneau ou défilement de la page : on referme */
+  document.addEventListener('click', e => { if (!links.contains(e.target) && !ham.contains(e.target)) close(); });
+  window.addEventListener('scroll', () => { if (links.classList.contains('open')) close(); }, { passive: true });
   window.matchMedia('(min-width: 1081px)').addEventListener('change', e => { if (e.matches) close(); });
 }
 
@@ -557,7 +534,6 @@ function initYear() {
 
 /* ── DÉMARRAGE ── */
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
   initOpenState();
   initLang();
   initNav();
