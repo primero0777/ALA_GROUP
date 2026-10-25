@@ -211,6 +211,7 @@ function initLang() {
 /* ── 6. LOADING SCREEN ── */
 function initLoading() {
   const screen = document.getElementById('loading-screen');
+  if (!screen) return;
   const hide = () => screen.classList.add('loaded');
   if (document.readyState === 'complete') {
     setTimeout(hide, 500);
